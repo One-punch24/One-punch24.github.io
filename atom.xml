@@ -6,7 +6,7 @@
   <link href="https://one-punch24.github.io/atom.xml" rel="self"/>
   
   <link href="https://one-punch24.github.io/"/>
-  <updated>2020-12-29T11:47:13.312Z</updated>
+  <updated>2020-12-29T13:37:50.840Z</updated>
   <id>https://one-punch24.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>my_first_blog</title>
+    <link href="https://one-punch24.github.io/2020/12/29/my-first-blog/"/>
+    <id>https://one-punch24.github.io/2020/12/29/my-first-blog/</id>
+    <published>2020-12-29T13:37:50.000Z</published>
+    <updated>2020-12-29T13:37:50.840Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
