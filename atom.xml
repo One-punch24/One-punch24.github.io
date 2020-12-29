@@ -6,7 +6,7 @@
   <link href="https://one-punch24.github.io/atom.xml" rel="self"/>
   
   <link href="https://one-punch24.github.io/"/>
-  <updated>2020-12-29T13:37:50.840Z</updated>
+  <updated>2020-12-29T14:11:18.283Z</updated>
   <id>https://one-punch24.github.io/</id>
   
   <author>
@@ -21,10 +21,12 @@
     <link href="https://one-punch24.github.io/2020/12/29/my-first-blog/"/>
     <id>https://one-punch24.github.io/2020/12/29/my-first-blog/</id>
     <published>2020-12-29T13:37:50.000Z</published>
-    <updated>2020-12-29T13:37:50.840Z</updated>
+    <updated>2020-12-29T14:11:18.283Z</updated>
     
     
     
+    
+    <category term="Quantum Physics" scheme="https://one-punch24.github.io/categories/Quantum-Physics/"/>
     
     
   </entry>
@@ -34,7 +36,7 @@
     <link href="https://one-punch24.github.io/2020/12/29/hello-world/"/>
     <id>https://one-punch24.github.io/2020/12/29/hello-world/</id>
     <published>2020-12-29T11:47:13.312Z</published>
-    <updated>2020-12-29T11:47:13.312Z</updated>
+    <updated>2020-12-29T14:11:41.549Z</updated>
     
     
       
@@ -46,6 +48,8 @@
       
     
     
+    
+    <category term="Start" scheme="https://one-punch24.github.io/categories/Start/"/>
     
     
   </entry>

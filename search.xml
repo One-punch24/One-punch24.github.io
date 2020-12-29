@@ -13,10 +13,16 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <categories>
+        <category>Start</category>
+      </categories>
   </entry>
   <entry>
     <title>my_first_blog</title>
     <url>/2020/12/29/my-first-blog/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>Quantum Physics</category>
+      </categories>
   </entry>
 </search>
