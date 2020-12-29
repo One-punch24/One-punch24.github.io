@@ -20,7 +20,14 @@
   <entry>
     <title>my_first_blog</title>
     <url>/2020/12/29/my-first-blog/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[
+
+	<div class="row">
+    <embed src="https://github.com/One-punch24/my_onepunch/blob/main/pro1.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
       <categories>
         <category>Quantum Physics</category>
       </categories>
