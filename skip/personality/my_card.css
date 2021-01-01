@@ -1,0 +1,78 @@
+body{
+	background-color:#faffff;
+	/*background-image:;*/
+	display:grid; /*容器*/
+	background-image:url(cover3.jpg);
+	background-repeat: no-repeat;
+	background-size:1950px 900px;
+
+}
+
+h1{
+	font-size:38px;
+	margin-top:15px;
+}
+
+h3{
+	font-size:25px;
+}
+
+/*选择器*/
+/*斜体*/
+.italic{
+	font-style:italic;
+	height:30px;
+}
+
+.card{
+	position:relative;/*相当于并没有添加真正的元素到图表，见知乎*/
+	margin-top:150px;/*注意auto具有居中的特性*/
+	align-items:center;
+	margin-left:420px;
+	height:350px;
+	width:600px;
+	/*display:grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px*/
+	/*text-align:center;*/
+	background:linear-gradient(0deg, #3300cc, #330066); /*渐变色*/
+	border-radius: 15px; /*圆倒角*/
+	/*display:grid;*/
+
+	box-shadow: 1px 2px 3px #000;/*投影*/
+	color:#fff;
+	grid-template-columns: 1fr 1fr minmax(100px, 1fr);
+
+	padding:20px;
+
+}
+
+.credits{
+  margin-top:100px;
+  text-align: left;
+  color: #343536;
+}
+
+.photo{
+	margin-left:30px;
+	box-shadow: 3px 3px 3px #000;
+	width:153px;
+	position:absolute;
+
+}
+
+.back-side {
+  width: 370px;
+  height: 260px;
+  
+  position:absolute;
+  grid-template-columns: 2% 96% 2%;
+  grid-template-rows: 4% 92% 4%;
+  margin-top:-20px;
+  margin-left:210px;
+  overflow: hidden;
+  box-shadow: 2px 5px 15px 0px #17161694;
+  background-color: #122529;
+}
+
+
