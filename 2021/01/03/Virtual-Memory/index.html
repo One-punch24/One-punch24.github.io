@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    my_first_blog |  Onepunchman
+    Virtual Memory |  Onepunchman
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -45,7 +45,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-my-first-blog"
+  id="post-Virtual-Memory"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -56,18 +56,18 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  my_first_blog
+  Virtual Memory
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/2020/12/29/my-first-blog/" class="article-date">
-  <time datetime="2020-12-29T13:37:50.000Z" itemprop="datePublished">2020-12-29</time>
+      <a href="/2021/01/03/Virtual-Memory/" class="article-date">
+  <time datetime="2021-01-03T03:39:17.000Z" itemprop="datePublished">2021-01-03</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Quantum-Physics/">Quantum Physics</a>
+    <a class="article-category-link" href="/categories/Computer-Architecture/">Computer Architecture</a>
   </div>
   
 <div class="word_count">
@@ -75,7 +75,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">10</span>
+            <span class="post-count">184</span>
         </span>
     </span>
 
@@ -91,22 +91,50 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  
+  <h2 id="1-Basic-concepts"><a href="#1-Basic-concepts" class="headerlink" title="1 Basic concepts"></a>1 Basic concepts</h2><p><strong>1.address space:</strong></p>
+<p>Every program should be mapped into its own address space for the sake of protection.</p>
+<p>But physical pages can be shared by 2 virtual addresses.</p>
+<p><strong>2.relocation</strong></p>
+<p>It means we never need to find a continuous block of memory in the DRAM. Instead, we can load the program anywhere in the main memory.</p>
+<p><strong>3.virtual address</strong></p>
+<p>virtual page number + page offset</p>
+<p><strong>4. associative + write back (virtual memory system)</strong></p>
+<p><strong>5.page table</strong></p>
+<p>virtual address –&gt; physical address, stored in main memory. It use page table register for each program for identification.</p>
+<p><strong>6.virtual machine</strong></p>
+<p><strong>7.virtual machine monitor</strong></p>
+<p>(1) Guest software should behave on a VM as if it was on the hardware.</p>
+<p>(2) Guest software not able to change the allocation of real system resources.</p>
+<p>(3) VM monitor must isolate itself from guest Software, even guest OS,  it should be able to control them. </p>
+<p><strong>8.state of virtual machine  (referred as process)</strong></p>
+<p>(1) page table + registers + PC</p>
+<p>(2) context switch needs the state to be saved.  </p>
+<p>**9. **</p>
+<h2 id="2-Key-aspects"><a href="#2-Key-aspects" class="headerlink" title="2 Key aspects"></a>2 Key aspects</h2><h3 id="2-1-Translation-of-address"><a href="#2-1-Translation-of-address" class="headerlink" title="2.1 Translation of address"></a>2.1 Translation of address</h3><p><img src="Virtual-Memory/1.PNG" alt="1"></p>
+<h2 id="3-Some-novel-concepts"><a href="#3-Some-novel-concepts" class="headerlink" title="3 Some novel concepts"></a>3 Some novel concepts</h2><p><strong>1. segmentation</strong></p>
+
 
 	<div class="row">
-    <embed src="https://one-punch24.github.io/2020/12/29/my-first-blog/pro1.pdf" width="100%" height="550" type="application/pdf">
+    <embed src="./pro1.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
 
 
-<p>很难说这篇文章在干嘛</p>
+
+
+
+
+
+
  
       <!-- reward -->
       
@@ -177,30 +205,23 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://one-punch24.github.io/2020/12/29/my-first-blog/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://one-punch24.github.io/2021/01/03/Virtual-Memory/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/computer/" rel="tag">computer</a></li></ul>
+
     </footer>
   </div>
 
    
   <nav class="article-nav">
     
-      <a href="/2021/01/03/Virtual-Memory/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            Virtual Memory
-          
-        </div>
-      </a>
     
-    
-      <a href="/2020/12/29/hello-world/" class="article-nav-link">
+      <a href="/2020/12/29/my-first-blog/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Hello World</div>
+        <div class="article-nav-title">my_first_blog</div>
       </a>
     
   </nav>
