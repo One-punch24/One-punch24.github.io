@@ -75,7 +75,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">476</span>
+            <span class="post-count">579</span>
         </span>
     </span>
 
@@ -84,7 +84,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">2 min</span>
+            <span class="post-count">3 min</span>
         </span>
     </span>
 </div>
@@ -142,7 +142,21 @@
 <p>(1) reference and dirty bit need to be copy back to page table, <strong>which is in the main memory</strong>, that is just <strong>portion</strong> of an entry. if dirty , copy the whole entry back to page table.</p>
 <p>(2) LRU scheme is too expensive, we use partial random LRU.</p>
 <p>4.TLB misses can be handled in either hardware or software.</p>
-<h4 id="2-2-2"><a href="#2-2-2" class="headerlink" title="2.2.2"></a>2.2.2</h4><h2 id="3-Some-novel-concepts"><a href="#3-Some-novel-concepts" class="headerlink" title="3 Some novel concepts"></a>3 Some novel concepts</h2><p><strong>1. segmentation</strong></p>
+<h4 id="2-2-2-Multi-level-page-table"><a href="#2-2-2-Multi-level-page-table" class="headerlink" title="2.2.2 Multi-level page table"></a>2.2.2 Multi-level page table</h4><p><img src="C:/Users/14828/AppData/Roaming/Typora/typora-user-images/image-20210103201425361.png" alt="image-20210103201425361"></p>
+<p>(e)  </p>
+<p>（1）寻址是以byte 寻址；</p>
+<p>virtual page number of second page table : 20bit-8bit(256) =12bit;(4096 entries each )</p>
+<p>every second <strong>page table</strong> need: 4096*8B=32KB;</p>
+<p>every second page table cover address: 4096* 4KB (*<strong>page size</strong>) =2^24 B;</p>
+<p>（2）minimum: 2^31 / (2^24) = 2^7;</p>
+<p>so we need 128 first level page table. </p>
+<p>1st: 128*6 *5=3840 bytes;</p>
+<p>2st: 5* 128*32KB=20MB;</p>
+<p>（3） maximum :2^32/ (2^24) = 2^8;</p>
+<p>so we need 128 first level page table. </p>
+<p>1st: 256*6 *5=7680 bytes;</p>
+<p>2st: 5* 256*32KB=40MB;</p>
+<h2 id="3-Some-novel-concepts"><a href="#3-Some-novel-concepts" class="headerlink" title="3 Some novel concepts"></a>3 Some novel concepts</h2><p><strong>1. segmentation</strong></p>
 <p><strong>2. dual tables</strong></p>
 <p>In many systems, the table of physical page and disk page addresses, while logically on the one table, is stored in 2 separate data structures. Dual tables are justified in part because we must keep the disk address of all pages, even if they are currently in main memory. </p>
 <p>, </p>
