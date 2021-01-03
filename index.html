@@ -177,50 +177,11 @@
        
   <h2 id="1-Basic-concepts"><a href="#1-Basic-concepts" class="headerlink" title="1 Basic concepts"></a>1 Basic concepts</h2><p><strong>1.address space:</strong></p>
 <p>Every program should be mapped into its own address space for the sake of protection.</p>
-<p>But physical pages can be shared by 2 virtual addresses.</p>
-<p><strong>2.relocation</strong></p>
-<p>It means we never need to find a continuous block of memory in the DRAM. Instead, we can load the program anywhere in the main memory.</p>
-<p><strong>3.virtual address</strong></p>
-<p>virtual page number + page offset</p>
-<p><strong>4. associative + write back (virtual memory system)</strong></p>
-<p><strong>5.page table</strong></p>
-<p>virtual address –&gt; physical address, stored in main memory. It use page table register for each program for identification.</p>
-<p><strong>6.virtual machine</strong></p>
-<p><strong>7.virtual machine monitor</strong></p>
-<p>(1) Guest software should behave on a VM as if it was on the hardware.</p>
-<p>(2) Guest software not able to change the allocation of real system resources.</p>
-<p>(3) VM monitor must isolate itself from guest Software, even guest OS,  it should be able to control them. </p>
-<p><strong>8.state of virtual machine  (referred as process)</strong></p>
-<p>(1) page table + registers + PC</p>
-<p>(2) context switch needs the state to be saved.  </p>
-<p><strong>9. reference bit</strong></p>
-<p>A field that is set whenever a page is accessed to implement LRU and similar replacement strategies.</p>
-<p><strong>10.write bit</strong></p>
-<p>control whether write could be implemented with that authority.</p>
-<p><strong>11. enable or disable exception</strong>(p439)</p>
-<p><strong>12.page fault</strong></p>
-<p>not in secondary main memory, in disk</p>
-<h2 id="2-Key-aspects"><a href="#2-Key-aspects" class="headerlink" title="2 Key aspects"></a>2 Key aspects</h2><h3 id="2-1-Translation-of-address"><a href="#2-1-Translation-of-address" class="headerlink" title="2.1 Translation of address"></a>2.1 Translation of address</h3><p><img src="https://one-punch24.github.io/2021/01/03/Virtual-Memory/1.PNG" alt="1"></p>
-<h3 id="2-2-TLB-translation-lookaside-buffer"><a href="#2-2-TLB-translation-lookaside-buffer" class="headerlink" title="2.2 TLB(translation-lookaside buffer)"></a>2.2 TLB(translation-lookaside buffer)</h3><p><img src="https://one-punch24.github.io/2021/01/03/Virtual-Memory/2.PNG" alt="1"></p>
-<h4 id="2-2-1-Handle-access-p431"><a href="#2-2-1-Handle-access-p431" class="headerlink" title="2.2.1 Handle access(p431)"></a>2.2.1 Handle access(p431)</h4><p>1.hit</p>
-<p>(1) if read reference bit turn on;</p>
-<p>(2) if write, dirty bit turn on;</p>
-<p>2.miss</p>
-<p>(1) in DRAM, load last-level page table to TLB;</p>
-<p>(2) in Disk ,raise exception to handle page fault;</p>
-<p>(3) look up page table entry, using virtual memory, to find the location of referenced page table.</p>
-<p>(4) choose  a physical page(DRAM) to replace, if it is dirty, it must be written out to secondary memory (<strong>disk 磁盘</strong>) before we can bring a new virtual page into this physical page.</p>
-<p>(5) start a read to bring the referenced page from the secondary memory into the chosen <strong>physical page</strong>. (<strong>replace page table</strong>)</p>
-<p>QA: how do we update TLB?      </p>
-<p>3.replage <strong>TLB entry</strong>(p432)</p>
-<p>(1) reference and dirty bit need to be copy back to page table, <strong>which is in the main memory</strong>, that is just <strong>portion</strong> of an entry. if dirty , copy the whole entry back to page table.</p>
-<p>(2) LRU scheme is too expensive, we use partial random LRU.</p>
-<p>4.TLB misses can be handled in either hardware or software.</p>
-<h4 id="2-2-2"><a href="#2-2-2" class="headerlink" title="2.2.2"></a>2.2.2</h4><h2 id="3-Some-novel-concepts"><a href="#3-Some-novel-concepts" class="headerlink" title="3 Some novel concepts"></a>3 Some novel concepts</h2><p><strong>1. segmentation</strong></p>
-<p><strong>2. dual tables</strong></p>
-<p>In many systems, the table of physical page and disk page addresses, while logically on the one table, is stored in 2 separate data structures. Dual tables are justified in part because we must keep the disk address of all pages, even if they are currently in main memory. </p>
-<p>, </p>
- 
+<p>But physical pages can be shared by 2 virtual addresses.</p> 
+      <a class="article-more-link" href="/2021/01/03/Virtual-Memory/"
+        >阅读更多...</a
+      >
+       
       <!-- reward -->
       
     </div>
