@@ -84,8 +84,7 @@
 <p>(1) reference and dirty bit need to be copy back to page table, <strong>which is in the main memory</strong>, that is just <strong>portion</strong> of an entry. if dirty , copy the whole entry back to page table.</p>
 <p>(2) LRU scheme is too expensive, we use partial random LRU.</p>
 <p>4.TLB misses can be handled in either hardware or software.</p>
-<h4 id="2-2-2-Multi-level-page-table"><a href="#2-2-2-Multi-level-page-table" class="headerlink" title="2.2.2 Multi-level page table"></a>2.2.2 Multi-level page table</h4><p><img src="C:/Users/14828/AppData/Roaming/Typora/typora-user-images/image-20210103201425361.png" alt="image-20210103201425361"></p>
-<p>(e)  </p>
+<h4 id="2-2-2-Multi-level-page-table"><a href="#2-2-2-Multi-level-page-table" class="headerlink" title="2.2.2 Multi-level page table"></a>2.2.2 Multi-level page table</h4><p><img src="https://one-punch24.github.io/2021/01/03/Virtual-Memory/3.PNG" alt="image-20210103201425361"></p>
 <p>（1）寻址是以byte 寻址；</p>
 <p>virtual page number of second page table : 20bit-8bit(256) =12bit;(4096 entries each )</p>
 <p>every second <strong>page table</strong> need: 4096*8B=32KB;</p>
@@ -98,6 +97,11 @@
 <p>so we need 128 first level page table. </p>
 <p>1st: 256*6 *5=7680 bytes;</p>
 <p>2st: 5* 256*32KB=40MB;</p>
+<h3 id="2-2-3-some-important-understanding"><a href="#2-2-3-some-important-understanding" class="headerlink" title="2.2.3 some important understanding"></a>2.2.3 some important understanding</h3><p>(1) TLB 和 page table 的 dirty 都是指cache中的内容是否为dirty；</p>
+<p>(2) 只有当page table 里面的虚拟地址-物理地址 映射关系被改变，才有可能发生TLB中的映射关系被改变，否则就是不变；因为没有任何东西会去 **在hit的前提下去修改 TLB 中的 page number **；</p>
+<p>(3) **2 STEPS RELATED TO REFERENCE **</p>
+<p>​    On every reference, we look up the virtual page number in the TLB. If we get a hit, the physical page number is used to form the address, and the corresponding reference bit is turned on. <strong>If the processor is performing a write, the dirty bit is also turned on.</strong> If a miss in the TLB occurs, we must determine whether it is a page fault or merely a TLB miss. If the page exists in memory, then the TLB miss indicates only that the translation is missing. In such cases, the processor can handle the TLB miss by loading the translation from the (last-level) page table into the TLB and <strong>then trying the reference again.</strong> If the page is not present in memory, then the TLB miss indicates a true page fault. In this case, the processor invokes the operating system using an exception. Because the TLB has many fewer entries than the number of pages in main memory, TLB misses will be much more frequent than true page faults.</p>
+<p>​    After a TLB miss occurs and the missing translation has been retrieved from the page table, we will need to select a TLB entry to replace. <strong>Because the reference and dirty bits are contained in the TLB entry, we need to copy these bits back to the page table entry when we replace an entry. These bits are the only portion of the TLB entry that can be changed.</strong> Using write-back—that is, copying these entries back at miss time rather than when they are written—is very efficient, since we expect the TLB miss rate to be small. Some systems use other techniques to approximate the reference and dirty bits, eliminating the need to write into the TLB except to load a new table entry on a miss. </p>
 <h2 id="3-Some-novel-concepts"><a href="#3-Some-novel-concepts" class="headerlink" title="3 Some novel concepts"></a>3 Some novel concepts</h2><p><strong>1. segmentation</strong></p>
 <p><strong>2. dual tables</strong></p>
 <p>In many systems, the table of physical page and disk page addresses, while logically on the one table, is stored in 2 separate data structures. Dual tables are justified in part because we must keep the disk address of all pages, even if they are currently in main memory. </p>
