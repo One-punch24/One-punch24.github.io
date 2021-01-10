@@ -6,7 +6,7 @@
   <link href="https://one-punch24.github.io/atom.xml" rel="self"/>
   
   <link href="https://one-punch24.github.io/"/>
-  <updated>2021-01-07T05:05:05.006Z</updated>
+  <updated>2021-01-10T01:38:18.647Z</updated>
   <id>https://one-punch24.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Kolmogorov Complexity</title>
+    <link href="https://one-punch24.github.io/2021/01/10/Kolmogorov-Complexity/"/>
+    <id>https://one-punch24.github.io/2021/01/10/Kolmogorov-Complexity/</id>
+    <published>2021-01-10T01:30:58.000Z</published>
+    <updated>2021-01-10T01:38:18.647Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-Preamble&quot;&gt;&lt;a href=&quot;#1-Preamble&quot; class=&quot;headerlink&quot; title=&quot;1 Preamble&quot;&gt;&lt;/a&gt;1 Preamble&lt;/h2&gt;&lt;p&gt;​   </summary>
+        
+      
+    
+    
+    
+    <category term="Information Theory" scheme="https://one-punch24.github.io/categories/Information-Theory/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Virtual Memory</title>
     <link href="https://one-punch24.github.io/2021/01/03/Virtual-Memory/"/>
     <id>https://one-punch24.github.io/2021/01/03/Virtual-Memory/</id>
     <published>2021-01-03T03:39:17.000Z</published>
-    <updated>2021-01-07T05:05:05.006Z</updated>
+    <updated>2021-01-07T05:32:04.331Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-Basic-concepts&quot;&gt;&lt;a href=&quot;#1-Basic-concepts&quot; class=&quot;headerlink&quot; title=&quot;1 Basic concepts&quot;&gt;&lt;/a&gt;1 Basic concepts&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1.address space:&lt;/strong&gt;&lt;/p&gt;
