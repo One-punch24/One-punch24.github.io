@@ -145,10 +145,12 @@
   </entry>
   <entry>
     <title>COD REVIEW</title>
-    <url>/2021/01/17/COD-REIVEW/</url>
-    <content><![CDATA[<h2 id="Jump-and-link"><a href="#Jump-and-link" class="headerlink" title="Jump and link"></a>Jump and link</h2><p><img src="/Instruction-Example/1.PNG" alt="1"></p>
-<p><img src="/Instruction-Example/2.PNG" alt="2"></p>
-]]></content>
+    <url>/2021/01/17/COD-REVIEW/</url>
+    <content><![CDATA[<h2 id="Some-Instruction-types"><a href="#Some-Instruction-types" class="headerlink" title="Some Instruction types"></a>Some Instruction types</h2><img src="COD-REVIEW/1.PNG" alt="1" style="zoom:50%;" />
+
+<img src="COD-REVIEW/2.PNG" alt="2" style="zoom:50%;" />
+
+<h2 id="Instruction-format"><a href="#Instruction-format" class="headerlink" title="Instruction format"></a>Instruction format</h2><h2 id="Caller-and-callee"><a href="#Caller-and-callee" class="headerlink" title="Caller and callee"></a>Caller and callee</h2>]]></content>
       <categories>
         <category>Computer Architecture</category>
       </categories>
