@@ -6,7 +6,7 @@
   <link href="https://one-punch24.github.io/atom.xml" rel="self"/>
   
   <link href="https://one-punch24.github.io/"/>
-  <updated>2021-01-10T01:58:49.510Z</updated>
+  <updated>2021-01-17T13:38:41.096Z</updated>
   <id>https://one-punch24.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Instruction Example</title>
+    <link href="https://one-punch24.github.io/2021/01/17/Instruction-Example/"/>
+    <id>https://one-punch24.github.io/2021/01/17/Instruction-Example/</id>
+    <published>2021-01-17T13:35:29.000Z</published>
+    <updated>2021-01-17T13:38:41.096Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Jump-and-link&quot;&gt;&lt;a href=&quot;#Jump-and-link&quot; class=&quot;headerlink&quot; title=&quot;Jump and link&quot;&gt;&lt;/a&gt;Jump and link&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="Computer Architecture" scheme="https://one-punch24.github.io/categories/Computer-Architecture/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Rate Distortion Theory</title>
+    <link href="https://one-punch24.github.io/2021/01/17/Rate-Distortion-Theory/"/>
+    <id>https://one-punch24.github.io/2021/01/17/Rate-Distortion-Theory/</id>
+    <published>2021-01-17T02:27:21.000Z</published>
+    <updated>2021-01-17T04:28:49.839Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;First-Example&quot;&gt;&lt;a href=&quot;#First-Example&quot; class=&quot;headerlink&quot; title=&quot;First Example&quot;&gt;&lt;/a&gt;First Example&lt;/h2&gt;&lt;p&gt;​       </summary>
+        
+      
+    
+    
+    
+    <category term="Information Theory" scheme="https://one-punch24.github.io/categories/Information-Theory/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Kolmogorov Complexity</title>

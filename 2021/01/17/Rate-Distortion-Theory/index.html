@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Kolmogorov Complexity |  Onepunchman
+    Rate Distortion Theory |  Onepunchman
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -45,7 +45,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Kolmogorov-Complexity"
+  id="post-Rate-Distortion-Theory"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -56,15 +56,15 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Kolmogorov Complexity
+  Rate Distortion Theory
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/2021/01/10/Kolmogorov-Complexity/" class="article-date">
-  <time datetime="2021-01-10T01:30:58.000Z" itemprop="datePublished">2021-01-10</time>
+      <a href="/2021/01/17/Rate-Distortion-Theory/" class="article-date">
+  <time datetime="2021-01-17T02:27:21.000Z" itemprop="datePublished">2021-01-17</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/Information-Theory/">Information Theory</a>
@@ -75,7 +75,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">126</span>
+            <span class="post-count">202</span>
         </span>
     </span>
 
@@ -99,9 +99,16 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="1-Preamble"><a href="#1-Preamble" class="headerlink" title="1 Preamble"></a>1 Preamble</h2><p>​    一个对象的<strong>算法复杂度</strong>被定义为能够描述该对象的二元计算机程序的最短长度，本质上是独立于计算机，也不涉及概率分布的。令人惊讶的是，一个随机变量的最短二元计算机描述的期望长度，近似等于它的<strong>熵</strong>。</p>
-<p>​                                                        $$010100100010101010…$$</p>
-<p>​    注意到，上方这样的，真正$\frac{1}{2}$随机的二元序列的描述复杂度至少与序列本身一样长。</p>
+  <h2 id="First-Example"><a href="#First-Example" class="headerlink" title="First Example"></a>First Example</h2><p>​        连续信源的量化问题是保真度准则下的一个很好的例子。</p>
+<p>​        现在的任务是，如何将一个连续的随机变量$X$, 量化成$X^{‘}$（$X^{‘}$又被称为<strong>再生点</strong>）。</p>
+<p>​        现在的问题是，如何量化，使平均失真$E[(X-X^{‘})^2]$最小。</p>
+<h2 id="Rate-distortion-function"><a href="#Rate-distortion-function" class="headerlink" title="Rate distortion function"></a>Rate distortion function</h2><p>​        保真度下的压缩编码，必须规定失真的度量。</p>
+<p>​        转移概率就是不同的编码方式。</p>
+<h3 id="失真度量"><a href="#失真度量" class="headerlink" title="失真度量"></a>失真度量</h3><p>​        $E(d(X,X’))&lt;=D$</p>
+<h3 id="零速率编码的最小失真"><a href="#零速率编码的最小失真" class="headerlink" title="零速率编码的最小失真"></a>零速率编码的最小失真</h3><p>​    1.$D_{max}=Ed(X,x^{‘*})$  此时对应$R=0$</p>
+<p>​    2.$R=\dfrac{logM}{n}$  $n$个字符的序列，总数为M的编码，相当于需要$logM$ bit来描述；</p>
+<p>​        只有$logM$才相当于真正的传输量</p>
+<h3 id="率失真函数"><a href="#率失真函数" class="headerlink" title="率失真函数"></a>率失真函数</h3><h2 id="Lossy-source-coding"><a href="#Lossy-source-coding" class="headerlink" title="Lossy source coding"></a>Lossy source coding</h2><h2 id="QA"><a href="#QA" class="headerlink" title="QA"></a>QA</h2><p>1.信源钟所有的符号？ </p>
  
       <!-- reward -->
       
@@ -172,7 +179,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://one-punch24.github.io/2021/01/10/Kolmogorov-Complexity/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://one-punch24.github.io/2021/01/17/Rate-Distortion-Theory/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -183,19 +190,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2021/01/17/Rate-Distortion-Theory/" class="article-nav-link">
+      <a href="/2021/01/17/Instruction-Example/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            Rate Distortion Theory
+            Instruction Example
           
         </div>
       </a>
     
     
-      <a href="/2021/01/03/Virtual-Memory/" class="article-nav-link">
+      <a href="/2021/01/10/Kolmogorov-Complexity/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Virtual Memory</div>
+        <div class="article-nav-title">Kolmogorov Complexity</div>
       </a>
     
   </nav>
