@@ -191,7 +191,12 @@
   <entry>
     <title>Semantic Segmentation Review</title>
     <url>/2021/05/24/Semantic-Segmentation-Review/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><p>Reference:</p>
+<ol>
+<li><a href="https://blog.csdn.net/qq_41997920/article/details/96479243">https://blog.csdn.net/qq_41997920/article/details/96479243</a> </li>
+<li></li>
+</ol>
+<h2 id="Dilated-Atrous-Convolution"><a href="#Dilated-Atrous-Convolution" class="headerlink" title="Dilated/Atrous Convolution"></a>Dilated/Atrous Convolution</h2>]]></content>
       <categories>
         <category>Computer Vision</category>
       </categories>
