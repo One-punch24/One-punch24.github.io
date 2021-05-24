@@ -6,7 +6,7 @@
   <link href="https://one-punch24.github.io/atom.xml" rel="self"/>
   
   <link href="https://one-punch24.github.io/"/>
-  <updated>2021-01-17T14:13:34.826Z</updated>
+  <updated>2021-05-24T09:15:43.320Z</updated>
   <id>https://one-punch24.github.io/</id>
   
   <author>
@@ -17,18 +17,58 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Semantic Segmentation Review</title>
+    <link href="https://one-punch24.github.io/2021/05/24/Semantic-Segmentation-Review/"/>
+    <id>https://one-punch24.github.io/2021/05/24/Semantic-Segmentation-Review/</id>
+    <published>2021-05-24T09:15:12.000Z</published>
+    <updated>2021-05-24T09:15:43.320Z</updated>
+    
+    
+    
+    
+    <category term="Computer Vision" scheme="https://one-punch24.github.io/categories/Computer-Vision/"/>
+    
+    
+    <category term="computer" scheme="https://one-punch24.github.io/tags/computer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Perturbation theory</title>
+    <link href="https://one-punch24.github.io/2021/01/20/Perturbation-theory/"/>
+    <id>https://one-punch24.github.io/2021/01/20/Perturbation-theory/</id>
+    <published>2021-01-20T07:40:01.000Z</published>
+    <updated>2021-01-21T10:20:41.881Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;A-nice-theorem&quot;&gt;&lt;a href=&quot;#A-nice-theorem&quot; class=&quot;headerlink&quot; title=&quot;A nice theorem&quot;&gt;&lt;/a&gt;A nice theorem&lt;/h2&gt;&lt;p&gt;​       </summary>
+        
+      
+    
+    
+    
+    <category term="Quantum Physics" scheme="https://one-punch24.github.io/categories/Quantum-Physics/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>COD REVIEW</title>
     <link href="https://one-punch24.github.io/2021/01/17/COD-REVIEW/"/>
     <id>https://one-punch24.github.io/2021/01/17/COD-REVIEW/</id>
     <published>2021-01-17T13:35:29.000Z</published>
-    <updated>2021-01-17T14:13:34.826Z</updated>
+    <updated>2021-01-17T14:51:26.729Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Some-Instruction-types&quot;&gt;&lt;a href=&quot;#Some-Instruction-types&quot; class=&quot;headerlink&quot; title=&quot;Some Instruction types&quot;&gt;&lt;/a&gt;Some Instruction</summary>
+    <summary type="html">&lt;h2 id=&quot;1-Some-Instruction-types&quot;&gt;&lt;a href=&quot;#1-Some-Instruction-types&quot; class=&quot;headerlink&quot; title=&quot;1 Some Instruction types&quot;&gt;&lt;/a&gt;1 Some</summary>
         
       
     
