@@ -116,7 +116,7 @@
 <p>(3) Strong induction principle.</p>
 <p><strong>Proposition 1.2:</strong> Well-ordering principle and induction principle are equivalent.</p>
 <p>$\mathcal{Proof}.$ </p>
-<p>$(1)\Rightarrow(2)$: Assume $S\neq \mathbb{N}$ prove that $\mathbb{N} \backslash S=\empty$ using well-ordering principle.</p>
+<p>$(1)\Rightarrow(2)$: Assume $S\neq \mathbb{N}$ prove that $\mathbb{N} \backslash S=\varnothing$ using well-ordering principle.</p>
 <p>$(2)\Rightarrow (3)$ is easy.</p>
 <p>$(3)\Rightarrow (1)$ For this part of proof, maybe it is better to recognize the $\mathbb{N}$ and ${P(i)}$ holds for all $i\in \mathbb{N}$ as equivalent. Choose nonempty $Y$ not satisfying well-ordering property. Denote $S={i \notin Y}$, then use (3) show that $S=\mathbb{N}$.</p>
 <p><strong>Theorem 1.3 </strong> Fundamental theorems of arithmetic.</p>
@@ -133,7 +133,7 @@
 ab=p_1...p_nq_1...q_m</script><p>If $p|ab$, then there is another prime factorization for $ab$. Contradiction.</p>
 <p><strong>Theorem 2.2</strong> (Euclidean division)  Let $n \in \mathbb{Z} $ and $d \in \mathbb{Z}_+$. There exist two integers $q, r \in \mathbb{Z}$ such that $n = qd + r$, and $0 \leq r&lt;  d$. The integers $q, r$ are unique.</p>
 <p>$Proof.$</p>
-<p>(1) $\exist 0\leq r&lt;d$, such that $n=qd+r$.  Let $S={n-kd}_{k\in \mathbb{Z}}\cap \mathbb{N}$. It is easy to see $S\neq \empty$. Thus, there exists a least element $r\in S$ such that $r=n-kd$. Assume $r\geq d$, then $r-1\in S$. Contradiction.</p>
+<p>(1) $\exists 0\leq r&lt;d$, such that $n=qd+r$.  Let $S={n-kd}_{k\in \mathbb{Z}}\cap \mathbb{N}$. It is easy to see $S\neq \varnothing$. Thus, there exists a least element $r\in S$ such that $r=n-kd$. Assume $r\geq d$, then $r-1\in S$. Contradiction.</p>
 <p>(2) Uniqueness. Suppose $\exists 0\leq r_1<d,0\leq r_2<d, r_1\neq r_2$, such that $r_1+q_1d=r_2+q_2d$. Assume $q_1>q_2$ without loss of generality, $r_1=r_2+(q_2-q_1)d\geq d$. Contradiction.</p>
 <h3 id="2-2-Euclidean-algorithm"><a href="#2-2-Euclidean-algorithm" class="headerlink" title="2.2 Euclidean algorithm"></a>2.2 Euclidean algorithm</h3><p><strong>Lemma 2.3</strong> (Euclidean Algorithm) Let $n,q \in \mathbb{Z} $ and $d \in \mathbb{Z}_+$ such that $n = qd + r$, then $gcd(n,d)=gcd(d,r)$.</p>
 <p>$Proof.$</p>
