@@ -84,7 +84,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">400</span>
+            <span class="post-count">782</span>
         </span>
     </span>
 
@@ -93,7 +93,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">2 min</span>
+            <span class="post-count">4 min</span>
         </span>
     </span>
 </div>
@@ -118,7 +118,7 @@
 <p>$\mathcal{Proof}.$ </p>
 <p>$(1)\Rightarrow(2)$: Assume $S\neq \mathbb{N}$ prove that $\mathbb{N} \backslash S=\varnothing$ using well-ordering principle.</p>
 <p>$(2)\Rightarrow (3)$ is easy.</p>
-<p>$(3)\Rightarrow (1)$ For this part of proof, maybe it is better to recognize the $\mathbb{N}$ and ${P(i)}$ holds for all $i\in \mathbb{N}$ as equivalent. Choose nonempty $Y$ not satisfying well-ordering property. Denote $S={i \notin Y}$, then use (3) show that $S=\mathbb{N}$.</p>
+<p>$(3)\Rightarrow (1)$ For this part of proof, maybe it is better to recognize the $\mathbb{N}$ and $\{P(i)\}$ holds for all $i\in \mathbb{N}$ as equivalent. Choose nonempty $Y$ not satisfying well-ordering property. Denote $S=\{i \notin Y\}$, then use (3) show that $S=\mathbb{N}$.</p>
 <p><strong>Theorem 1.3 </strong> Fundamental theorems of arithmetic.</p>
 <p>(1) Any integer greater than 1 is a product of primes.</p>
 <p>(2) The prime factorization is unique up to the order of factors.</p>
@@ -133,8 +133,8 @@
 ab=p_1...p_nq_1...q_m</script><p>If $p|ab$, then there is another prime factorization for $ab$. Contradiction.</p>
 <p><strong>Theorem 2.2</strong> (Euclidean division)  Let $n \in \mathbb{Z} $ and $d \in \mathbb{Z}_+$. There exist two integers $q, r \in \mathbb{Z}$ such that $n = qd + r$, and $0 \leq r&lt;  d$. The integers $q, r$ are unique.</p>
 <p>$Proof.$</p>
-<p>(1) $\exists 0\leq r&lt;d$, such that $n=qd+r$.  Let $S={n-kd}_{k\in \mathbb{Z}}\cap \mathbb{N}$. It is easy to see $S\neq \varnothing$. Thus, there exists a least element $r\in S$ such that $r=n-kd$. Assume $r\geq d$, then $r-1\in S$. Contradiction.</p>
-<p>(2) Uniqueness. Suppose $\exists 0\leq r_1<d,0\leq r_2<d, r_1\neq r_2$, such that $r_1+q_1d=r_2+q_2d$. Assume $q_1>q_2$ without loss of generality, $r_1=r_2+(q_2-q_1)d\geq d$. Contradiction.</p>
+<p>(1) $\exists 0\leq r&lt; d$, such that $n=qd+r$.  Let $S=\{n-kd\}_{k\in \mathbb{Z}}\cap \mathbb{N}$. It is easy to see $S\neq \varnothing$. Thus, there exists a least element $r\in S$ such that $r=n-kd$. Assume $r\geq d$, then $r-1\in S$. Contradiction.</p>
+<p>(2) Uniqueness. Suppose exists $0 \leq r_1&lt; d$  and $0 \leq r_2 &lt; d$ and $r_1\neq r_2$, such that $r_1+q_1d=r_2+q_2d$. Assume $q_1&gt;q_2$ without loss of generality, $r_1=r_2+(q_2-q_1)d\geq  d$. Contradiction.</p>
 <h3 id="2-2-Euclidean-algorithm"><a href="#2-2-Euclidean-algorithm" class="headerlink" title="2.2 Euclidean algorithm"></a>2.2 Euclidean algorithm</h3><p><strong>Lemma 2.3</strong> (Euclidean Algorithm) Let $n,q \in \mathbb{Z} $ and $d \in \mathbb{Z}_+$ such that $n = qd + r$, then $gcd(n,d)=gcd(d,r)$.</p>
 <p>$Proof.$</p>
 <p>(1) If $a|n, a|d$, then $r=a(n/a-d/a)\Rightarrow a|r$.</p>
@@ -142,7 +142,7 @@ ab=p_1...p_nq_1...q_m</script><p>If $p|ab$, then there is another prime factoriz
 <p>Since the divisors of $a$ and $−a$ are the same, one can run the Euclidean algorithm for $|a|, |b|$ to find the $gcd(a, b)$.</p>
 <p><strong>Corollary 2.4</strong> For any $a,b \in \mathbb{Z_+}$  there exist $x, y \in \mathbb{Z}$ such that </p>
 <script type="math/tex; mode=display">
-gcd(a, b) = ax + by</script><p>$Proof.$ (The corollary can be extended to $a,b \in Z \ (a,b\neq 0)$ )</p>
+gcd(a, b) = ax + by</script><p>$Proof.$ (The corollary can be extended to $a,b \in Z  (a,b\neq 0)$ )</p>
 <p>We only need to prove $a’=ax_1+by_1, b’=ax_2+by_2$ for $a’,b’$ in every step. (induction)</p>
 <p>Base step: It is easy to see that $a=a\cdot 1,b=b\cdot1$.</p>
 <p>Induction step: Assume $a’=ax_1+by_1, b’=ax_2+by_2$ and $a’&gt;b’$. Denoting $a’/b’=k$, and $a’\%b’=c’$,</p>
@@ -181,9 +181,9 @@ c'=a'-kb'=a(x_1-kx_2)+b(y_1-ky_2)</script><p>Thus $b’=ax_2+by_2$ and $c’=ax_
       </a>
     
     
-      <a href="/2022/07/30/Properties-of-Finite-dim-Normed-Space/" class="article-nav-link">
+      <a href="/2022/07/30/Bounded-Linear-Operator/" class="article-nav-link">
         <strong class="article-nav-caption">Next Post</strong>
-        <div class="article-nav-title">Properties of Finite-dim Normed Space</div>
+        <div class="article-nav-title">Bounded Linear Operator</div>
       </a>
     
   </nav>
@@ -576,6 +576,21 @@ c'=a'-kb'=a(x_1-kx_2)+b(y_1-ky_2)</script><p>Thus $b’=ax_2+by_2$ and $c’=ax_
     
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
