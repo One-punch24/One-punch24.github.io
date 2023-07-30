@@ -40,7 +40,7 @@
   <entry>
     <title>Basic Number Theory</title>
     <url>/2022/09/28/Basic-Number-Theory/</url>
-    <content><![CDATA[<h1 id="Basic-Number-Theory"><a href="#Basic-Number-Theory" class="headerlink" title="Basic Number Theory"></a>Basic Number Theory</h1><p>A note following Math-310 Algebra, EPFL.</p>
+    <content><![CDATA[<p>A note following Math-310 Algebra, EPFL.</p>
 <h2 id="1-Well-ordering-and-factorization"><a href="#1-Well-ordering-and-factorization" class="headerlink" title="1 Well-ordering and factorization"></a>1 Well-ordering and factorization</h2><p><strong>Axioms 1.1</strong> Principles of integer number.</p>
 <p><a href="https://proofwiki.org/wiki/Equivalence_of_Well-Ordering_Principle_and_Induction">https://proofwiki.org/wiki/Equivalence_of_Well-Ordering_Principle_and_Induction</a></p>
 <p>(1) Well-ordering principle: Every nonempty subset of natural numbers has a least element.</p>
@@ -91,6 +91,24 @@ c'=a'-kb'=a(x_1-kx_2)+b(y_1-ky_2)</script><p>Thus $b’=ax_2+by_2$ and $c’=ax_
       </categories>
       <tags>
         <tag>Algebra</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Properties of Finite-dim Normed Space</title>
+    <url>/2022/07/30/Properties-of-Finite-dim-Normed-Space/</url>
+    <content><![CDATA[<p><strong>Proposition 1</strong> Every finite dimensional normed space is homeomorphic to $\mathbb R^n$.</p>
+<p><strong>Proposition 2</strong> All norms on finite dimensional normed space $E$ are equivalent.</p>
+<p><strong>Corollary 1 </strong> Every finite dimensional normed space is complete. Heine-Borel Theorem could be generalized to finite dimensional normed space.</p>
+<p><strong>Riesz’s Lemma</strong> Let $E_0$ be a closed proper linear subspace of a normed space $E$. Then for each $0 &lt;  \epsilon&lt; 1$, there exists $x_0\in E$ such that $\Vert x_0\Vert=1$ and for any $x\in E_0$,</p>
+<script type="math/tex; mode=display">
+\Vert x-x_0\Vert\geq 1-\epsilon</script><p><strong>Proposition 2</strong> A normed space $E$ is finite dimensional iff E is locally compact, i.e. every porint $x$ in $E$ has a compact neighborhood.</p>
+<p><strong>Proposition 3</strong> A normed space $E$ is finite-dimensional if and only its closed unit ball is compact.</p>
+]]></content>
+      <categories>
+        <category>Functional Analysis</category>
+      </categories>
+      <tags>
+        <tag>Functional Analysis</tag>
       </tags>
   </entry>
 </search>
