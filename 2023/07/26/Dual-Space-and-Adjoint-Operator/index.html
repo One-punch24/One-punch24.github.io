@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Bounded Linear Operator |  Shuailong Zhu</title>
+      <title>Dual Space and Adjoint Operator |  Shuailong Zhu</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -53,7 +53,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Bounded-Linear-Operator"
+  id="post-Dual-Space-and-Adjoint-Operator"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -64,7 +64,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Bounded Linear Operator
+  Dual Space and Adjoint Operator
 </h1>
  
 
@@ -72,8 +72,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/07/30/Bounded-Linear-Operator/" class="article-date">
-  <time datetime="2022-07-30T09:36:30.000Z" itemprop="datePublished">2022-07-30</time>
+      <a href="/2023/07/26/Dual-Space-and-Adjoint-Operator/" class="article-date">
+  <time datetime="2023-07-26T03:50:18.000Z" itemprop="datePublished">2023-07-26</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/Functional-Analysis/">Functional Analysis</a>
@@ -84,7 +84,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">247</span>
+            <span class="post-count">86</span>
         </span>
     </span>
 
@@ -108,16 +108,10 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="1-Baire-Category-Theorem"><a href="#1-Baire-Category-Theorem" class="headerlink" title="1 Baire Category Theorem"></a>1 Baire Category Theorem</h2><p><strong>Definition 1.1 (Nowhere dense set)</strong>: Let $X$ a metric space,  we say $A\subseteq X$ is nowhere dense if $Int(cl(A))=\varnothing$. (For any open set $B\subseteq X$, $B\not\subseteq cl(A)$.)</p>
-<p><strong>Theorem 1.1  (Baire category theorem)</strong>: Any complete metric space is not mearge, i.e. can not be written as a countable union of nowhere dense sets. </p>
-<p>We use this theorem in the following way:  Let $X$ be nonempty complete metric space. Let $(X_n)_{n\geq 1}$ be a sequence of closed subsets such that $\mathop\cup\limits_{n=1}^{\infty} X_n = X$. Then there exists some $n_0$ such that </p>
-<script type="math/tex; mode=display">
-Int (X_{n_0})     \neq \varnothing</script><h2 id="2-Properties-of-Bounded-Linear-Operator"><a href="#2-Properties-of-Bounded-Linear-Operator" class="headerlink" title="2 Properties of Bounded Linear Operator"></a>2 Properties of Bounded Linear Operator</h2><h3 id="2-1-Bounded-Linear-Operator-and-the-Corresponding-Space"><a href="#2-1-Bounded-Linear-Operator-and-the-Corresponding-Space" class="headerlink" title="2.1 Bounded Linear Operator and the Corresponding Space"></a>2.1 Bounded Linear Operator and the Corresponding Space</h3><p><strong>Theorem 2.1</strong> Let $(X,\Vert\cdot\Vert_X)$ and $(Y,\Vert\cdot\Vert_Y)$ be normed spaces.  $T:X\rightarrow Y$ is a linear operator, then the following properties are equivalent:</p>
-<p>(1) $T$ is continuous (in the sense of continuity for operators in metric spaces).</p>
-<p>(2) $T$ is continuous at $\theta$.</p>
-<p>(3) $T$ is bounded.</p>
-<p><strong>Theorem 2.2 (The space of bounded linear operators)</strong> Let $(X,\Vert\cdot\Vert_X)$ and  $(Y,\Vert\cdot\Vert_Y)$ be normed spaces.  $\mathcal L(X,Y)=\{T| T:X\rightarrow Y \text{ is bounded linear operators} \}$ is a normed space with $\Vert T\Vert=sup_{||x||=1}\Vert Tx\Vert$. If $Y$ is Banach space, then $\mathcal L(X,Y)$ is Banach space.</p>
-<h3 id="2-2-Theorems"><a href="#2-2-Theorems" class="headerlink" title="2.2 Theorems"></a>2.2 Theorems</h3> 
+  <h2 id="1-Dual-Space"><a href="#1-Dual-Space" class="headerlink" title="1 Dual Space"></a>1 Dual Space</h2><h3 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h3><p><strong>Definition 1 (Dual space)</strong> Let $X$ be a normed space. $X^{\ast}=\mathcal{L}(X,K)$ is called the dual space of $X$. Since $K$ is complete, $X^{\ast}$ is also a Banach space.</p>
+<p><strong>Definition 2 (Bidual space)</strong> We can define another intermediate mapping $x^{\ast\ast}: X^{\ast}\rightarrow R$ by $x^{\ast\ast}(f)=f(x)$. The space $X^{\ast\ast}=\mathcal{L}(X^{\ast},K)$ is called Bidual space, which is also a Banach space.</p>
+<p><strong>Definition 3 (Canonical mapping/embedding)</strong> </p>
+ 
       <!-- reward -->
       
     </div>
@@ -135,19 +129,10 @@ Int (X_{n_0})     \neq \varnothing</script><h2 id="2-Properties-of-Bounded-Linea
    
   <nav class="article-nav">
     
+    
       <a href="/2022/09/28/Basic-Number-Theory/" class="article-nav-link">
-        <strong class="article-nav-caption">Previous Post</strong>
-        <div class="article-nav-title">
-          
-            Basic Number Theory
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2022/07/22/Properties-of-Finite-dim-Normed-Space/" class="article-nav-link">
         <strong class="article-nav-caption">Next Post</strong>
-        <div class="article-nav-title">Properties of Finite-Dim Normed Space</div>
+        <div class="article-nav-title">Basic Number Theory</div>
       </a>
     
   </nav>
