@@ -84,7 +84,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">86</span>
+            <span class="post-count">790</span>
         </span>
     </span>
 
@@ -93,7 +93,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">4 min</span>
         </span>
     </span>
 </div>
@@ -108,9 +108,49 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="1-Dual-Space"><a href="#1-Dual-Space" class="headerlink" title="1 Dual Space"></a>1 Dual Space</h2><h3 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h3><p><strong>Definition 1 (Dual space)</strong> Let $X$ be a normed space. $X^{\ast}=\mathcal{L}(X,K)$ is called the dual space of $X$. Since $K$ is complete, $X^{\ast}$ is also a Banach space.</p>
-<p><strong>Definition 2 (Bidual space)</strong> We can define another intermediate mapping $x^{\ast\ast}: X^{\ast}\rightarrow R$ by $x^{\ast\ast}(f)=f(x)$. The space $X^{\ast\ast}=\mathcal{L}(X^{\ast},K)$ is called Bidual space, which is also a Banach space.</p>
-<p><strong>Definition 3 (Canonical mapping/embedding)</strong> </p>
+  <h2 id="1-Dual-Space"><a href="#1-Dual-Space" class="headerlink" title="1 Dual Space"></a>1 Dual Space</h2><h3 id="1-1-Dual-Space"><a href="#1-1-Dual-Space" class="headerlink" title="1.1  Dual Space"></a>1.1  Dual Space</h3><p><strong>Definition 1.1 (Dual space)</strong> Let $X$ be a normed space. $X^{\ast}=\mathcal{L}(X,K)$ is called the dual space of $X$. Since $K$ is complete, $X^{\ast}$ is also a Banach space.</p>
+<p><strong>Definition 1.2 (Bidual space)</strong> We can define another intermediate mapping $x^{\ast\ast}: X^{\ast}\rightarrow R$ by $x^{\ast\ast}(f)=f(x)$. The space $X^{\ast\ast}=\mathcal{L}(X^{\ast},K)$ is called Bidual space, which is also a Banach space.</p>
+<p><strong>Definition 1.3 (Canonical mapping/embedding)</strong> We can define a mapping $J:X\rightarrow X^{\ast\ast}$ where $Jx(f)=f(x)$. $J$ is a linear isometry.</p>
+<p><em>Proof.</em> Since $x^{\ast\ast}(f)=|f(x)|\leq||x||||f||$, $||x^{\ast\ast}||\leq ||x||$. Due to Hahn-Banach theorem, there exists $f_0\in E^{\ast}$ such that $\Vert f_0\Vert=1$ and $|f_0(x)|=||x||$, and thus $||x^{\ast\ast}||\geq||x||$. Therefore, $||x^{\ast\ast}||=||x||$.</p>
+<p><strong>Definition 1.4 (Reflexive)</strong> In the sense of isometry, $X$ is a subspace of $X^{\ast\ast}$. $X$ is said to be reflexive if the canonical embedding $J$ into its bidual $X^{\ast\ast}$ is surjective. </p>
+<h3 id="1-2-Dual-Space-of-Hilbert-Space"><a href="#1-2-Dual-Space-of-Hilbert-Space" class="headerlink" title="1.2 Dual Space of Hilbert Space"></a>1.2 Dual Space of Hilbert Space</h3><p><strong>Theorem 1.1 (Riesz representation theorem) </strong> Let $H$ be a Hilbert space $f$ be a bounded linear functional on $H$,  then there exists one and only one $h\in H$ such that</p>
+<script type="math/tex; mode=display">
+f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem suggests that the mapping $H\rightarrow H^{\ast}$ is surjective, and hence an isometric isomorphism. It is not hard to see that $H^{\ast}$ is also a Hilbert space. Repeat the argument for $H^*$ and mapping $H^{\ast}\rightarrow H^{\ast\ast}$. We can prove that a Hilbert space is reflexive.</p>
+<h3 id="1-3-Examples-of-Dual-Spaces"><a href="#1-3-Examples-of-Dual-Spaces" class="headerlink" title="1.3 Examples of Dual Spaces"></a>1.3 Examples of Dual Spaces</h3><p>Distribution, and $L_p$ space.</p>
+<h2 id="2-Adjoint-Operators"><a href="#2-Adjoint-Operators" class="headerlink" title="2 Adjoint Operators"></a>2 Adjoint Operators</h2><p><strong>Definition 2.1 (Adjoint Operator)</strong> Let $X$ and $Y$ be normed linear spaces and $T\in \mathcal{L}(X,Y)$. The adjoint operator of $T$, denoted by $T^{\ast}$ , is the operator $T^{\ast}:Y^{\ast}\rightarrow X^{\ast}$ defined by</p>
+<script type="math/tex; mode=display">
+(T^{\ast}y^{\ast})(x)=y^{\ast}(Tx) \text{ for all } y^{\ast}\in Y^{\ast}, x\in X^{\ast}</script><p><strong>Theorem 2.1</strong> Let $X$ and $Y$ be normed linear spaces and $T\in \mathcal{L}(X,Y)$.</p>
+<p>(a) $T^{\ast}$ is bounded linear operator on $Y^{\ast}$.</p>
+<p>(b) $||T||=||T^{\ast}||$.</p>
+<h2 id="3-Weak-Topology"><a href="#3-Weak-Topology" class="headerlink" title="3 Weak Topology"></a>3 Weak Topology</h2><p>[Something very useful in this link: <a target="_blank" rel="noopener" href="https://math.stackexchange.com/questions/2282607/what-distinguishes-weak-and-strong-convergence-of-bounded-linear-operator-in-ban">https://math.stackexchange.com/questions/2282607/what-distinguishes-weak-and-strong-convergence-of-bounded-linear-operator-in-ban</a>]</p>
+<h3 id="3-1-Type-of-Convergence"><a href="#3-1-Type-of-Convergence" class="headerlink" title="3.1 Type of Convergence"></a>3.1 Type of Convergence</h3><p><strong>Definition 3.1 (Types of convergence for sequence)</strong></p>
+<p>Let $X$  be normed linear space, $x,\{x_n\}\in X$.</p>
+<p>(1) Strong Convergence: <script type="math/tex">||x_n-x||\rightarrow 0</script>.</p>
+<p>(2) Weak convergence:  If $\forall$ $f\in X^{\ast}$,  $f(x_n)\rightarrow f(x)$, then we call $x_n\rightharpoonup x$ in weak topology. </p>
+<p><strong>Proposition 3.1</strong> $x_n\rightharpoonup x$ iff</p>
+<p>(1) $\{||x_n||\}$ is bounded.</p>
+<p>(2) $\exists$ a dense subset $M\subseteq X^{\ast}$ such that for any $f\in M$, $f(x_n)\rightarrow f(x)$</p>
+<p><strong>Proposition 3.2</strong></p>
+<p>If $X$ is finite dimensional, then $\text{strong convergence}\iff \text{weak convergence}$.</p>
+<p><strong>Definition 3.2 (Types of convergence for operators)</strong></p>
+<p>Let $X,Y$  be normed linear spaces, $T,\{T_n\}\in \mathcal L(X,Y)$. </p>
+<p>(1) Uniform Convergence.</p>
+<p>(2) Strong Convergence: If $\forall$ $x\in X$,  $T_nx$ convergences strongly to $Tx$, then we call $T_n\rightarrow T$.</p>
+<p>(3) Weak Convergence: If $\forall$ $x\in X$,  $T_nx$ convergences weakly to $Tx$ in $Y$, then we call $T_n\rightharpoonup T$.</p>
+<p>Let $X,Y$ be normed spaces and $T\in \mathcal L(X,Y)$. The mapping $GT=T^{\ast}$ is a distance-preseved mapping and $Im(G)$ is isometric isomorphism wrt $\mathcal L(X,Y)$.</p>
+<p><strong>Definition 3.3 (Types of convergence for functionals)</strong> </p>
+<p>(1) Strong convergence.</p>
+<p>(2) Weak convergence.</p>
+<p>(2) Weak-$\ast$ convergence. Let $X$ be a normed space and $X^{\ast}$ be its dual space. </p>
+<p><strong>Proposition 3.3</strong> Let $X$ be Banach space and $f,\{f_n\}\in X^{\ast}$. Then $f_n\mathop{\rightarrow}\limits_{}^{w^{\ast}} f$ iff</p>
+<p>(1) $\{||f_n||\}$ is bounded.</p>
+<p>(2) $\exists$ a dense subset $M\subseteq X$ such that for any $x\in M$, $f(x_n)\rightarrow f(x)$.</p>
+<p><strong>Proposition 3.4</strong> Let $X$ be normed spaces and $X^{\ast}$ be the dual space, then </p>
+<script type="math/tex; mode=display">
+\text{weak convergence} \Rightarrow \text{weak-}{\ast} \text{convergence}</script><p> in $X^{\ast}$. If $X$ is reflexive,</p>
+<script type="math/tex; mode=display">
+\text{weak convergence} \iff\text{weak-}{\ast} \text{convergence}</script><h3 id="3-2-Separability"><a href="#3-2-Separability" class="headerlink" title="3.2 Separability"></a>3.2 Separability</h3><p>(1) If $X$ is a separable normed space, then any bounded sequence $\{f_n\}\in X^{\ast}$ admits a weakly-* convergent subsequence. </p>
+<p>(2) Let $X$ be a normed space, then $X^{\ast}$ is separable $\Rightarrow$ $X$ is separable. </p>
  
       <!-- reward -->
       
@@ -534,21 +574,6 @@
     
 
   </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
