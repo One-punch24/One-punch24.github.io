@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>$L^p$ Space and Sobolev Spaces |  Shuailong Zhu</title>
+      <title>Weak Solutions |  Shuailong Zhu</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -53,7 +53,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Lp-Space"
+  id="post-Weak-Solutions"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -64,7 +64,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  $L^p$ Space and Sobolev Spaces
+  Weak Solutions
 </h1>
  
 
@@ -72,8 +72,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/08/11/Lp-Space/" class="article-date">
-  <time datetime="2023-08-11T03:02:36.000Z" itemprop="datePublished">2023-08-11</time>
+      <a href="/2023/08/05/Weak-Solutions/" class="article-date">
+  <time datetime="2023-08-05T10:33:27.000Z" itemprop="datePublished">2023-08-05</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/Functional-Analysis/">Functional Analysis</a>
@@ -84,7 +84,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">452</span>
+            <span class="post-count">0</span>
         </span>
     </span>
 
@@ -93,52 +93,20 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">2 min</span>
+            <span class="post-count">1 min</span>
         </span>
     </span>
 </div>
  
     </div>
       
-    <div class="tocbot"></div>
-
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="1-L-p-Space"><a href="#1-L-p-Space" class="headerlink" title="1 $L^p$ Space"></a>1 $L^p$ Space</h2><h3 id="1-1-Density"><a href="#1-1-Density" class="headerlink" title="1.1 Density"></a>1.1 Density</h3><p><strong>Theorem 1.1 (Density of simple functions)</strong> Let $(X,\mathscr{A},\mu)$ be a measure space, and let $p$ satisfy $1 \leq p \leq +\infty$. Then the simple functions in $L^p(X,\mathscr{A},\mu)$ form a dense subspace of $L^p(X,\mathscr{A},\mu)$.</p>
-<p><strong>Lemma 1.2 (Approximation of measurable function by simple function)</strong> If $f : X \rightarrow [0, \infty]$ is a positive measurable function, then there is a monotone increasing sequence of positive simple functions $\varphi_n : X → [0, \infty)$ with $\varphi_1 ≤ \varphi_2 ≤ · · · ≤ \varphi_n ≤ . . .$ such that $\varphi_n \rightarrow f$ pointwise. If $f$ is bounded, then $\varphi_n \rightarrow f$ uniformly.</p>
-<p><em>Proof of Lemma 1.2</em> For each $n \in \mathbb N$, we divide the interval $[0, n]$  into $n2^{n}$ subintervals of width $1/n$</p>
-<script type="math/tex; mode=display">
-I_{k,n} = (k2^{−n} ,(k + 1)2^{−n}], k = 0, 1, . . . , n2^{n }-1,</script><p>and let $E_n = (n, ∞]$. Define </p>
-<script type="math/tex; mode=display">
-E_{k,n} = f^{-1} (I_{k,n}), F_n = f ^{−1} (J_n).</script><p>Let $\varphi_n(x) = n\chi_{E_n} (x) + \sum\limits_{k=0}^{n2^n-1}\dfrac{k}{2^n}\chi_{E_{k,n}(x)}$. Then $\varphi_n(x)\leq\varphi_{n+1}(x)\leq f(x)$. We show pointwise convergence in the following.</p>
-<p>(1) For $x$ such that $f(x)&lt; M$ if $x\geq M$, then for $n&gt;M$, $f(x)-\varphi_n(x)&lt;\dfrac{1}{2^n}$.</p>
-<p>(2) For $x$ such that $f(x)=+\infty$, $lim_{n\rightarrow \infty}\varphi_n(x)=+\infty$.</p>
-<p><em>Proof of Theorem 1</em>. It is sufficient to prove that we can approximate a positive function $f : X → [0, ∞]$ by simple functions. </p>
-<p>First suppose that $f \in L_p (X)$ where $1 \leq p &lt; \infty$. Then, from Theorem 1.1, there is an increasing sequence of simple functions $\{\varphi_n\}$ such that $\varphi_n \rightarrow f$ pointwise. Since $|\varphi_n(x)|\leq |f(x)|$, $\varphi_n\in L_p(X)$. Also, $|f − \varphi_n|^{p} ≤ |f|^{p}$ suggests that $|f − \varphi_n|^{p}$ is integrable. As we have $\varphi_n\rightarrow f$ pointwise, $|f − \varphi_n|^{p}\rightarrow 0$ pointwise. Using dominated convergence theorem,</p>
-<script type="math/tex; mode=display">
-\int|f − \varphi_n|^pd\mu\rightarrow 0</script><p>Secondly, if $f\in L^{\infty}(X)$, then we may choose a representative of $f$ that is bounded. According to Theorem 1, there is a sequence of simple functions that converges uniformly to $f$, and therefore in $L^{\infty}(X)$.</p>
-<p><strong>Theorem 1.3 (Density of continuous functions)</strong> </p>
-<h3 id="1-2-Completeness"><a href="#1-2-Completeness" class="headerlink" title="1.2 Completeness"></a>1.2 Completeness</h3><p><strong>Theorem 1.4 (Riesz–Fischer theorem)</strong> $L^p (X)$ is complete for $p\in[1,\infty]$.</p>
-<p><em>Proof.</em>  We only prove this for $p\in[1,\infty)$. </p>
-<p>(1) Let $f_{n_0}$ be a cauchy sequence in $L^p(X)$. There exists a subsequence $\{f_n\}$ such that  </p>
-<script type="math/tex; mode=display">
-\sum\limits_{k=1}^{\infty}||f_{k+1}-f_k||_p<\infty</script><p>Let </p>
-<script type="math/tex; mode=display">
-g_n=|f_1|+\sum\limits_{k=1}^{n-1}|f_{k+1}-f_k|</script><p>For each $x\in X$, $\{g_n(x)\} \uparrow$, and thus $g(x)=limg_n(x)$ (in the sense of $[0,\infty]$). By monotone convergence theorem and the fact that $g_n^p$ is a monotone sequence, $\int g^p_nd\mu\rightarrow\int gd\mu$. Since</p>
-<script type="math/tex; mode=display">
-||g_n||_p\leq||f_1||_p+\sum\limits_{k=1}^{\infty}||f_{k+1}-f_k||_p<\infty</script><p>$g\in L^p(X)$ and $g$ is almost everywhere finite. We also have </p>
-<script type="math/tex; mode=display">
-g_m(x)-g_n(x)\geq |f_m(x)-f_n(x)| \text{ for } m>n
-\tag{1}</script><p>(2) Since $g$ is almost everywhere finite and $g(x)=limg_n(x)$, $\mathop{lim}\limits_{m,n\rightarrow\infty} g_m(x)-g_n(x)=0$ holds almost everywhere, and so do $\mathop{lim}\limits_{m,n\rightarrow\infty} f_m(x)-f_n(x)=0$. Thus $\{f_n(x)\}$ forms a cauchy sequence almost everywhere $\Rightarrow$ $f_n(x)$ has finite limit almost everywhere, which is denoted as $f(x)$. Let $m\rightarrow\infty$,</p>
-<script type="math/tex; mode=display">
-|f(x)-f_n(x)|\leq g(x)-g_n(x)\leq g(x), a.e.</script><p>$|f(x)|\leq f_n(x)+g(x)\Rightarrow f(x)\in L^p(X)$. Also,</p>
-<script type="math/tex; mode=display">
-|f(x)-f_n(x)|^p\leq [g(x)]^p \Rightarrow |f(x)-f_n(x)|^p\in L(X)</script><p>According to Dominated convergence theorem, $||f(x)-f_n(x)||_p\rightarrow 0$.</p>
- 
+   
       <!-- reward -->
       
     </div>
@@ -148,7 +116,7 @@ g_m(x)-g_n(x)\geq |f_m(x)-f_n(x)| \text{ for } m>n
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Functional-Analysis/" rel="tag">Functional Analysis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Measure-Theory/" rel="tag">Measure Theory</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Real-Analysis/" rel="tag">Real Analysis</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Functional-Analysis/" rel="tag">Functional Analysis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PDE/" rel="tag">PDE</a></li></ul>
 
     </footer>
   </div>
@@ -157,9 +125,9 @@ g_m(x)-g_n(x)\geq |f_m(x)-f_n(x)| \text{ for } m>n
   <nav class="article-nav">
     
     
-      <a href="/2022/09/28/Basic-Number-Theory/" class="article-nav-link">
+      <a href="/2023/07/25/Lp-Space/" class="article-nav-link">
         <strong class="article-nav-caption">Next Post</strong>
-        <div class="article-nav-title">Basic Number Theory</div>
+        <div class="article-nav-title">$L^p$ Space and Sobolev Spaces</div>
       </a>
     
   </nav>
@@ -552,21 +520,6 @@ g_m(x)-g_n(x)\geq |f_m(x)-f_n(x)| \text{ for } m>n
     
 
   </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

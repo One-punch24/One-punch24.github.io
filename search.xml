@@ -224,15 +224,15 @@ c'=a'-kb'=a(x_1-kx_2)+b(y_1-ky_2)</script><p>Thus $b’=ax_2+by_2$ and $c’=ax_
       </categories>
       <tags>
         <tag>Measure Theory</tag>
-        <tag>Point-set Topology</tag>
+        <tag>Point-Set Topology</tag>
       </tags>
   </entry>
   <entry>
     <title>$L^p$ Space and Sobolev Spaces</title>
-    <url>/2023/08/11/Lp-Space/</url>
+    <url>/2023/07/25/Lp-Space/</url>
     <content><![CDATA[<h2 id="1-L-p-Space"><a href="#1-L-p-Space" class="headerlink" title="1 $L^p$ Space"></a>1 $L^p$ Space</h2><h3 id="1-1-Density"><a href="#1-1-Density" class="headerlink" title="1.1 Density"></a>1.1 Density</h3><p><strong>Theorem 1.1 (Density of simple functions)</strong> Let $(X,\mathscr{A},\mu)$ be a measure space, and let $p$ satisfy $1 \leq p \leq +\infty$. Then the simple functions in $L^p(X,\mathscr{A},\mu)$ form a dense subspace of $L^p(X,\mathscr{A},\mu)$.</p>
 <p><strong>Lemma 1.2 (Approximation of measurable function by simple function)</strong> If $f : X \rightarrow [0, \infty]$ is a positive measurable function, then there is a monotone increasing sequence of positive simple functions $\varphi_n : X → [0, \infty)$ with $\varphi_1 ≤ \varphi_2 ≤ · · · ≤ \varphi_n ≤ . . .$ such that $\varphi_n \rightarrow f$ pointwise. If $f$ is bounded, then $\varphi_n \rightarrow f$ uniformly.</p>
-<p><em>Proof of Lemma 1.2</em> For each $n \in \mathbb N$, we divide the interval $[0, n]$  into $n2^{n}$ subintervals of width $1/n$</p>
+<p><em>Proof of Lemma 1.2</em> For each $n \in \mathbb N$, we divide the interval $[0, n]$  into $n2^{n}$ subintervals of width $1/2^n$</p>
 <script type="math/tex; mode=display">
 I_{k,n} = (k2^{−n} ,(k + 1)2^{−n}], k = 0, 1, . . . , n2^{n }-1,</script><p>and let $E_n = (n, ∞]$. Define </p>
 <script type="math/tex; mode=display">
@@ -243,7 +243,9 @@ E_{k,n} = f^{-1} (I_{k,n}), F_n = f ^{−1} (J_n).</script><p>Let $\varphi_n(x) 
 <p>First suppose that $f \in L_p (X)$ where $1 \leq p &lt; \infty$. Then, from Theorem 1.1, there is an increasing sequence of simple functions $\{\varphi_n\}$ such that $\varphi_n \rightarrow f$ pointwise. Since $|\varphi_n(x)|\leq |f(x)|$, $\varphi_n\in L_p(X)$. Also, $|f − \varphi_n|^{p} ≤ |f|^{p}$ suggests that $|f − \varphi_n|^{p}$ is integrable. As we have $\varphi_n\rightarrow f$ pointwise, $|f − \varphi_n|^{p}\rightarrow 0$ pointwise. Using dominated convergence theorem,</p>
 <script type="math/tex; mode=display">
 \int|f − \varphi_n|^pd\mu\rightarrow 0</script><p>Secondly, if $f\in L^{\infty}(X)$, then we may choose a representative of $f$ that is bounded. According to Theorem 1, there is a sequence of simple functions that converges uniformly to $f$, and therefore in $L^{\infty}(X)$.</p>
-<p><strong>Theorem 1.3 (Density of continuous functions)</strong> </p>
+<p><strong>Theorem 1.3 (Density of continuous functions)</strong> The space $C_c(\mathbb R_n)$ is dense in $L^1 (\mathbb R_n)$. (could be extended to $L^p$ for $p\in[1,\infty)$)</p>
+<p><em>Proof (1).</em> Using Borel regularity of Lebesgue measure and Urysohn’s lemma.</p>
+<p><em>Proof (2).</em> Using Lusin’s theorem.</p>
 <h3 id="1-2-Completeness"><a href="#1-2-Completeness" class="headerlink" title="1.2 Completeness"></a>1.2 Completeness</h3><p><strong>Theorem 1.4 (Riesz–Fischer theorem)</strong> $L^p (X)$ is complete for $p\in[1,\infty]$.</p>
 <p><em>Proof.</em>  We only prove this for $p\in[1,\infty)$. </p>
 <p>(1) Let $f_{n_0}$ be a cauchy sequence in $L^p(X)$. There exists a subsequence $\{f_n\}$ such that  </p>
@@ -260,6 +262,32 @@ g_m(x)-g_n(x)\geq |f_m(x)-f_n(x)| \text{ for } m>n
 |f(x)-f_n(x)|\leq g(x)-g_n(x)\leq g(x), a.e.</script><p>$|f(x)|\leq f_n(x)+g(x)\Rightarrow f(x)\in L^p(X)$. Also,</p>
 <script type="math/tex; mode=display">
 |f(x)-f_n(x)|^p\leq [g(x)]^p \Rightarrow |f(x)-f_n(x)|^p\in L(X)</script><p>According to Dominated convergence theorem, $||f(x)-f_n(x)||_p\rightarrow 0$.</p>
+<h2 id="2-Sobolev-Spaces"><a href="#2-Sobolev-Spaces" class="headerlink" title="2 Sobolev Spaces"></a>2 Sobolev Spaces</h2><h3 id="2-1-Weak-Derivative"><a href="#2-1-Weak-Derivative" class="headerlink" title="2.1 Weak Derivative"></a>2.1 Weak Derivative</h3><p><strong>Definition 2.1 (Distributional derivative)</strong> For $f ∈ L^1_{loc}(\Omega)$ and $\alpha \in \mathbb{N}^n$ , the α-distributional partial derivative $D^{\alpha}f \in \mathscr{D}’ (Ω)$ is defined as </p>
+<script type="math/tex; mode=display">
+\left <D^{\alpha} f, \varphi \right>:= (−1)^{|\alpha|} \int_{\Omega} fD^{\alpha}ϕ\varphi dx,  \forall \varphi \in \mathscr D(Ω).</script><p><strong>Definition 2.2 (Weak derivative)</strong> For $f ∈ L^1_{loc}(\Omega)$ and $\alpha \in \mathbb{N}^n$ , we say $f$ has α-weak derivative if its distributional derivative $D^{\alpha}f \in L_{loc}^1(\Omega), i.e. $ there exists $v\in L_{loc}^1(\Omega)$ s.t.</p>
+<script type="math/tex; mode=display">
+\int_{\Omega}v\varphi dx= (−1)^{|\alpha|} \int_ Ω fD^{\alpha}ϕ\varphi dx, , \forall \varphi \in \mathscr D(Ω).</script><p><strong>Definition 2.3 (Sobolev spaces)</strong>. For $1 \leq p  \leq\infty$, we define, </p>
+<script type="math/tex; mode=display">
+W^{k,p}(\Omega) = \{f \in L^p (\Omega) : D^{\alpha} f \in  (\Omega) ,\forall |\alpha| \leq k\}</script><p>with the norm </p>
+<script type="math/tex; mode=display">
+|| f||_{k,p}= \left(\sum\limits_{|\alpha|\leq k}\int_{\Omega}|D^{\alpha }f | ^ p \right )^{\frac{1}{p}}</script><h3 id="2-2-Density-Results-of-Different-Mollifications"><a href="#2-2-Density-Results-of-Different-Mollifications" class="headerlink" title="2.2 Density Results of Different Mollifications"></a>2.2 Density Results of Different Mollifications</h3><p><strong>Definition 2.4 (Standard mollification)</strong></p>
+<p><strong>Theorem 2.1</strong> Let $f \in W^{k,p}(\Omega), 1 \leq p &lt; \infty$ and $f_{\epsilon} = η ∗ f : \Omega \rightarrow \mathbb {R}$. Then</p>
+<script type="math/tex; mode=display">
+f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } L^p(\Omega)\\
+f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } W^{k,p}(K) ,\forall K\subset\Omega</script><p>The result is the same for mollification from inside. </p>
+<p><strong>Theorem 2.2</strong> $C_{0}^{\infty}(\Omega)$ is not dense in $W^{k,p}(\Omega)$. </p>
+<p><em>Proof</em>. Under some conditions like $C^1$ boundary, $\tau_0 u=\mathop{lim}\limits_{k\rightarrow\infty}u_k|_{\partial u}=0$. (Theorem 5.8)</p>
+<p><strong>Theorem 2.3 (Meyers-Serrin’s theorem)</strong> $C^{\infty}(\Omega)\cap W^{k,p}(\Omega)$ is dense in $W^{k,p}(\Omega)$. </p>
+<p><strong>Definition 2.5 (translated mollification)</strong></p>
+<p><strong>Theorem 2.4</strong> Let $\Omega = \mathbb R^n_ {+}$ and $1 \leq p &lt; \infty$. Let $\hat{f_{\epsilon}}$ be translated mollification. Then </p>
+<script type="math/tex; mode=display">
+\hat f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } L^p(\Omega)\\
+\hat f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } W^{k,p}(\Omega)</script><p>Also, $\hat f_{\epsilon}\in C_0^{\infty} (\overline\Omega)$.</p>
+<p><strong>Theorem 2.5 </strong> If $\Omega$ satisfies the segment condition, then $C_0^{\infty} (\overline\Omega)$ is dense in $W^{k,p}(\Omega)$, for $1 \leq p &lt; \infty$. (This also means $C^{\infty} (\overline\Omega)$ is dense in $W^{k,p}(\Omega)$).</p>
+<h3 id="2-3-Traces"><a href="#2-3-Traces" class="headerlink" title="2.3 Traces"></a>2.3 Traces</h3><p>Deal with the boundary: Since $L^p$ space has no restrictions for boundary (null set), it is meaningless to discuss the solution in $L^p$ space. Thus, we turn to $W^{k,p}(\Omega)$. The way to proceed is the following: since $C^{\infty}(\Omega)$ is dense in $W^{k,p}(\Omega)$, given $f \in W^{k,p}(\Omega)$ we can find a sequence $f_k \in C^{\infty}(Ω)$ s.t. </p>
+<script type="math/tex; mode=display">
+f_k\rightarrow f \text{ in }W^{k,p}(\Omega)</script><p>Surjective (11-23)?</p>
+<p><strong>Theorem 2.5 (Trace theorem in $\mathbb R^n_+$)</strong>. There exists a bounded linear operator $τ_0 : W^{1,p}(\mathbb R^n_+) \rightarrow L^p (\partial \mathbb R^n_+), 1 ≤ p &lt; ∞$, </p>
 ]]></content>
       <categories>
         <category>Functional Analysis</category>
@@ -268,6 +296,19 @@ g_m(x)-g_n(x)\geq |f_m(x)-f_n(x)| \text{ for } m>n
         <tag>Functional Analysis</tag>
         <tag>Measure Theory</tag>
         <tag>Real Analysis</tag>
+        <tag>PDE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Weak Solutions</title>
+    <url>/2023/08/05/Weak-Solutions/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Functional Analysis</category>
+      </categories>
+      <tags>
+        <tag>Functional Analysis</tag>
+        <tag>PDE</tag>
       </tags>
   </entry>
 </search>
