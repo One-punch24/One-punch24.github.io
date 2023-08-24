@@ -84,7 +84,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">0</span>
+            <span class="post-count">738</span>
         </span>
     </span>
 
@@ -93,20 +93,68 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">4 min</span>
         </span>
     </span>
 </div>
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-   
+  <h2 id="1-Classical-Solutions"><a href="#1-Classical-Solutions" class="headerlink" title="1 Classical Solutions"></a>1 Classical Solutions</h2><h3 id="1-1-Classifications"><a href="#1-1-Classifications" class="headerlink" title="1.1 Classifications"></a>1.1 Classifications</h3><p><strong>Definition 1.1 (Poisson equations with different boundaries)</strong></p>
+<p>Dirichlet boundary:</p>
+<script type="math/tex; mode=display">
+− \Delta u = f \text{ in } \Omega, \\
+u = g \text{ on } \partial\Omega</script><p>Neumann boundary:</p>
+<script type="math/tex; mode=display">
+− \Delta u = f \text{ in } \Omega, \\
+\partial u = h \text{ on } \partial\Omega</script><p>If $f=0$, we call it Laplace equation. Classically we restrict the solution $u \in C^2(\Omega) \cap C^0(\overline\Omega)$.</p>
+<h3 id="1-2-Uniqueness-and-Existence"><a href="#1-2-Uniqueness-and-Existence" class="headerlink" title="1.2 Uniqueness and Existence"></a>1.2 Uniqueness and Existence</h3><h2 id="2-Weak-Solutions"><a href="#2-Weak-Solutions" class="headerlink" title="2 Weak Solutions"></a>2 Weak Solutions</h2><h3 id="2-1-Abstract-Formulation"><a href="#2-1-Abstract-Formulation" class="headerlink" title="2.1 Abstract Formulation"></a>2.1 Abstract Formulation</h3><p>Consider the following problem,</p>
+<script type="math/tex; mode=display">
+− \Delta u = f \text{ in } \Omega, u = 0 \text{ on } \partial\Omega \tag{2.1}</script><p><strong>Definition 2.1 (Weak solution)</strong>. We say that $u \in H^1_0(\Omega)$ is a weak solution if</p>
+<script type="math/tex; mode=display">
+\int_{\Omega}  \nabla u \cdot \nabla v = \int_{\Omega} fv, ∀v \in H^1_0(\Omega)</script><p>which is called the weak formulation of (2.1). $f\in L^2(\Omega)$ is enough, but $f$ might also be distribution.</p>
+<p><strong>Definition 2.2 (Abstract variational problem).</strong></p>
+<p>Let $V$ be a Hilbert space,</p>
+<script type="math/tex; mode=display">
+\text{find } u \in V : a(u, v) = F(v), \forall v \in V</script><hr>
+<p>Formulating in the abstract way, let $V=H^1_0 (\Omega)$ , We say that $u \in V$ is a weak solution of (2.1) with $f \in V’$ if </p>
+<script type="math/tex; mode=display">
+a(u, v) = F(v), \forall v \in V.</script><p>where $a(u, v) = \int_{\Omega}  \nabla u \cdot \nabla v, F(v)= \left&lt; f,v\right &gt;$. We can denote $(H^1_0 (\Omega))’$ by $H^{−1 }(\Omega)$.</p>
+<p>We can utilize the abstract form with Lax-Milgram theorem in PDEs.</p>
+<h3 id="2-2-Applications-to-PDEs"><a href="#2-2-Applications-to-PDEs" class="headerlink" title="2.2 Applications to PDEs"></a>2.2 Applications to PDEs</h3><h4 id="2-2-1-Homogeneous-Poisson-equation-with-Dirichlet-boundary"><a href="#2-2-1-Homogeneous-Poisson-equation-with-Dirichlet-boundary" class="headerlink" title="2.2.1 Homogeneous Poisson equation with Dirichlet boundary."></a>2.2.1 Homogeneous Poisson equation with Dirichlet boundary.</h4><p><strong>Lemma 2.1 </strong> For any $f \in H^{−1 }(\Omega)$, (2.1) in a bounded domain $\Omega$ has a unique weak solution $u ∈ H^1_0 (\Omega)$ which satisfies $\Vert u\Vert_{H^1_0 (\Omega)} = \Vert f\Vert_{H^{−1}(\Omega)}$.</p>
+<p><em>Proof.</em></p>
+<p>(1) Coercivity of $a$. </p>
+<p>Using Poincare inequality,</p>
+<script type="math/tex; mode=display">
+\Vert f\Vert_{L^2(\Omega)} \leq C_P \Vert Df\Vert_{L^2(\Omega)}, ∀f \in H^1_0(\Omega).</script><p>We can show $\Vert\cdot\Vert_{L^2}$ is equivalent to $\Vert\cdot\Vert_{H^1_0}$. Thus, it is direct to get $\alpha=1$.</p>
+<h4 id="2-2-2-Non-homogeneous-Poisson-equation-with-Dirichlet-boundary"><a href="#2-2-2-Non-homogeneous-Poisson-equation-with-Dirichlet-boundary" class="headerlink" title="2.2.2 Non-homogeneous Poisson equation with Dirichlet boundary."></a>2.2.2 Non-homogeneous Poisson equation with Dirichlet boundary.</h4><script type="math/tex; mode=display">
+− \Delta u = f \text{ in } \Omega, u = g \text{ on } \partial\Omega \tag{2.2}</script><p><strong>Lemma 2.2</strong>. The space $Rτ \subset L^2 (\partial\Omega)$ a strict subspace, endowed with the norm </p>
+<script type="math/tex; mode=display">
+\Vert g\Vert_{R\tau} = \mathop{inf}\limits_{u\in H^1(\Omega), \tau u=g}\Vert u\Vert _{H^1(\Omega)}.</script><p>is a Banach space, which is usually denoted by $H^{\frac{1}{2}}(\partial\Omega)$. </p>
+<p><strong>Definition 2.3</strong> Let $\Omega \subset \mathbb R^n$  be a bounded domain with $C^1$ boundary. We say that $u \in H^1 (\Omega)$ is a weak solution of (2.2) with $f \in H^{-1}(\Omega)$ and $g \in H^{1/2} (\partial\Omega)$ if it satisfies $\tau u = g$ and</p>
+<script type="math/tex; mode=display">
+\int_{\Omega} \nabla u \cdot \nabla v = \int_{\Omega} fv, \forall v \in H_0^1(\Omega)</script><p>Let $u=u_0+v_g$ such that $\tau v_g=g$ and $v_g\in H^1(\Omega)$, $u_0\in H^1_0(\Omega)$</p>
+<script type="math/tex; mode=display">
+\int_{\Omega}\nabla u \cdot \nabla v=\int_{\Omega} fv-\int_{\Omega}\nabla v_g \cdot \nabla v, \forall v \in H_0^1(\Omega)</script><p><em>Remark</em>. According to Lemma 2.2, it is necessary to have some constraint on $g$.</p>
+<p><strong>Lemma 2.3</strong> Let $\Omega \subset \mathbb R^n$  be a bounded domain with $C^1 $ boundary. For any $g \in H^{1/2} (\partial\Omega)$ and $f \in H^{-1} (\Omega)$ there exists a unique weak solution to problem.</p>
+<h4 id="2-2-3-Non-homogeneous-Generalized-Poisson-equation-with-Neumann-boundary"><a href="#2-2-3-Non-homogeneous-Generalized-Poisson-equation-with-Neumann-boundary" class="headerlink" title="2.2.3 Non-homogeneous Generalized Poisson equation with Neumann boundary."></a>2.2.3 Non-homogeneous Generalized Poisson equation with Neumann boundary.</h4><p>The Problem is </p>
+<script type="math/tex; mode=display">
+− \Delta u +cu= f \text{ in } \Omega, \partial_v u = h \text{ on } \partial\Omega  \tag{2.3}</script><p><strong>Definition 2.4</strong>. We say that $u \in H^1 (\Omega)$​ is a weak solution of (2.3) with $f \in L^2 (Ω)$​ and $h \in L^2 (\partial\Omega)$​ if </p>
+<script type="math/tex; mode=display">
+\int_{\Omega}\nabla u \cdot \nabla v+\int_{\Omega} u v=\int_{\Omega} fv+\int_{\partial \Omega} h \tau v,\forall v \in H^1
+(\Omega).</script><p><em>Remark</em> </p>
+<p>(1) Here we must require $c&gt;0$ to ensure coercivity of $a$.</p>
+<p>(2) Generally, $f\in H^{-1}(\Omega)$ is enough. Since $\tau$ is also a bounded operator, $h\in H^{-1/2}(\Omega)=(H^{1/2}(\Omega))’$ is also enough.</p>
+<p>Then the theorem is similarly stated.</p>
+ 
       <!-- reward -->
       
     </div>
@@ -520,6 +568,21 @@
     
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

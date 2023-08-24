@@ -153,19 +153,29 @@ W^{k,p}(\Omega) = \{f \in L^p (\Omega) : D^{\alpha} f \in  (\Omega) ,\forall |\a
 <script type="math/tex; mode=display">
 f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } L^p(\Omega)\\
 f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } W^{k,p}(K) ,\forall K\subset\Omega</script><p>The result is the same for mollification from inside. </p>
-<p><strong>Theorem 2.2</strong> $C_{0}^{\infty}(\Omega)$ is not dense in $W^{k,p}(\Omega)$. </p>
+<p><strong>Proposition 2.2</strong> $C_{0}^{\infty}(\Omega)$ is not dense in $W^{k,p}(\Omega)$. </p>
 <p><em>Proof</em>. Under some conditions like $C^1$ boundary, $\tau_0 u=\mathop{lim}\limits_{k\rightarrow\infty}u_k|_{\partial u}=0$. (Theorem 5.8)</p>
+<p><strong>Definition 2.5 </strong> Following Proposition 2.3, we denote by $W^{k,p}_0(\Omega)$ the closure of $C_{0}^{\infty}(\Omega)$ in  $W^{k,p}(\Omega)$.</p>
 <p><strong>Theorem 2.3 (Meyers-Serrin’s theorem)</strong> $C^{\infty}(\Omega)\cap W^{k,p}(\Omega)$ is dense in $W^{k,p}(\Omega)$. </p>
-<p><strong>Definition 2.5 (translated mollification)</strong></p>
+<p><strong>Definition 2.6 (translated mollification)</strong></p>
 <p><strong>Theorem 2.4</strong> Let $\Omega = \mathbb R^n_ {+}$ and $1 \leq p &lt; \infty$. Let $\hat{f_{\epsilon}}$ be translated mollification. Then </p>
 <script type="math/tex; mode=display">
 \hat f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } L^p(\Omega)\\
 \hat f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } W^{k,p}(\Omega)</script><p>Also, $\hat f_{\epsilon}\in C_0^{\infty} (\overline\Omega)$.</p>
-<p><strong>Theorem 2.5 </strong> If $\Omega$ satisfies the segment condition, then $C_0^{\infty} (\overline\Omega)$ is dense in $W^{k,p}(\Omega)$, for $1 \leq p &lt; \infty$. (This also means $C^{\infty} (\overline\Omega)$ is dense in $W^{k,p}(\Omega)$).</p>
-<h3 id="2-3-Traces"><a href="#2-3-Traces" class="headerlink" title="2.3 Traces"></a>2.3 Traces</h3><p>Deal with the boundary: Since $L^p$ space has no restrictions for boundary (null set), it is meaningless to discuss the solution in $L^p$ space. Thus, we turn to $W^{k,p}(\Omega)$. The way to proceed is the following: since $C^{\infty}(\Omega)$ is dense in $W^{k,p}(\Omega)$, given $f \in W^{k,p}(\Omega)$ we can find a sequence $f_k \in C^{\infty}(Ω)$ s.t. </p>
+<p><strong>Theorem 2.5 </strong> If $\Omega$ satisfies the segment condition, then $C^{\infty} (\overline\Omega)$ is dense in $W^{k,p}(\Omega)$, for $1 \leq p &lt; \infty$. [Theorem 3 in Section 5.3.3 in Evan’s book]</p>
+<h3 id="2-3-Traces"><a href="#2-3-Traces" class="headerlink" title="2.3 Traces"></a>2.3 Traces</h3><p>Deal with the boundary: Since $L^p$ space has no restrictions for boundary (null set), it is meaningless to discuss the solution in $L^p$ space. Thus, we turn to $W^{k,p}(\Omega)$. The way to proceed is the following: since $C^{\infty}(\overline\Omega)$ is dense in $W^{k,p}(\Omega)$ [Theorem 2.5], given $f \in W^{k,p}(\Omega)$ we can find a sequence $f_k \in C^{\infty}(Ω)$ s.t. </p>
 <script type="math/tex; mode=display">
-f_k\rightarrow f \text{ in }W^{k,p}(\Omega)</script><p>Surjective (11-23)?</p>
-<p><strong>Theorem 2.5 (Trace theorem in $\mathbb R^n_+$)</strong>. There exists a bounded linear operator $τ_0 : W^{1,p}(\mathbb R^n_+) \rightarrow L^p (\partial \mathbb R^n_+), 1 ≤ p &lt; ∞$, </p>
+f_k\rightarrow f \text{ in }W^{k,p}(\Omega)</script><p>For each $f_k$, the trace $f_k|\partial\Omega$ is uniquely defined, so that we define the “trace of $f$ on ∂Ω” as $\mathop{lim}\limits_{k\rightarrow \infty} f_k|\partial\Omega$.  The crucial question is whether such limit exists and with respect to which topology.</p>
+<p><strong>Theorem 2.5 (Trace theorem in $\mathbb R^n_+$)</strong>. There exists a bounded linear operator $τ_0 : W^{1,p}(\mathbb R^n_+) \rightarrow L^p (\partial \mathbb R^n_+), 1 \leq p &lt; \infty$, s.t. $\tau_0u = u|\partial {\mathbb R_n^+}$  if $u \in W^{1,p}(\mathbb R^n_+) ∩ C_0 (\overline{\mathbb R^+_n})$.</p>
+<p><strong>Theorem 2.6 (Trace theorem in $\Omega$ )</strong>. Let $\Omega$ be a domain with bounded boundary $\partial\Omega$ of class $C^1$. There exists a bounded linear operator $τ_0 : W^{1,p}(\Omega) \rightarrow L^p (\partial\Omega), 1 \leq p &lt; \infty$, s.t. $\tau_0u = u|\partial {\Omega}$ if $u \in W^{1,p}(\Omega) ∩ C_0 (\overline{\Omega})$.</p>
+<p>There are several corollaries:</p>
+<ul>
+<li><p>Integration by part.</p>
+</li>
+<li><p>Poincare inequality: Let $\Omega \subset \mathbb R^n$  be a bounded domain. Then there exists a constant $C_P&gt;0$ such that</p>
+<script type="math/tex; mode=display">
+\Vert f\Vert_{L^p(\Omega)} \leq C_P \Vert Df\Vert_{L^p(\Omega)}, ∀f \in W^{1,p}_0(\Omega).</script></li>
+</ul>
  
       <!-- reward -->
       
@@ -589,6 +599,21 @@ f_k\rightarrow f \text{ in }W^{k,p}(\Omega)</script><p>Surjective (11-23)?</p>
     
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

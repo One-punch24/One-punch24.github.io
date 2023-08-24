@@ -84,7 +84,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">790</span>
+            <span class="post-count">877</span>
         </span>
     </span>
 
@@ -93,7 +93,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">4 min</span>
+            <span class="post-count">5 min</span>
         </span>
     </span>
 </div>
@@ -113,17 +113,20 @@
 <p><strong>Definition 1.3 (Canonical mapping/embedding)</strong> We can define a mapping $J:X\rightarrow X^{\ast\ast}$ where $Jx(f)=f(x)$. $J$ is a linear isometry.</p>
 <p><em>Proof.</em> Since $x^{\ast\ast}(f)=|f(x)|\leq||x||||f||$, $||x^{\ast\ast}||\leq ||x||$. Due to Hahn-Banach theorem, there exists $f_0\in E^{\ast}$ such that $\Vert f_0\Vert=1$ and $|f_0(x)|=||x||$, and thus $||x^{\ast\ast}||\geq||x||$. Therefore, $||x^{\ast\ast}||=||x||$.</p>
 <p><strong>Definition 1.4 (Reflexive)</strong> In the sense of isometry, $X$ is a subspace of $X^{\ast\ast}$. $X$ is said to be reflexive if the canonical embedding $J$ into its bidual $X^{\ast\ast}$ is surjective. </p>
-<h3 id="1-2-Dual-Space-of-Hilbert-Space"><a href="#1-2-Dual-Space-of-Hilbert-Space" class="headerlink" title="1.2 Dual Space of Hilbert Space"></a>1.2 Dual Space of Hilbert Space</h3><p><strong>Theorem 1.1 (Riesz representation theorem) </strong> Let $H$ be a Hilbert space $f$ be a bounded linear functional on $H$,  then there exists one and only one $h\in H$ such that</p>
+<h3 id="1-2-Dual-Space-of-Hilbert-Space"><a href="#1-2-Dual-Space-of-Hilbert-Space" class="headerlink" title="1.2 Dual Space of Hilbert Space"></a>1.2 Dual Space of Hilbert Space</h3><p><strong>Theorem 1.1 (Projection theorem)</strong> Let $H$ be a Hilbert space and $H_0 \subset H$ a closed subspace. Then for every $x \in H$ there exist uniquely $y \in H_0$ and $z \in H_0^{\perp}$ s.t. $x = y + z$.</p>
+<p><strong>Theorem 1.2 (Riesz’s representation theorem) </strong> Let $H$ be a Hilbert space $f$ be a bounded linear functional on $H$,  then there exists one and only one $h\in H$ such that</p>
 <script type="math/tex; mode=display">
 f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem suggests that the mapping $H\rightarrow H^{\ast}$ is surjective, and hence an isometric isomorphism. It is not hard to see that $H^{\ast}$ is also a Hilbert space. Repeat the argument for $H^*$ and mapping $H^{\ast}\rightarrow H^{\ast\ast}$. We can prove that a Hilbert space is reflexive.</p>
-<h3 id="1-3-Examples-of-Dual-Spaces"><a href="#1-3-Examples-of-Dual-Spaces" class="headerlink" title="1.3 Examples of Dual Spaces"></a>1.3 Examples of Dual Spaces</h3><p>Distribution, and $L_p$ space.</p>
+<p><strong>Corollary 1.3 (Lax-Milgram)</strong> Let $V$ be a Hilbert space, $a : H \times H → \mathbb R$ a bilinear, bounded and coercive form on $H$ . Then, for any $f \in H’$  the abstract problem </p>
+<script type="math/tex; mode=display">
+\text{find } u \in H : a(u, v) = f(v), \forall v \in H</script><p>has a unique solution $u \in V$ such that $\Vert u\Vert_H ≤\Vert f\Vert_{H’}/\alpha$ where $\alpha$ is the coercivity constant of the bilinear form.</p>
+<h3 id="1-3-Examples-of-Dual-Spaces"><a href="#1-3-Examples-of-Dual-Spaces" class="headerlink" title="1.3 Examples of Dual Spaces"></a>1.3 Examples of Dual Spaces</h3><p>Distribution.</p>
 <h2 id="2-Adjoint-Operators"><a href="#2-Adjoint-Operators" class="headerlink" title="2 Adjoint Operators"></a>2 Adjoint Operators</h2><p><strong>Definition 2.1 (Adjoint Operator)</strong> Let $X$ and $Y$ be normed linear spaces and $T\in \mathcal{L}(X,Y)$. The adjoint operator of $T$, denoted by $T^{\ast}$ , is the operator $T^{\ast}:Y^{\ast}\rightarrow X^{\ast}$ defined by</p>
 <script type="math/tex; mode=display">
 (T^{\ast}y^{\ast})(x)=y^{\ast}(Tx) \text{ for all } y^{\ast}\in Y^{\ast}, x\in X^{\ast}</script><p><strong>Theorem 2.1</strong> Let $X$ and $Y$ be normed linear spaces and $T\in \mathcal{L}(X,Y)$.</p>
 <p>(a) $T^{\ast}$ is bounded linear operator on $Y^{\ast}$.</p>
 <p>(b) $||T||=||T^{\ast}||$.</p>
-<h2 id="3-Weak-Topology"><a href="#3-Weak-Topology" class="headerlink" title="3 Weak Topology"></a>3 Weak Topology</h2><p>[Something very useful in this link: <a target="_blank" rel="noopener" href="https://math.stackexchange.com/questions/2282607/what-distinguishes-weak-and-strong-convergence-of-bounded-linear-operator-in-ban">https://math.stackexchange.com/questions/2282607/what-distinguishes-weak-and-strong-convergence-of-bounded-linear-operator-in-ban</a>]</p>
-<h3 id="3-1-Type-of-Convergence"><a href="#3-1-Type-of-Convergence" class="headerlink" title="3.1 Type of Convergence"></a>3.1 Type of Convergence</h3><p><strong>Definition 3.1 (Types of convergence for sequence)</strong></p>
+<h2 id="3-Weak-Topology"><a href="#3-Weak-Topology" class="headerlink" title="3 Weak Topology"></a>3 Weak Topology</h2><h3 id="3-1-Type-of-Convergence"><a href="#3-1-Type-of-Convergence" class="headerlink" title="3.1 Type of Convergence"></a>3.1 Type of Convergence</h3><p><strong>Definition 3.1 (Types of convergence for sequence)</strong></p>
 <p>Let $X$  be normed linear space, $x,\{x_n\}\in X$.</p>
 <p>(1) Strong Convergence: <script type="math/tex">||x_n-x||\rightarrow 0</script>.</p>
 <p>(2) Weak convergence:  If $\forall$ $f\in X^{\ast}$,  $f(x_n)\rightarrow f(x)$, then we call $x_n\rightharpoonup x$ in weak topology. </p>
@@ -574,6 +577,21 @@ f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem
     
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

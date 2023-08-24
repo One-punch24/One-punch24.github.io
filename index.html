@@ -199,9 +199,9 @@ mjx-container[display="true"] + br {
       var typed = new Typed("#subtitle", {
         strings: ['Machine Learning Theory,', 'Quantum Machine Learning', ''],
         startDelay: 0,
-        typeSpeed: 200,
+        typeSpeed: 500,
         loop: true,
-        backSpeed: 100,
+        backSpeed: 300,
         showCursor: true
       });
     } catch (err) {
@@ -284,7 +284,53 @@ mjx-container[display="true"] + br {
       
     <div class="article-entry" itemprop="articleBody">
        
-   
+  <h2 id="1-Classical-Solutions"><a href="#1-Classical-Solutions" class="headerlink" title="1 Classical Solutions"></a>1 Classical Solutions</h2><h3 id="1-1-Classifications"><a href="#1-1-Classifications" class="headerlink" title="1.1 Classifications"></a>1.1 Classifications</h3><p><strong>Definition 1.1 (Poisson equations with different boundaries)</strong></p>
+<p>Dirichlet boundary:</p>
+<script type="math/tex; mode=display">
+− \Delta u = f \text{ in } \Omega, \\
+u = g \text{ on } \partial\Omega</script><p>Neumann boundary:</p>
+<script type="math/tex; mode=display">
+− \Delta u = f \text{ in } \Omega, \\
+\partial u = h \text{ on } \partial\Omega</script><p>If $f=0$, we call it Laplace equation. Classically we restrict the solution $u \in C^2(\Omega) \cap C^0(\overline\Omega)$.</p>
+<h3 id="1-2-Uniqueness-and-Existence"><a href="#1-2-Uniqueness-and-Existence" class="headerlink" title="1.2 Uniqueness and Existence"></a>1.2 Uniqueness and Existence</h3><h2 id="2-Weak-Solutions"><a href="#2-Weak-Solutions" class="headerlink" title="2 Weak Solutions"></a>2 Weak Solutions</h2><h3 id="2-1-Abstract-Formulation"><a href="#2-1-Abstract-Formulation" class="headerlink" title="2.1 Abstract Formulation"></a>2.1 Abstract Formulation</h3><p>Consider the following problem,</p>
+<script type="math/tex; mode=display">
+− \Delta u = f \text{ in } \Omega, u = 0 \text{ on } \partial\Omega \tag{2.1}</script><p><strong>Definition 2.1 (Weak solution)</strong>. We say that $u \in H^1_0(\Omega)$ is a weak solution if</p>
+<script type="math/tex; mode=display">
+\int_{\Omega}  \nabla u \cdot \nabla v = \int_{\Omega} fv, ∀v \in H^1_0(\Omega)</script><p>which is called the weak formulation of (2.1). $f\in L^2(\Omega)$ is enough, but $f$ might also be distribution.</p>
+<p><strong>Definition 2.2 (Abstract variational problem).</strong></p>
+<p>Let $V$ be a Hilbert space,</p>
+<script type="math/tex; mode=display">
+\text{find } u \in V : a(u, v) = F(v), \forall v \in V</script><hr>
+<p>Formulating in the abstract way, let $V=H^1_0 (\Omega)$ , We say that $u \in V$ is a weak solution of (2.1) with $f \in V’$ if </p>
+<script type="math/tex; mode=display">
+a(u, v) = F(v), \forall v \in V.</script><p>where $a(u, v) = \int_{\Omega}  \nabla u \cdot \nabla v, F(v)= \left&lt; f,v\right &gt;$. We can denote $(H^1_0 (\Omega))’$ by $H^{−1 }(\Omega)$.</p>
+<p>We can utilize the abstract form with Lax-Milgram theorem in PDEs.</p>
+<h3 id="2-2-Applications-to-PDEs"><a href="#2-2-Applications-to-PDEs" class="headerlink" title="2.2 Applications to PDEs"></a>2.2 Applications to PDEs</h3><h4 id="2-2-1-Homogeneous-Poisson-equation-with-Dirichlet-boundary"><a href="#2-2-1-Homogeneous-Poisson-equation-with-Dirichlet-boundary" class="headerlink" title="2.2.1 Homogeneous Poisson equation with Dirichlet boundary."></a>2.2.1 Homogeneous Poisson equation with Dirichlet boundary.</h4><p><strong>Lemma 2.1 </strong> For any $f \in H^{−1 }(\Omega)$, (2.1) in a bounded domain $\Omega$ has a unique weak solution $u ∈ H^1_0 (\Omega)$ which satisfies $\Vert u\Vert_{H^1_0 (\Omega)} = \Vert f\Vert_{H^{−1}(\Omega)}$.</p>
+<p><em>Proof.</em></p>
+<p>(1) Coercivity of $a$. </p>
+<p>Using Poincare inequality,</p>
+<script type="math/tex; mode=display">
+\Vert f\Vert_{L^2(\Omega)} \leq C_P \Vert Df\Vert_{L^2(\Omega)}, ∀f \in H^1_0(\Omega).</script><p>We can show $\Vert\cdot\Vert_{L^2}$ is equivalent to $\Vert\cdot\Vert_{H^1_0}$. Thus, it is direct to get $\alpha=1$.</p>
+<h4 id="2-2-2-Non-homogeneous-Poisson-equation-with-Dirichlet-boundary"><a href="#2-2-2-Non-homogeneous-Poisson-equation-with-Dirichlet-boundary" class="headerlink" title="2.2.2 Non-homogeneous Poisson equation with Dirichlet boundary."></a>2.2.2 Non-homogeneous Poisson equation with Dirichlet boundary.</h4><script type="math/tex; mode=display">
+− \Delta u = f \text{ in } \Omega, u = g \text{ on } \partial\Omega \tag{2.2}</script><p><strong>Lemma 2.2</strong>. The space $Rτ \subset L^2 (\partial\Omega)$ a strict subspace, endowed with the norm </p>
+<script type="math/tex; mode=display">
+\Vert g\Vert_{R\tau} = \mathop{inf}\limits_{u\in H^1(\Omega), \tau u=g}\Vert u\Vert _{H^1(\Omega)}.</script><p>is a Banach space, which is usually denoted by $H^{\frac{1}{2}}(\partial\Omega)$. </p>
+<p><strong>Definition 2.3</strong> Let $\Omega \subset \mathbb R^n$  be a bounded domain with $C^1$ boundary. We say that $u \in H^1 (\Omega)$ is a weak solution of (2.2) with $f \in H^{-1}(\Omega)$ and $g \in H^{1/2} (\partial\Omega)$ if it satisfies $\tau u = g$ and</p>
+<script type="math/tex; mode=display">
+\int_{\Omega} \nabla u \cdot \nabla v = \int_{\Omega} fv, \forall v \in H_0^1(\Omega)</script><p>Let $u=u_0+v_g$ such that $\tau v_g=g$ and $v_g\in H^1(\Omega)$, $u_0\in H^1_0(\Omega)$</p>
+<script type="math/tex; mode=display">
+\int_{\Omega}\nabla u \cdot \nabla v=\int_{\Omega} fv-\int_{\Omega}\nabla v_g \cdot \nabla v, \forall v \in H_0^1(\Omega)</script><p><em>Remark</em>. According to Lemma 2.2, it is necessary to have some constraint on $g$.</p>
+<p><strong>Lemma 2.3</strong> Let $\Omega \subset \mathbb R^n$  be a bounded domain with $C^1 $ boundary. For any $g \in H^{1/2} (\partial\Omega)$ and $f \in H^{-1} (\Omega)$ there exists a unique weak solution to problem.</p>
+<h4 id="2-2-3-Non-homogeneous-Generalized-Poisson-equation-with-Neumann-boundary"><a href="#2-2-3-Non-homogeneous-Generalized-Poisson-equation-with-Neumann-boundary" class="headerlink" title="2.2.3 Non-homogeneous Generalized Poisson equation with Neumann boundary."></a>2.2.3 Non-homogeneous Generalized Poisson equation with Neumann boundary.</h4><p>The Problem is </p>
+<script type="math/tex; mode=display">
+− \Delta u +cu= f \text{ in } \Omega, \partial_v u = h \text{ on } \partial\Omega  \tag{2.3}</script><p><strong>Definition 2.4</strong>. We say that $u \in H^1 (\Omega)$​ is a weak solution of (2.3) with $f \in L^2 (Ω)$​ and $h \in L^2 (\partial\Omega)$​ if </p>
+<script type="math/tex; mode=display">
+\int_{\Omega}\nabla u \cdot \nabla v+\int_{\Omega} u v=\int_{\Omega} fv+\int_{\partial \Omega} h \tau v,\forall v \in H^1
+(\Omega).</script><p><em>Remark</em> </p>
+<p>(1) Here we must require $c&gt;0$ to ensure coercivity of $a$.</p>
+<p>(2) Generally, $f\in H^{-1}(\Omega)$ is enough. Since $\tau$ is also a bounded operator, $h\in H^{-1/2}(\Omega)=(H^{1/2}(\Omega))’$ is also enough.</p>
+<p>Then the theorem is similarly stated.</p>
+ 
       <!-- reward -->
       
     </div>
@@ -382,19 +428,29 @@ W^{k,p}(\Omega) = \{f \in L^p (\Omega) : D^{\alpha} f \in  (\Omega) ,\forall |\a
 <script type="math/tex; mode=display">
 f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } L^p(\Omega)\\
 f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } W^{k,p}(K) ,\forall K\subset\Omega</script><p>The result is the same for mollification from inside. </p>
-<p><strong>Theorem 2.2</strong> $C_{0}^{\infty}(\Omega)$ is not dense in $W^{k,p}(\Omega)$. </p>
+<p><strong>Proposition 2.2</strong> $C_{0}^{\infty}(\Omega)$ is not dense in $W^{k,p}(\Omega)$. </p>
 <p><em>Proof</em>. Under some conditions like $C^1$ boundary, $\tau_0 u=\mathop{lim}\limits_{k\rightarrow\infty}u_k|_{\partial u}=0$. (Theorem 5.8)</p>
+<p><strong>Definition 2.5 </strong> Following Proposition 2.3, we denote by $W^{k,p}_0(\Omega)$ the closure of $C_{0}^{\infty}(\Omega)$ in  $W^{k,p}(\Omega)$.</p>
 <p><strong>Theorem 2.3 (Meyers-Serrin’s theorem)</strong> $C^{\infty}(\Omega)\cap W^{k,p}(\Omega)$ is dense in $W^{k,p}(\Omega)$. </p>
-<p><strong>Definition 2.5 (translated mollification)</strong></p>
+<p><strong>Definition 2.6 (translated mollification)</strong></p>
 <p><strong>Theorem 2.4</strong> Let $\Omega = \mathbb R^n_ {+}$ and $1 \leq p &lt; \infty$. Let $\hat{f_{\epsilon}}$ be translated mollification. Then </p>
 <script type="math/tex; mode=display">
 \hat f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } L^p(\Omega)\\
 \hat f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } W^{k,p}(\Omega)</script><p>Also, $\hat f_{\epsilon}\in C_0^{\infty} (\overline\Omega)$.</p>
-<p><strong>Theorem 2.5 </strong> If $\Omega$ satisfies the segment condition, then $C_0^{\infty} (\overline\Omega)$ is dense in $W^{k,p}(\Omega)$, for $1 \leq p &lt; \infty$. (This also means $C^{\infty} (\overline\Omega)$ is dense in $W^{k,p}(\Omega)$).</p>
-<h3 id="2-3-Traces"><a href="#2-3-Traces" class="headerlink" title="2.3 Traces"></a>2.3 Traces</h3><p>Deal with the boundary: Since $L^p$ space has no restrictions for boundary (null set), it is meaningless to discuss the solution in $L^p$ space. Thus, we turn to $W^{k,p}(\Omega)$. The way to proceed is the following: since $C^{\infty}(\Omega)$ is dense in $W^{k,p}(\Omega)$, given $f \in W^{k,p}(\Omega)$ we can find a sequence $f_k \in C^{\infty}(Ω)$ s.t. </p>
+<p><strong>Theorem 2.5 </strong> If $\Omega$ satisfies the segment condition, then $C^{\infty} (\overline\Omega)$ is dense in $W^{k,p}(\Omega)$, for $1 \leq p &lt; \infty$. [Theorem 3 in Section 5.3.3 in Evan’s book]</p>
+<h3 id="2-3-Traces"><a href="#2-3-Traces" class="headerlink" title="2.3 Traces"></a>2.3 Traces</h3><p>Deal with the boundary: Since $L^p$ space has no restrictions for boundary (null set), it is meaningless to discuss the solution in $L^p$ space. Thus, we turn to $W^{k,p}(\Omega)$. The way to proceed is the following: since $C^{\infty}(\overline\Omega)$ is dense in $W^{k,p}(\Omega)$ [Theorem 2.5], given $f \in W^{k,p}(\Omega)$ we can find a sequence $f_k \in C^{\infty}(Ω)$ s.t. </p>
 <script type="math/tex; mode=display">
-f_k\rightarrow f \text{ in }W^{k,p}(\Omega)</script><p>Surjective (11-23)?</p>
-<p><strong>Theorem 2.5 (Trace theorem in $\mathbb R^n_+$)</strong>. There exists a bounded linear operator $τ_0 : W^{1,p}(\mathbb R^n_+) \rightarrow L^p (\partial \mathbb R^n_+), 1 ≤ p &lt; ∞$, </p>
+f_k\rightarrow f \text{ in }W^{k,p}(\Omega)</script><p>For each $f_k$, the trace $f_k|\partial\Omega$ is uniquely defined, so that we define the “trace of $f$ on ∂Ω” as $\mathop{lim}\limits_{k\rightarrow \infty} f_k|\partial\Omega$.  The crucial question is whether such limit exists and with respect to which topology.</p>
+<p><strong>Theorem 2.5 (Trace theorem in $\mathbb R^n_+$)</strong>. There exists a bounded linear operator $τ_0 : W^{1,p}(\mathbb R^n_+) \rightarrow L^p (\partial \mathbb R^n_+), 1 \leq p &lt; \infty$, s.t. $\tau_0u = u|\partial {\mathbb R_n^+}$  if $u \in W^{1,p}(\mathbb R^n_+) ∩ C_0 (\overline{\mathbb R^+_n})$.</p>
+<p><strong>Theorem 2.6 (Trace theorem in $\Omega$ )</strong>. Let $\Omega$ be a domain with bounded boundary $\partial\Omega$ of class $C^1$. There exists a bounded linear operator $τ_0 : W^{1,p}(\Omega) \rightarrow L^p (\partial\Omega), 1 \leq p &lt; \infty$, s.t. $\tau_0u = u|\partial {\Omega}$ if $u \in W^{1,p}(\Omega) ∩ C_0 (\overline{\Omega})$.</p>
+<p>There are several corollaries:</p>
+<ul>
+<li><p>Integration by part.</p>
+</li>
+<li><p>Poincare inequality: Let $\Omega \subset \mathbb R^n$  be a bounded domain. Then there exists a constant $C_P&gt;0$ such that</p>
+<script type="math/tex; mode=display">
+\Vert f\Vert_{L^p(\Omega)} \leq C_P \Vert Df\Vert_{L^p(\Omega)}, ∀f \in W^{1,p}_0(\Omega).</script></li>
+</ul>
  
       <!-- reward -->
       
@@ -612,17 +668,20 @@ c'=a'-kb'=a(x_1-kx_2)+b(y_1-ky_2)</script><p>Thus $b’=ax_2+by_2$ and $c’=ax_
 <p><strong>Definition 1.3 (Canonical mapping/embedding)</strong> We can define a mapping $J:X\rightarrow X^{\ast\ast}$ where $Jx(f)=f(x)$. $J$ is a linear isometry.</p>
 <p><em>Proof.</em> Since $x^{\ast\ast}(f)=|f(x)|\leq||x||||f||$, $||x^{\ast\ast}||\leq ||x||$. Due to Hahn-Banach theorem, there exists $f_0\in E^{\ast}$ such that $\Vert f_0\Vert=1$ and $|f_0(x)|=||x||$, and thus $||x^{\ast\ast}||\geq||x||$. Therefore, $||x^{\ast\ast}||=||x||$.</p>
 <p><strong>Definition 1.4 (Reflexive)</strong> In the sense of isometry, $X$ is a subspace of $X^{\ast\ast}$. $X$ is said to be reflexive if the canonical embedding $J$ into its bidual $X^{\ast\ast}$ is surjective. </p>
-<h3 id="1-2-Dual-Space-of-Hilbert-Space"><a href="#1-2-Dual-Space-of-Hilbert-Space" class="headerlink" title="1.2 Dual Space of Hilbert Space"></a>1.2 Dual Space of Hilbert Space</h3><p><strong>Theorem 1.1 (Riesz representation theorem) </strong> Let $H$ be a Hilbert space $f$ be a bounded linear functional on $H$,  then there exists one and only one $h\in H$ such that</p>
+<h3 id="1-2-Dual-Space-of-Hilbert-Space"><a href="#1-2-Dual-Space-of-Hilbert-Space" class="headerlink" title="1.2 Dual Space of Hilbert Space"></a>1.2 Dual Space of Hilbert Space</h3><p><strong>Theorem 1.1 (Projection theorem)</strong> Let $H$ be a Hilbert space and $H_0 \subset H$ a closed subspace. Then for every $x \in H$ there exist uniquely $y \in H_0$ and $z \in H_0^{\perp}$ s.t. $x = y + z$.</p>
+<p><strong>Theorem 1.2 (Riesz’s representation theorem) </strong> Let $H$ be a Hilbert space $f$ be a bounded linear functional on $H$,  then there exists one and only one $h\in H$ such that</p>
 <script type="math/tex; mode=display">
 f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem suggests that the mapping $H\rightarrow H^{\ast}$ is surjective, and hence an isometric isomorphism. It is not hard to see that $H^{\ast}$ is also a Hilbert space. Repeat the argument for $H^*$ and mapping $H^{\ast}\rightarrow H^{\ast\ast}$. We can prove that a Hilbert space is reflexive.</p>
-<h3 id="1-3-Examples-of-Dual-Spaces"><a href="#1-3-Examples-of-Dual-Spaces" class="headerlink" title="1.3 Examples of Dual Spaces"></a>1.3 Examples of Dual Spaces</h3><p>Distribution, and $L_p$ space.</p>
+<p><strong>Corollary 1.3 (Lax-Milgram)</strong> Let $V$ be a Hilbert space, $a : H \times H → \mathbb R$ a bilinear, bounded and coercive form on $H$ . Then, for any $f \in H’$  the abstract problem </p>
+<script type="math/tex; mode=display">
+\text{find } u \in H : a(u, v) = f(v), \forall v \in H</script><p>has a unique solution $u \in V$ such that $\Vert u\Vert_H ≤\Vert f\Vert_{H’}/\alpha$ where $\alpha$ is the coercivity constant of the bilinear form.</p>
+<h3 id="1-3-Examples-of-Dual-Spaces"><a href="#1-3-Examples-of-Dual-Spaces" class="headerlink" title="1.3 Examples of Dual Spaces"></a>1.3 Examples of Dual Spaces</h3><p>Distribution.</p>
 <h2 id="2-Adjoint-Operators"><a href="#2-Adjoint-Operators" class="headerlink" title="2 Adjoint Operators"></a>2 Adjoint Operators</h2><p><strong>Definition 2.1 (Adjoint Operator)</strong> Let $X$ and $Y$ be normed linear spaces and $T\in \mathcal{L}(X,Y)$. The adjoint operator of $T$, denoted by $T^{\ast}$ , is the operator $T^{\ast}:Y^{\ast}\rightarrow X^{\ast}$ defined by</p>
 <script type="math/tex; mode=display">
 (T^{\ast}y^{\ast})(x)=y^{\ast}(Tx) \text{ for all } y^{\ast}\in Y^{\ast}, x\in X^{\ast}</script><p><strong>Theorem 2.1</strong> Let $X$ and $Y$ be normed linear spaces and $T\in \mathcal{L}(X,Y)$.</p>
 <p>(a) $T^{\ast}$ is bounded linear operator on $Y^{\ast}$.</p>
 <p>(b) $||T||=||T^{\ast}||$.</p>
-<h2 id="3-Weak-Topology"><a href="#3-Weak-Topology" class="headerlink" title="3 Weak Topology"></a>3 Weak Topology</h2><p>[Something very useful in this link: <a target="_blank" rel="noopener" href="https://math.stackexchange.com/questions/2282607/what-distinguishes-weak-and-strong-convergence-of-bounded-linear-operator-in-ban">https://math.stackexchange.com/questions/2282607/what-distinguishes-weak-and-strong-convergence-of-bounded-linear-operator-in-ban</a>]</p>
-<h3 id="3-1-Type-of-Convergence"><a href="#3-1-Type-of-Convergence" class="headerlink" title="3.1 Type of Convergence"></a>3.1 Type of Convergence</h3><p><strong>Definition 3.1 (Types of convergence for sequence)</strong></p>
+<h2 id="3-Weak-Topology"><a href="#3-Weak-Topology" class="headerlink" title="3 Weak Topology"></a>3 Weak Topology</h2><h3 id="3-1-Type-of-Convergence"><a href="#3-1-Type-of-Convergence" class="headerlink" title="3.1 Type of Convergence"></a>3.1 Type of Convergence</h3><p><strong>Definition 3.1 (Types of convergence for sequence)</strong></p>
 <p>Let $X$  be normed linear space, $x,\{x_n\}\in X$.</p>
 <p>(1) Strong Convergence: <script type="math/tex">||x_n-x||\rightarrow 0</script>.</p>
 <p>(2) Weak convergence:  If $\forall$ $f\in X^{\ast}$,  $f(x_n)\rightarrow f(x)$, then we call $x_n\rightharpoonup x$ in weak topology. </p>
@@ -1258,6 +1317,21 @@ d(x,x_0)=\mathop{inf}_{x_0\in X_0}||x-x_0||=d</script><p>then there exists <mjx-
     
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
