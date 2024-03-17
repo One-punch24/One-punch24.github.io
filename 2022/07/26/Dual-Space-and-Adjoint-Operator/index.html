@@ -84,7 +84,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.1k</span>
+            <span class="post-count">1.3k</span>
         </span>
     </span>
 
@@ -130,40 +130,39 @@ f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem
 <p>Let $X$  be normed linear space, $x,\{x_n\}\in X$.</p>
 <p>(1) Strong Convergence: <script type="math/tex">||x_n-x||\rightarrow 0</script>.</p>
 <p>(2) Weak convergence:  If $\forall$ $f\in X^{\ast}$,  $f(x_n)\rightarrow f(x)$, then we call $x_n\rightharpoonup x$ in weak topology. </p>
+<p>(3) Weak-$\ast$ convergence <strong>[Concepts for dual space of X]</strong>. Let $X$ be a normed space and $X^{\ast}$ be its dual space. We define $f_n\mathop{\rightarrow}\limits_{}^{w^{\ast}} f$  if $f_n(x)\rightarrow f(x)$, for all $x\in X$.</p>
+<p><strong>Note:</strong> We can define similar convergences for functionals [strong convergence and weak convergence, weak-$<em>$ convergence is originally defined on $X^{\ast}$]. It is not the case for ‘convergence for operators’. For example, when we define weak convergence for $X^{\ast}$: we say $f_n\rightharpoonup f$, if $X^{\ast\ast}(f_n)\rightarrow X^{\ast\ast}(f)$ for all $x^{\ast \ast}\in X^{*</em>}$. Proposition 3.4 and its proof are a very good explanation for this.</p>
 <p><strong>Proposition 3.1</strong> $x_n\rightharpoonup x$ iff</p>
 <p>(1) $\{||x_n||\}$ is bounded.</p>
-<p>(2) $\exists$ a dense subset $M\subseteq X^{\ast}$ such that for any $f\in M$, $f(x_n)\rightarrow f(x)$</p>
+<p>(2) $\exists$ a dense subset $M\subseteq X^{\ast}$ such that for any $f\in M$, $f(x_n)\rightarrow f(x)$.</p>
 <p><strong>Proposition 3.2</strong></p>
 <p>If $X$ is finite dimensional, then $\text{strong convergence}\iff \text{weak convergence}$.</p>
+<p><strong>Proposition 3.3 (Weak-$*$ convergence)</strong> Let $X$ be Banach space and $f,\{f_n\}\in X^{\ast}$. Then $f_n\mathop{\rightarrow}\limits_{}^{w^{\ast}} f$ iff</p>
+<p>(1) $\{||f_n||\}$ is bounded.</p>
+<p>(2) $\exists$ a dense subset $M\subseteq X$ such that for any $x\in M$, $f(x_n)\rightarrow f(x)$.</p>
 <p><strong>Definition 3.2 (Types of convergence for operators)</strong></p>
 <p>Let $X,Y$  be normed linear spaces, $T,\{T_n\}\in \mathcal L(X,Y)$. </p>
 <p>(1) Uniform Convergence.</p>
 <p>(2) Strong Convergence: If $\forall$ $x\in X$,  $T_nx$ convergences strongly to $Tx$, then we call $T_n\rightarrow T$.</p>
 <p>(3) Weak Convergence: If $\forall$ $x\in X$,  $T_nx$ convergences weakly to $Tx$ in $Y$, then we call $T_n\rightharpoonup T$.</p>
 <p>Let $X,Y$ be normed spaces and $T\in \mathcal L(X,Y)$. The mapping $GT=T^{\ast}$ is a distance-preseved mapping and $Im(G)$ is isometric isomorphism wrt $\mathcal L(X,Y)$.</p>
-<p><strong>Definition 3.3 (Types of convergence for functionals)</strong> </p>
-<p>(1) Strong convergence.</p>
-<p>(2) Weak convergence.</p>
-<p>(2) Weak-$\ast$ convergence. Let $X$ be a normed space and $X^{\ast}$ be its dual space. We define $f_n\mathop{\rightarrow}\limits_{}^{w^{\ast}} f$  if $f_n(x)\rightarrow f(x)$, for all $x\in X$.</p>
-<p><strong>Proposition 3.3</strong> Let $X$ be Banach space and $f,\{f_n\}\in X^{\ast}$. Then $f_n\mathop{\rightarrow}\limits_{}^{w^{\ast}} f$ iff</p>
-<p>(1) $\{||f_n||\}$ is bounded.</p>
-<p>(2) $\exists$ a dense subset $M\subseteq X$ such that for any $x\in M$, $f(x_n)\rightarrow f(x)$.</p>
-<p><strong>Proposition 3.4</strong> Let $X$ be normed spaces and $X^{\ast}$ be the dual space, then </p>
+<p><strong>Proposition 3.4 (Proposition 5.13 in [2], Weak Convergence on $X^{<em>}$ and weak-$</em>$ convergence)</strong> Let $X$ be normed spaces and $X^{\ast}$ be the dual space, then </p>
 <script type="math/tex; mode=display">
 \text{weak convergence} \Rightarrow \text{weak-}{\ast} \text{convergence}</script><p> in $X^{\ast}$. If $X$ is reflexive,</p>
 <script type="math/tex; mode=display">
-\text{weak convergence} \iff\text{weak-}{\ast} \text{convergence}</script><h3 id="3-2-Separability"><a href="#3-2-Separability" class="headerlink" title="3.2 Separability"></a>3.2 Separability</h3><p>Banach-Alaoglu Theorem (Theorem 5.5.7 in [1]). We can turn to [1] and <a target="_blank" rel="noopener" href="https://planetmath.org/proofofbanachalaoglutheorem">link</a> here.</p>
+\text{weak convergence} \ on \ X^*  \iff\text{weak-}{\ast} \text{convergence}</script><h3 id="3-2-Separability"><a href="#3-2-Separability" class="headerlink" title="3.2 Separability"></a>3.2 Separability</h3><p><strong>Theorem 3.5 (Banach-Alaoglu Theorem, Theorem 5.5.7 in [1])</strong>.  Let $X$ be a normed linear space. Then the closed unit ball in $X$ is weak-$*$ compact.</p>
+<p><em>Proof.</em> We can turn to [1] and <a target="_blank" rel="noopener" href="https://planetmath.org/proofofbanachalaoglutheorem">link</a> here.</p>
 <p><img src="https://One-punch24.github.io/2022/07/26/Dual-Space-and-Adjoint-Operator/image-20240224001801993.png" alt=""></p>
-<p>(1) If $X$ is a separable normed space, then any bounded sequence $\{f_n\}\in X^{\ast}$ admits a weakly-* convergent subsequence. (Weaker Version of Banach-Alaoglu Theorem in separable case.)</p>
-<p>(2) Let $X$ be a normed space, then $X^{\ast}$ is separable $\Rightarrow$ $X$ is separable. </p>
+<p><strong>Proposition 3.6</strong>. If $X$ is a separable normed space, then any bounded sequence $\{f_n\}\in X^{\ast}$ admits a weakly-* convergent subsequence. (Weaker Version of Banach-Alaoglu Theorem in separable case.)</p>
+<p><strong>Proposition 3.7</strong>. Let $X$ be a normed space, then $X^{\ast}$ is separable $\Rightarrow$ $X$ is separable. </p>
 <h2 id="4-Finite-Dimentional-Normed-Space"><a href="#4-Finite-Dimentional-Normed-Space" class="headerlink" title="4 Finite Dimentional Normed Space"></a>4 Finite Dimentional Normed Space</h2><p>A small supplement.</p>
-<p><strong>Definition 1 (Linear isometry and homeomorphism in normed spaces)</strong> In mathematics, an isometry is a distance-preserving transformation between metric spaces, usually assumed to be bijective. Linear isometry is often respect with <strong>normed vector spaces</strong>. Homeomorphism represents the <strong>topological</strong> isomorphism.</p>
-<p><strong>Proposition 1 (Several Properties)</strong>  I met them in my “Smooth Manifolds” course. </p>
+<p><strong>Definition 4.1 (Linear isometry and homeomorphism in normed spaces)</strong> In mathematics, an isometry is a distance-preserving transformation between metric spaces, usually assumed to be bijective. Linear isometry is often respect with <strong>normed vector spaces</strong>. Homeomorphism represents the <strong>topological</strong> isomorphism.</p>
+<p><strong>Proposition 4.1 (Several Properties)</strong>  I met them in my “Smooth Manifolds” course. </p>
 <ul>
 <li>All norms on finite dimensional normed space $X$ are equivalent. [1, Theorem 2.6.1]</li>
 <li>Every finite dimensional normed space is linear isomorphic (线性同构，一定意义的代数上) and homeomorphic (同胚，拓扑上) to $\mathbb{R}^n$. [2, Theorem 2.1]</li>
 </ul>
-<p><strong>Proposition 2 (More properties about the finite dim normed spaces)</strong></p>
+<p><strong>Proposition 4.2 (More properties about the finite dim normed spaces)</strong></p>
 <ul>
 <li>Every finite dimensional normed space is complete. Heine-Borel Theorem could be generalized to finite dimensional normed space.</li>
 <li>A normed space $X$ is finite dimensional iff $X$ is locally compact, i.e. every point $x$ in $X$ has a compact neighborhood (through Riesz’s Lemma). [2, Theorem 2.2]</li>
