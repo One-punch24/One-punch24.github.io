@@ -84,7 +84,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.3k</span>
+            <span class="post-count">1.4k</span>
         </span>
     </span>
 
@@ -93,7 +93,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">7 min</span>
+            <span class="post-count">8 min</span>
         </span>
     </span>
 </div>
@@ -132,7 +132,7 @@ f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem
 <p>(2) Weak convergence:  If $\forall$ $f\in X^{\ast}$,  $f(x_n)\rightarrow f(x)$, then we call $x_n\rightharpoonup x$ in weak topology. </p>
 <p>(3) Weak-$\ast$ convergence <strong>[Concepts for dual space of X]</strong>. Let $X$ be a normed space and $X^{\ast}$ be its dual space. We define $f_n\mathop{\rightarrow}\limits_{}^{w^{\ast}} f$  if $f_n(x)\rightarrow f(x)$, for all $x\in X$.</p>
 <p><strong>Note:</strong> We can define similar convergences for functionals [strong convergence and weak convergence, weak-$<em>$ convergence is originally defined on $X^{\ast}$]. It is not the case for ‘convergence for operators’. For example, when we define weak convergence for $X^{\ast}$: we say $f_n\rightharpoonup f$, if $X^{\ast\ast}(f_n)\rightarrow X^{\ast\ast}(f)$ for all $x^{\ast \ast}\in X^{*</em>}$. Proposition 3.4 and its proof are a very good explanation for this.</p>
-<p><strong>Proposition 3.1</strong> $x_n\rightharpoonup x$ iff</p>
+<p><strong>Proposition 3.1 (Sufficient and necessary condition for weak convergence)</strong> $x_n\rightharpoonup x$ iff</p>
 <p>(1) $\{||x_n||\}$ is bounded.</p>
 <p>(2) $\exists$ a dense subset $M\subseteq X^{\ast}$ such that for any $f\in M$, $f(x_n)\rightarrow f(x)$.</p>
 <p><strong>Proposition 3.2</strong></p>
@@ -155,6 +155,12 @@ f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem
 <p><img src="https://One-punch24.github.io/2022/07/26/Dual-Space-and-Adjoint-Operator/image-20240224001801993.png" alt=""></p>
 <p><strong>Proposition 3.6</strong>. If $X$ is a separable normed space, then any bounded sequence $\{f_n\}\in X^{\ast}$ admits a weakly-* convergent subsequence. (Weaker Version of Banach-Alaoglu Theorem in separable case.)</p>
 <p><strong>Proposition 3.7</strong>. Let $X$ be a normed space, then $X^{\ast}$ is separable $\Rightarrow$ $X$ is separable. </p>
+<h3 id="3-3-Weak-Convergence-in-L-2"><a href="#3-3-Weak-Convergence-in-L-2" class="headerlink" title="3.3 Weak Convergence in $L^2$"></a>3.3 Weak Convergence in $L^2$</h3><p><strong>Proposition 3.8 (Weak Convergence on $L^p$, Example 4 in Section 5.3 [2])</strong>.  In $L^p[a,b]$, $x_n\rightharpoonup x_0$ iff:</p>
+<p>(1) For every $t\in[a,b]$, we have</p>
+<script type="math/tex; mode=display">
+\int_{a}^t x_n(s)ds\rightarrow \int_a^t x_0(s)ds</script><p>(2) $(\Vert x_n\Vert )$ is bounded.</p>
+<p><em>Proof.</em> It relies on Proposition 3.1 in this note. </p>
+<p><strong>Proposition 3.9  (Weak Convergence on $L^2$ or generally a hilbert space $H$)</strong> <a target="_blank" rel="noopener" href="https://math.stackexchange.com/questions/1177782/every-bounded-sequence-has-a-weakly-convergent-subsequence-in-a-hilbert-space">This link </a>provieds a theorem: Every bounded sequence in Hilbert space admits a weakly convergent sequence.</p>
 <h2 id="4-Finite-Dimentional-Normed-Space"><a href="#4-Finite-Dimentional-Normed-Space" class="headerlink" title="4 Finite Dimentional Normed Space"></a>4 Finite Dimentional Normed Space</h2><p>A small supplement.</p>
 <p><strong>Definition 4.1 (Linear isometry and homeomorphism in normed spaces)</strong> In mathematics, an isometry is a distance-preserving transformation between metric spaces, usually assumed to be bijective. Linear isometry is often respect with <strong>normed vector spaces</strong>. Homeomorphism represents the <strong>topological</strong> isomorphism.</p>
 <p><strong>Proposition 4.1 (Several Properties)</strong>  I met them in my “Smooth Manifolds” course. </p>
