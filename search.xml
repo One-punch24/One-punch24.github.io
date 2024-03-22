@@ -80,13 +80,13 @@ f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem
 <p>(1) Strong Convergence: <script type="math/tex">||x_n-x||\rightarrow 0</script>.</p>
 <p>(2) Weak convergence:  If $\forall$ $f\in X^{\ast}$,  $f(x_n)\rightarrow f(x)$, then we call $x_n\rightharpoonup x$ in weak topology. </p>
 <p>(3) Weak-$\ast$ convergence <strong>[Concepts for dual space of X]</strong>. Let $X$ be a normed space and $X^{\ast}$ be its dual space. We define $f_n\mathop{\rightarrow}\limits_{}^{w^{\ast}} f$  if $f_n(x)\rightarrow f(x)$, for all $x\in X$.</p>
-<p><strong>Note:</strong> We can define similar convergences for functionals [strong convergence and weak convergence, weak-$<em>$ convergence is originally defined on $X^{\ast}$]. It is not the case for ‘convergence for operators’. For example, when we define weak convergence for $X^{\ast}$: we say $f_n\rightharpoonup f$, if $X^{\ast\ast}(f_n)\rightarrow X^{\ast\ast}(f)$ for all $x^{\ast \ast}\in X^{*</em>}$. Proposition 3.4 and its proof are a very good explanation for this.</p>
+<p><strong>Note:</strong> We can define similar convergences for functionals [strong convergence and weak convergence, weak-$\ast$ convergence is originally defined on $X^{\ast}$]. It is not the case for ‘convergence for operators’. For example, when we define weak convergence for $X^{\ast}$: we say $f_n\rightharpoonup f$, if $X^{\ast\ast}(f_n)\rightarrow X^{\ast\ast}(f)$ for all $x^{\ast \ast}\in X^{**}$. Proposition 3.4 and its proof are a very good explanation for this.</p>
 <p><strong>Proposition 3.1 (Sufficient and necessary condition for weak convergence)</strong> $x_n\rightharpoonup x$ iff</p>
 <p>(1) $\{||x_n||\}$ is bounded.</p>
 <p>(2) $\exists$ a dense subset $M\subseteq X^{\ast}$ such that for any $f\in M$, $f(x_n)\rightarrow f(x)$.</p>
 <p><strong>Proposition 3.2</strong></p>
 <p>If $X$ is finite dimensional, then $\text{strong convergence}\iff \text{weak convergence}$.</p>
-<p><strong>Proposition 3.3 (Weak-$*$ convergence)</strong> Let $X$ be Banach space and $f,\{f_n\}\in X^{\ast}$. Then $f_n\mathop{\rightarrow}\limits_{}^{w^{\ast}} f$ iff</p>
+<p><strong>Proposition 3.3 (Weak-$\ast$ convergence)</strong> Let $X$ be Banach space and $f,\{f_n\}\in X^{\ast}$. Then $f_n\mathop{\rightarrow}\limits_{}^{w^{\ast}} f$ iff</p>
 <p>(1) $\{||f_n||\}$ is bounded.</p>
 <p>(2) $\exists$ a dense subset $M\subseteq X$ such that for any $x\in M$, $f(x_n)\rightarrow f(x)$.</p>
 <p><strong>Definition 3.2 (Types of convergence for operators)</strong></p>
@@ -155,11 +155,11 @@ f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem
   </entry>
   <entry>
     <title>Measure Theory Notes</title>
-    <url>/2022/08/06/Measure-Theory-Notes/</url>
+    <url>/2023/08/06/Measure-Theory-Notes/</url>
     <content><![CDATA[
 
 	<div class="row">
-    <embed src="https://one-punch24.github.io/2022/08/06/Measure-Theory-Notes/Measure_Theory.pdf" width="100%" height="550" type="application/pdf">
+    <embed src="https://one-punch24.github.io/2023/08/06/Measure-Theory-Notes/Measure_Theory.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
@@ -329,6 +329,26 @@ a(u, v) = F(v), \forall v \in V.</script><p>where $a(u, v) = \int_{\Omega}  \nab
       <tags>
         <tag>Point-Set Topology</tag>
         <tag>Differential Manifolds</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Notes on Optimal Transport</title>
+    <url>/2023/09/02/Notes-on-Optimal-Transport/</url>
+    <content><![CDATA[
+
+	<div class="row">
+    <embed src="https://one-punch24.github.io/2023/09/02/Note-on-Optimal-Transport/Notes_on_Optimal_Transport.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+]]></content>
+      <categories>
+        <category>Measure Theory</category>
+      </categories>
+      <tags>
+        <tag>Measure Theory</tag>
+        <tag>Optimal Transport</tag>
       </tags>
   </entry>
 </search>
