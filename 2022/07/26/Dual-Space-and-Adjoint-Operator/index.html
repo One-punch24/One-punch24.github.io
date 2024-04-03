@@ -153,7 +153,7 @@ f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem
 \text{weak convergence} \ on \ X^*  \iff\text{weak-}{\ast} \text{convergence}</script><h3 id="3-2-Separability"><a href="#3-2-Separability" class="headerlink" title="3.2 Separability"></a>3.2 Separability</h3><p><strong>Theorem 3.5 (Banach-Alaoglu Theorem, Theorem 5.5.7 in [1])</strong>.  Let $X$ be a normed linear space. Then the closed unit ball in $X$ is weak-$*$ compact.</p>
 <p><em>Proof.</em> We can turn to [1] and <a target="_blank" rel="noopener" href="https://planetmath.org/proofofbanachalaoglutheorem">link</a> here.</p>
 <p><img src="https://One-punch24.github.io/2022/07/26/Dual-Space-and-Adjoint-Operator/image-20240224001801993.png" alt=""></p>
-<p><strong>Proposition 3.6</strong>. If $X$ is a separable normed space, then any bounded sequence $\{f_n\}\in X^{\ast}$ admits a weakly-* convergent subsequence. (Weaker Version of Banach-Alaoglu Theorem in separable case.)</p>
+<p><strong>Proposition 3.6 (Sequential Banach-Alaoglu Theorem)</strong>. If $X$ is a separable normed space, then any bounded sequence $\{f_n\}\in X^{\ast}$ admits a weakly-* convergent subsequence. This is equivalent to Helly selection Theorem. (We cannot treat it as weaker Version of Banach-Alaoglu Theorem.)</p>
 <p><strong>Proposition 3.7</strong>. Let $X$ be a normed space, then $X^{\ast}$ is separable $\Rightarrow$ $X$ is separable. </p>
 <h3 id="3-3-Weak-Convergence-in-L-2"><a href="#3-3-Weak-Convergence-in-L-2" class="headerlink" title="3.3 Weak Convergence in $L^2$"></a>3.3 Weak Convergence in $L^2$</h3><p><strong>Proposition 3.8 (Weak Convergence on $L^p$, Example 4 in Section 5.3 [2])</strong>.  In $L^p[a,b]$, $x_n\rightharpoonup x_0$ iff:</p>
 <p>(1) For every $t\in[a,b]$, we have</p>
@@ -600,6 +600,21 @@ f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem
     
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
