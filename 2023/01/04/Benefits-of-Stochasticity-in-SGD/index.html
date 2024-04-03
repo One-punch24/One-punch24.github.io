@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Dual Space and Adjoint Operator |  Shuailong Zhu</title>
+      <title>Benefits of Stochasticity in SGD |  Shuailong Zhu</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -53,7 +53,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Dual-Space-and-Adjoint-Operator"
+  id="post-Benefits-of-Stochasticity-in-SGD"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -64,7 +64,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Dual Space and Adjoint Operator
+  Benefits of Stochasticity in SGD
 </h1>
  
 
@@ -72,11 +72,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/07/26/Dual-Space-and-Adjoint-Operator/" class="article-date">
-  <time datetime="2022-07-26T03:50:18.000Z" itemprop="datePublished">2022-07-26</time>
+      <a href="/2023/01/04/Benefits-of-Stochasticity-in-SGD/" class="article-date">
+  <time datetime="2023-01-03T23:02:55.000Z" itemprop="datePublished">2023-01-04</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Functional-Analysis/">Functional Analysis</a>
+    <a class="article-category-link" href="/categories/Projects-of-ML-Theory/">Projects of ML Theory</a>
   </div>
   
 <div class="word_count">
@@ -84,7 +84,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.4k</span>
+            <span class="post-count">47</span>
         </span>
     </span>
 
@@ -93,90 +93,30 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">8 min</span>
+            <span class="post-count">1 min</span>
         </span>
     </span>
 </div>
  
     </div>
       
-    <div class="tocbot"></div>
-
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="1-Dual-Space"><a href="#1-Dual-Space" class="headerlink" title="1 Dual Space"></a>1 Dual Space</h2><h3 id="1-1-Dual-Space"><a href="#1-1-Dual-Space" class="headerlink" title="1.1  Dual Space"></a>1.1  Dual Space</h3><p><strong>Definition 1.1 (Dual space)</strong> Let $X$ be a normed space. $X^{\ast}=\mathcal{L}(X,K)$ is called the dual space of $X$. Since $K$ is complete, $X^{\ast}$ is also a Banach space.</p>
-<p><strong>Definition 1.2 (Bidual space)</strong> We can define another intermediate mapping $x^{\ast\ast}: X^{\ast}\rightarrow R$ by $x^{\ast\ast}(f)=f(x)$. The space $X^{\ast\ast}=\mathcal{L}(X^{\ast},K)$ is called Bidual space, which is also a Banach space.</p>
-<p><strong>Definition 1.3 (Canonical mapping/embedding)</strong> We can define a mapping $J:X\rightarrow X^{\ast\ast}$ where $Jx(f)=f(x)$. $J$ is a linear isometry.</p>
-<p><em>Proof.</em> Since $x^{\ast\ast}(f)=|f(x)|\leq||x||||f||$, $||x^{\ast\ast}||\leq ||x||$. Due to Hahn-Banach theorem, there exists $f_0\in E^{\ast}$ such that $\Vert f_0\Vert=1$ and $|f_0(x)|=||x||$, and thus $||x^{\ast\ast}||\geq||x||$. Therefore, $||x^{\ast\ast}||=||x||$.</p>
-<p><strong>Definition 1.4 (Reflexive)</strong> In the sense of isometry, $X$ is a subspace of $X^{\ast\ast}$. $X$ is said to be reflexive if the canonical embedding $J$ into its bidual $X^{\ast\ast}$ is surjective. </p>
-<h3 id="1-2-Dual-Space-of-Hilbert-Space"><a href="#1-2-Dual-Space-of-Hilbert-Space" class="headerlink" title="1.2 Dual Space of Hilbert Space"></a>1.2 Dual Space of Hilbert Space</h3><p><strong>Theorem 1.1 (Projection theorem)</strong> Let $H$ be a Hilbert space and $H_0 \subset H$ a closed subspace. Then for every $x \in H$ there exist uniquely $y \in H_0$ and $z \in H_0^{\perp}$ s.t. $x = y + z$.</p>
-<p><strong>Theorem 1.2 (Riesz’s representation theorem) </strong> Let $H$ be a Hilbert space $f$ be a bounded linear functional on $H$,  then there exists one and only one $h\in H$ such that</p>
-<script type="math/tex; mode=display">
-f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem suggests that the mapping $H\rightarrow H^{\ast}$ is surjective, and hence an isometric isomorphism. It is not hard to see that $H^{\ast}$ is also a Hilbert space. Repeat the argument for $H^*$ and mapping $H^{\ast}\rightarrow H^{\ast\ast}$. We can prove that a Hilbert space is reflexive.</p>
-<p><strong>Corollary 1.3 (Lax-Milgram)</strong> Let $V$ be a Hilbert space, $a : H \times H → \mathbb R$ a bilinear, bounded and coercive form on $H$ . Then, for any $f \in H’$  the abstract problem </p>
-<script type="math/tex; mode=display">
-\text{find } u \in H : a(u, v) = f(v), \forall v \in H</script><p>has a unique solution $u \in V$ such that $\Vert u\Vert_H ≤\Vert f\Vert_{H’}/\alpha$ where $\alpha$ is the coercivity constant of the bilinear form.</p>
-<h3 id="1-3-Examples-of-Dual-Spaces"><a href="#1-3-Examples-of-Dual-Spaces" class="headerlink" title="1.3 Examples of Dual Spaces"></a>1.3 Examples of Dual Spaces</h3><p>Distribution.</p>
-<h2 id="2-Adjoint-Operators"><a href="#2-Adjoint-Operators" class="headerlink" title="2 Adjoint Operators"></a>2 Adjoint Operators</h2><p><strong>Definition 2.1 (Adjoint Operator)</strong> Let $X$ and $Y$ be normed linear spaces and $T\in \mathcal{L}(X,Y)$. The adjoint operator of $T$, denoted by $T^{\ast}$ , is the operator $T^{\ast}:Y^{\ast}\rightarrow X^{\ast}$ defined by</p>
-<script type="math/tex; mode=display">
-(T^{\ast}y^{\ast})(x)=y^{\ast}(Tx) \text{ for all } y^{\ast}\in Y^{\ast}, x\in X^{\ast}</script><p><strong>Theorem 2.1</strong> Let $X$ and $Y$ be normed linear spaces and $T\in \mathcal{L}(X,Y)$.</p>
-<p>(a) $T^{\ast}$ is bounded linear operator on $Y^{\ast}$.</p>
-<p>(b) $||T||=||T^{\ast}||$.</p>
-<h2 id="3-Weak-Topology"><a href="#3-Weak-Topology" class="headerlink" title="3 Weak Topology"></a>3 Weak Topology</h2><h3 id="3-1-Type-of-Convergence"><a href="#3-1-Type-of-Convergence" class="headerlink" title="3.1 Type of Convergence"></a>3.1 Type of Convergence</h3><p><strong>Definition 3.1 (Types of convergence for sequence)</strong></p>
-<p>Let $X$  be normed linear space, $x,\{x_n\}\in X$.</p>
-<p>(1) Strong Convergence: <script type="math/tex">||x_n-x||\rightarrow 0</script>.</p>
-<p>(2) Weak convergence:  If $\forall$ $f\in X^{\ast}$,  $f(x_n)\rightarrow f(x)$, then we call $x_n\rightharpoonup x$ in weak topology. </p>
-<p>(3) Weak-$\ast$ convergence <strong>[Concepts for dual space of X]</strong>. Let $X$ be a normed space and $X^{\ast}$ be its dual space. We define $f_n\mathop{\rightarrow}\limits_{}^{w^{\ast}} f$  if $f_n(x)\rightarrow f(x)$, for all $x\in X$.</p>
-<p><strong>Note:</strong> We can define similar convergences for functionals [strong convergence and weak convergence, weak-$\ast$ convergence is originally defined on $X^{\ast}$]. It is not the case for ‘convergence for operators’. For example, when we define weak convergence for $X^{\ast}$: we say $f_n\rightharpoonup f$, if $X^{\ast\ast}(f_n)\rightarrow X^{\ast\ast}(f)$ for all $x^{\ast \ast}\in X^{**}$. Proposition 3.4 and its proof are a very good explanation for this.</p>
-<p><strong>Proposition 3.1 (Sufficient and necessary condition for weak convergence)</strong> $x_n\rightharpoonup x$ iff</p>
-<p>(1) $\{||x_n||\}$ is bounded.</p>
-<p>(2) $\exists$ a dense subset $M\subseteq X^{\ast}$ such that for any $f\in M$, $f(x_n)\rightarrow f(x)$.</p>
-<p><strong>Proposition 3.2</strong></p>
-<p>If $X$ is finite dimensional, then $\text{strong convergence}\iff \text{weak convergence}$.</p>
-<p><strong>Proposition 3.3 (Weak-$\ast$ convergence)</strong> Let $X$ be Banach space and $f,\{f_n\}\in X^{\ast}$. Then $f_n\mathop{\rightarrow}\limits_{}^{w^{\ast}} f$ iff</p>
-<p>(1) $\{||f_n||\}$ is bounded.</p>
-<p>(2) $\exists$ a dense subset $M\subseteq X$ such that for any $x\in M$, $f(x_n)\rightarrow f(x)$.</p>
-<p><strong>Definition 3.2 (Types of convergence for operators)</strong></p>
-<p>Let $X,Y$  be normed linear spaces, $T,\{T_n\}\in \mathcal L(X,Y)$. </p>
-<p>(1) Uniform Convergence.</p>
-<p>(2) Strong Convergence: If $\forall$ $x\in X$,  $T_nx$ convergences strongly to $Tx$, then we call $T_n\rightarrow T$.</p>
-<p>(3) Weak Convergence: If $\forall$ $x\in X$,  $T_nx$ convergences weakly to $Tx$ in $Y$, then we call $T_n\rightharpoonup T$.</p>
-<p>Let $X,Y$ be normed spaces and $T\in \mathcal L(X,Y)$. The mapping $GT=T^{\ast}$ is a distance-preseved mapping and $Im(G)$ is isometric isomorphism wrt $\mathcal L(X,Y)$.</p>
-<p><strong>Proposition 3.4 (Proposition 5.13 in [2], Weak Convergence on $X^{<em>}$ and weak-$</em>$ convergence)</strong> Let $X$ be normed spaces and $X^{\ast}$ be the dual space, then </p>
-<script type="math/tex; mode=display">
-\text{weak convergence} \Rightarrow \text{weak-}{\ast} \text{convergence}</script><p> in $X^{\ast}$. If $X$ is reflexive,</p>
-<script type="math/tex; mode=display">
-\text{weak convergence} \ on \ X^*  \iff\text{weak-}{\ast} \text{convergence}</script><h3 id="3-2-Separability"><a href="#3-2-Separability" class="headerlink" title="3.2 Separability"></a>3.2 Separability</h3><p><strong>Theorem 3.5 (Banach-Alaoglu Theorem, Theorem 5.5.7 in [1])</strong>.  Let $X$ be a normed linear space. Then the closed unit ball in $X$ is weak-$*$ compact.</p>
-<p><em>Proof.</em> We can turn to [1] and <a target="_blank" rel="noopener" href="https://planetmath.org/proofofbanachalaoglutheorem">link</a> here.</p>
-<p><img src="https://One-punch24.github.io/2022/07/26/Dual-Space-and-Adjoint-Operator/image-20240224001801993.png" alt=""></p>
-<p><strong>Proposition 3.6 (Sequential Banach-Alaoglu Theorem)</strong>. If $X$ is a separable normed space, then any bounded sequence $\{f_n\}\in X^{\ast}$ admits a weakly-* convergent subsequence. This is equivalent to Helly selection Theorem. (We cannot treat it as weaker Version of Banach-Alaoglu Theorem.)</p>
-<p><strong>Proposition 3.7</strong>. Let $X$ be a normed space, then $X^{\ast}$ is separable $\Rightarrow$ $X$ is separable. </p>
-<h3 id="3-3-Weak-Convergence-in-L-2"><a href="#3-3-Weak-Convergence-in-L-2" class="headerlink" title="3.3 Weak Convergence in $L^2$"></a>3.3 Weak Convergence in $L^2$</h3><p><strong>Proposition 3.8 (Weak Convergence on $L^p$, Example 4 in Section 5.3 [2])</strong>.  In $L^p[a,b]$, $x_n\rightharpoonup x_0$ iff:</p>
-<p>(1) For every $t\in[a,b]$, we have</p>
-<script type="math/tex; mode=display">
-\int_{a}^t x_n(s)ds\rightarrow \int_a^t x_0(s)ds</script><p>(2) $(\Vert x_n\Vert )$ is bounded.</p>
-<p><em>Proof.</em> It relies on Proposition 3.1 in this note. </p>
-<p><strong>Proposition 3.9  (Weak Convergence on $L^2$ or generally a hilbert space $H$)</strong> <a target="_blank" rel="noopener" href="https://math.stackexchange.com/questions/1177782/every-bounded-sequence-has-a-weakly-convergent-subsequence-in-a-hilbert-space">This link </a>provieds a theorem: Every bounded sequence in Hilbert space admits a weakly convergent sequence.</p>
-<h2 id="4-Finite-Dimentional-Normed-Space"><a href="#4-Finite-Dimentional-Normed-Space" class="headerlink" title="4 Finite Dimentional Normed Space"></a>4 Finite Dimentional Normed Space</h2><p>A small supplement.</p>
-<p><strong>Definition 4.1 (Linear isometry and homeomorphism in normed spaces)</strong> In mathematics, an isometry is a distance-preserving transformation between metric spaces, usually assumed to be bijective. Linear isometry is often respect with <strong>normed vector spaces</strong>. Homeomorphism represents the <strong>topological</strong> isomorphism.</p>
-<p><strong>Proposition 4.1 (Several Properties)</strong>  I met them in my “Smooth Manifolds” course. </p>
-<ul>
-<li>All norms on finite dimensional normed space $X$ are equivalent. [1, Theorem 2.6.1]</li>
-<li>Every finite dimensional normed space is linear isomorphic (线性同构，一定意义的代数上) and homeomorphic (同胚，拓扑上) to $\mathbb{R}^n$. [2, Theorem 2.1]</li>
-</ul>
-<p><strong>Proposition 4.2 (More properties about the finite dim normed spaces)</strong></p>
-<ul>
-<li>Every finite dimensional normed space is complete. Heine-Borel Theorem could be generalized to finite dimensional normed space.</li>
-<li>A normed space $X$ is finite dimensional iff $X$ is locally compact, i.e. every point $x$ in $X$ has a compact neighborhood (through Riesz’s Lemma). [2, Theorem 2.2]</li>
-<li>A normed space $X$ is finite-dimensional iff its closed unit ball is compact. [1, Theorem 2.6.4]</li>
-</ul>
-<p><em>References</em></p>
-<p>[1] Functional Analysis Notes, by Mr. Andrew Pinchuck, <a target="_blank" rel="noopener" href="https://uomustansiriyah.edu.iq/media/lectures/9/9_2017_09_30!12_03_54_PM.pdf">https://uomustansiriyah.edu.iq/media/lectures/9/9_2017_09_30!12_03_54_PM.pdf</a></p>
-<p>[2] A Sketch of Real-Value Function and Functional Analysis, by Wang Shengwang, Zheng Weixing.</p>
+  <p>This is a project mainly based on the paper “Implicit Bias of SGD for Diagonal Linear Networks: a Provable Benefit of stochasticity”. We put our reimplementation and some further experiments in the following repo:</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/One-punch24/Bias-of-SGF">https://github.com/One-punch24/Bias-of-SGF</a>.</p>
+<p>The following is the report.</p>
+
+
+	<div class="row">
+    <embed src="https://one-punch24.github.io/2023/01/04/Benefits-of-Stochasticity-in-SGD/project_implicit_bias_sgd.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
  
       <!-- reward -->
       
@@ -187,7 +127,7 @@ f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Functional-Analysis/" rel="tag">Functional Analysis</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Machine-Learning-Theory/" rel="tag">Machine Learning Theory</a></li></ul>
 
     </footer>
   </div>
@@ -195,19 +135,19 @@ f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem
    
   <nav class="article-nav">
     
-      <a href="/2023/01/04/Benefits-of-Stochasticity-in-SGD/" class="article-nav-link">
+      <a href="/2023/07/25/Lp-Space/" class="article-nav-link">
         <strong class="article-nav-caption">Previous Post</strong>
         <div class="article-nav-title">
           
-            Benefits of Stochasticity in SGD
+            $L^p$ Space and Sobolev Spaces
           
         </div>
       </a>
     
     
-      <a href="/2022/07/20/Bounded-Linear-Operator/" class="article-nav-link">
+      <a href="/2022/07/26/Dual-Space-and-Adjoint-Operator/" class="article-nav-link">
         <strong class="article-nav-caption">Next Post</strong>
-        <div class="article-nav-title">Bounded Linear Operator</div>
+        <div class="article-nav-title">Dual Space and Adjoint Operator</div>
       </a>
     
   </nav>

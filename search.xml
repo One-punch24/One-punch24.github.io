@@ -351,4 +351,26 @@ a(u, v) = F(v), \forall v \in V.</script><p>where $a(u, v) = \int_{\Omega}  \nab
         <tag>Optimal Transport</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Benefits of Stochasticity in SGD</title>
+    <url>/2023/01/04/Benefits-of-Stochasticity-in-SGD/</url>
+    <content><![CDATA[<p>This is a project mainly based on the paper “Implicit Bias of SGD for Diagonal Linear Networks: a Provable Benefit of stochasticity”. We put our reimplementation and some further experiments in the following repo:</p>
+<p><a href="https://github.com/One-punch24/Bias-of-SGF">https://github.com/One-punch24/Bias-of-SGF</a>.</p>
+<p>The following is the report.</p>
+
+
+	<div class="row">
+    <embed src="https://one-punch24.github.io/2023/01/04/Benefits-of-Stochasticity-in-SGD/project_implicit_bias_sgd.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+]]></content>
+      <categories>
+        <category>Projects of ML Theory</category>
+      </categories>
+      <tags>
+        <tag>Machine Learning Theory</tag>
+      </tags>
+  </entry>
 </search>
