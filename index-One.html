@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Bounded Linear Operator |  Shuailong Zhu</title>
+      <title> Shuailong Zhu</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -163,8 +163,592 @@ mjx-container[display="true"] + br {
     
       
     <main class="content on">
-      <section class="outer">
-  <article
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/onepunch_9.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">Shuailong Zhu</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['Applied Math, ML Theory', '', ''],
+        startDelay: 0,
+        typeSpeed: 35,
+        loop: true,
+        backSpeed: 80,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+  
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content">Instead of sitting around frustrated, it&#39;s better to keep on moving forward.</div>
+</div>
+
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-Weak-Solutions"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/08/05/Weak-Solutions/"
+    >Weak Solutions</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/08/05/Weak-Solutions/" class="article-date">
+  <time datetime="2023-08-05T10:33:27.000Z" itemprop="datePublished">2023-08-05</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Functional-Analysis/">Functional Analysis</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="1-Classical-Solutions"><a href="#1-Classical-Solutions" class="headerlink" title="1 Classical Solutions"></a>1 Classical Solutions</h2><h3 id="1-1-Classifications"><a href="#1-1-Classifications" class="headerlink" title="1.1 Classifications"></a>1.1 Classifications</h3><p><strong>Definition 1.1 (Poisson equations with different boundaries)</strong></p>
+<p>Dirichlet boundary:</p>
+<script type="math/tex; mode=display">
+− \Delta u = f \text{ in } \Omega, \\
+u = g \text{ on } \partial\Omega</script><p>Neumann boundary:</p>
+<script type="math/tex; mode=display">
+− \Delta u = f \text{ in } \Omega, \\
+\partial u = h \text{ on } \partial\Omega</script><p>If $f=0$, we call it Laplace equation. Classically we restrict the solution $u \in C^2(\Omega) \cap C^0(\overline\Omega)$.</p>
+<h3 id="1-2-Uniqueness-and-Existence"><a href="#1-2-Uniqueness-and-Existence" class="headerlink" title="1.2 Uniqueness and Existence"></a>1.2 Uniqueness and Existence</h3><h2 id="2-Weak-Solutions"><a href="#2-Weak-Solutions" class="headerlink" title="2 Weak Solutions"></a>2 Weak Solutions</h2><h3 id="2-1-Abstract-Formulation"><a href="#2-1-Abstract-Formulation" class="headerlink" title="2.1 Abstract Formulation"></a>2.1 Abstract Formulation</h3><p>Consider the following problem,</p>
+<script type="math/tex; mode=display">
+− \Delta u = f \text{ in } \Omega, u = 0 \text{ on } \partial\Omega \tag{2.1}</script><p><strong>Definition 2.1 (Weak solution)</strong>. We say that $u \in H^1_0(\Omega)$ is a weak solution if</p>
+<script type="math/tex; mode=display">
+\int_{\Omega}  \nabla u \cdot \nabla v = \int_{\Omega} fv, ∀v \in H^1_0(\Omega)</script><p>which is called the weak formulation of (2.1). $f\in L^2(\Omega)$ is enough, but $f$ might also be distribution.</p>
+<p><strong>Definition 2.2 (Abstract variational problem).</strong></p>
+<p>Let $V$ be a Hilbert space,</p>
+<script type="math/tex; mode=display">
+\text{find } u \in V : a(u, v) = F(v), \forall v \in V</script><hr>
+<p>Formulating in the abstract way, let $V=H^1_0 (\Omega)$ , We say that $u \in V$ is a weak solution of (2.1) with $f \in V’$ if </p>
+<script type="math/tex; mode=display">
+a(u, v) = F(v), \forall v \in V.</script><p>where $a(u, v) = \int_{\Omega}  \nabla u \cdot \nabla v, F(v)= \left&lt; f,v\right &gt;$. We can denote $(H^1_0 (\Omega))’$ by $H^{−1 }(\Omega)$.</p>
+<p>We can utilize the abstract form with Lax-Milgram theorem in PDEs.</p>
+<h3 id="2-2-Applications-to-PDEs"><a href="#2-2-Applications-to-PDEs" class="headerlink" title="2.2 Applications to PDEs"></a>2.2 Applications to PDEs</h3><h4 id="2-2-1-Homogeneous-Poisson-equation-with-Dirichlet-boundary"><a href="#2-2-1-Homogeneous-Poisson-equation-with-Dirichlet-boundary" class="headerlink" title="2.2.1 Homogeneous Poisson equation with Dirichlet boundary."></a>2.2.1 Homogeneous Poisson equation with Dirichlet boundary.</h4><p><strong>Lemma 2.1 </strong> For any $f \in H^{−1 }(\Omega)$, (2.1) in a bounded domain $\Omega$ has a unique weak solution $u ∈ H^1_0 (\Omega)$ which satisfies $\Vert u\Vert_{H^1_0 (\Omega)} = \Vert f\Vert_{H^{−1}(\Omega)}$.</p>
+<p><em>Proof.</em></p>
+<p>(1) Coercivity of $a$. </p>
+<p>Using Poincare inequality,</p>
+<script type="math/tex; mode=display">
+\Vert f\Vert_{L^2(\Omega)} \leq C_P \Vert Df\Vert_{L^2(\Omega)}, ∀f \in H^1_0(\Omega).</script><p>We can show $\Vert\cdot\Vert_{L^2}$ is equivalent to $\Vert\cdot\Vert_{H^1_0}$. Thus, it is direct to get $\alpha=1$.</p>
+<h4 id="2-2-2-Non-homogeneous-Poisson-equation-with-Dirichlet-boundary"><a href="#2-2-2-Non-homogeneous-Poisson-equation-with-Dirichlet-boundary" class="headerlink" title="2.2.2 Non-homogeneous Poisson equation with Dirichlet boundary."></a>2.2.2 Non-homogeneous Poisson equation with Dirichlet boundary.</h4><script type="math/tex; mode=display">
+− \Delta u = f \text{ in } \Omega, u = g \text{ on } \partial\Omega \tag{2.2}</script><p><strong>Lemma 2.2</strong>. The space $Rτ \subset L^2 (\partial\Omega)$ a strict subspace, endowed with the norm </p>
+<script type="math/tex; mode=display">
+\Vert g\Vert_{R\tau} = \mathop{inf}\limits_{u\in H^1(\Omega), \tau u=g}\Vert u\Vert _{H^1(\Omega)}.</script><p>is a Banach space, which is usually denoted by $H^{\frac{1}{2}}(\partial\Omega)$. </p>
+<p><strong>Definition 2.3</strong> Let $\Omega \subset \mathbb R^n$  be a bounded domain with $C^1$ boundary. We say that $u \in H^1 (\Omega)$ is a weak solution of (2.2) with $f \in H^{-1}(\Omega)$ and $g \in H^{1/2} (\partial\Omega)$ if it satisfies $\tau u = g$ and</p>
+<script type="math/tex; mode=display">
+\int_{\Omega} \nabla u \cdot \nabla v = \int_{\Omega} fv, \forall v \in H_0^1(\Omega)</script><p>Let $u=u_0+v_g$ such that $\tau v_g=g$ and $v_g\in H^1(\Omega)$, $u_0\in H^1_0(\Omega)$</p>
+<script type="math/tex; mode=display">
+\int_{\Omega}\nabla u \cdot \nabla v=\int_{\Omega} fv-\int_{\Omega}\nabla v_g \cdot \nabla v, \forall v \in H_0^1(\Omega)</script><p><em>Remark</em>. According to Lemma 2.2, it is necessary to have some constraint on $g$.</p>
+<p><strong>Lemma 2.3</strong> Let $\Omega \subset \mathbb R^n$  be a bounded domain with $C^1 $ boundary. For any $g \in H^{1/2} (\partial\Omega)$ and $f \in H^{-1} (\Omega)$ there exists a unique weak solution to problem.</p>
+<h4 id="2-2-3-Non-homogeneous-Generalized-Poisson-equation-with-Neumann-boundary"><a href="#2-2-3-Non-homogeneous-Generalized-Poisson-equation-with-Neumann-boundary" class="headerlink" title="2.2.3 Non-homogeneous Generalized Poisson equation with Neumann boundary."></a>2.2.3 Non-homogeneous Generalized Poisson equation with Neumann boundary.</h4><p>The Problem is </p>
+<script type="math/tex; mode=display">
+− \Delta u +cu= f \text{ in } \Omega, \partial_v u = h \text{ on } \partial\Omega  \tag{2.3}</script><p><strong>Definition 2.4</strong>. We say that $u \in H^1 (\Omega)$​ is a weak solution of (2.3) with $f \in L^2 (Ω)$​ and $h \in L^2 (\partial\Omega)$​ if </p>
+<script type="math/tex; mode=display">
+\int_{\Omega}\nabla u \cdot \nabla v+\int_{\Omega} u v=\int_{\Omega} fv+\int_{\partial \Omega} h \tau v,\forall v \in H^1
+(\Omega).</script><p><em>Remark</em> </p>
+<p>(1) Here we must require $c&gt;0$ to ensure coercivity of $a$.</p>
+<p>(2) Generally, $f\in H^{-1}(\Omega)$ is enough. Since $\tau$ is also a bounded operator, $h\in H^{-1/2}(\Omega)=(H^{1/2}(\Omega))’$ is also enough.</p>
+<p>Then the theorem is similarly stated.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Functional-Analysis/" rel="tag">Functional Analysis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PDE/" rel="tag">PDE</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-Lp-Space"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/07/25/Lp-Space/"
+    >$L^p$ Space and Sobolev Spaces</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/25/Lp-Space/" class="article-date">
+  <time datetime="2023-07-25T03:02:36.000Z" itemprop="datePublished">2023-07-25</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Functional-Analysis/">Functional Analysis</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="1-L-p-Space"><a href="#1-L-p-Space" class="headerlink" title="1 $L^p$ Space"></a>1 $L^p$ Space</h2><h3 id="1-1-Density"><a href="#1-1-Density" class="headerlink" title="1.1 Density"></a>1.1 Density</h3><p><strong>Theorem 1.1 (Density of simple functions)</strong> Let $(X,\mathscr{A},\mu)$ be a measure space, and let $p$ satisfy $1 \leq p \leq +\infty$. Then the simple functions in $L^p(X,\mathscr{A},\mu)$ form a dense subspace of $L^p(X,\mathscr{A},\mu)$.</p>
+<p><strong>Lemma 1.2 (Approximation of measurable function by simple function)</strong> If $f : X \rightarrow [0, \infty]$ is a positive measurable function, then there is a monotone increasing sequence of positive simple functions $\varphi_n : X → [0, \infty)$ with $\varphi_1 ≤ \varphi_2 ≤ · · · ≤ \varphi_n ≤ . . .$ such that $\varphi_n \rightarrow f$ pointwise. If $f$ is bounded, then $\varphi_n \rightarrow f$ uniformly.</p>
+<p><em>Proof of Lemma 1.2</em> For each $n \in \mathbb N$, we divide the interval $[0, n]$  into $n2^{n}$ subintervals of width $1/2^n$</p>
+<script type="math/tex; mode=display">
+I_{k,n} = (k2^{−n} ,(k + 1)2^{−n}], k = 0, 1, . . . , n2^{n }-1,</script><p>and let $E_n = (n, ∞]$. Define </p>
+<script type="math/tex; mode=display">
+E_{k,n} = f^{-1} (I_{k,n}), F_n = f ^{−1} (J_n).</script><p>Let $\varphi_n(x) = n\chi_{E_n} (x) + \sum\limits_{k=0}^{n2^n-1}\dfrac{k}{2^n}\chi_{E_{k,n}(x)}$. Then $\varphi_n(x)\leq\varphi_{n+1}(x)\leq f(x)$. We show pointwise convergence in the following.</p>
+<p>(1) For $x$ such that $f(x)&lt; M$ if $x\geq M$, then for $n&gt;M$, $f(x)-\varphi_n(x)&lt;\dfrac{1}{2^n}$.</p>
+<p>(2) For $x$ such that $f(x)=+\infty$, $lim_{n\rightarrow \infty}\varphi_n(x)=+\infty$.</p>
+<p><em>Proof of Theorem 1</em>. It is sufficient to prove that we can approximate a positive function $f : X → [0, ∞]$ by simple functions. </p>
+<p>First suppose that $f \in L_p (X)$ where $1 \leq p &lt; \infty$. Then, from Theorem 1.1, there is an increasing sequence of simple functions $\{\varphi_n\}$ such that $\varphi_n \rightarrow f$ pointwise. Since $|\varphi_n(x)|\leq |f(x)|$, $\varphi_n\in L_p(X)$. Also, $|f − \varphi_n|^{p} ≤ |f|^{p}$ suggests that $|f − \varphi_n|^{p}$ is integrable. As we have $\varphi_n\rightarrow f$ pointwise, $|f − \varphi_n|^{p}\rightarrow 0$ pointwise. Using dominated convergence theorem,</p>
+<script type="math/tex; mode=display">
+\int|f − \varphi_n|^pd\mu\rightarrow 0</script><p>Secondly, if $f\in L^{\infty}(X)$, then we may choose a representative of $f$ that is bounded. According to Theorem 1, there is a sequence of simple functions that converges uniformly to $f$, and therefore in $L^{\infty}(X)$.</p>
+<p><strong>Theorem 1.3 (Density of continuous functions)</strong> The space $C_c(\mathbb R_n)$ is dense in $L^1 (\mathbb R_n)$. (could be extended to $L^p$ for $p\in[1,\infty)$)</p>
+<p><em>Proof (1).</em> Using Borel regularity of Lebesgue measure and Urysohn’s lemma.</p>
+<p><em>Proof (2).</em> Using Lusin’s theorem.</p>
+<h3 id="1-2-Completeness"><a href="#1-2-Completeness" class="headerlink" title="1.2 Completeness"></a>1.2 Completeness</h3><p><strong>Theorem 1.4 (Riesz–Fischer theorem)</strong> $L^p (X)$ is complete for $p\in[1,\infty]$.</p>
+<p><em>Proof.</em>  We only prove this for $p\in[1,\infty)$. </p>
+<p>(1) Let $f_{n_0}$ be a cauchy sequence in $L^p(X)$. There exists a subsequence $\{f_n\}$ such that  </p>
+<script type="math/tex; mode=display">
+\sum\limits_{k=1}^{\infty}||f_{k+1}-f_k||_p<\infty</script><p>Let </p>
+<script type="math/tex; mode=display">
+g_n=|f_1|+\sum\limits_{k=1}^{n-1}|f_{k+1}-f_k|</script><p>For each $x\in X$, $\{g_n(x)\} \uparrow$, and thus $g(x)=limg_n(x)$ (in the sense of $[0,\infty]$). By monotone convergence theorem and the fact that $g_n^p$ is a monotone sequence, $\int g^p_nd\mu\rightarrow\int gd\mu$. Since</p>
+<script type="math/tex; mode=display">
+||g_n||_p\leq||f_1||_p+\sum\limits_{k=1}^{\infty}||f_{k+1}-f_k||_p<\infty</script><p>$g\in L^p(X)$ and $g$ is almost everywhere finite. We also have </p>
+<script type="math/tex; mode=display">
+g_m(x)-g_n(x)\geq |f_m(x)-f_n(x)| \text{ for } m>n
+\tag{1}</script><p>(2) Since $g$ is almost everywhere finite and $g(x)=limg_n(x)$, $\mathop{lim}\limits_{m,n\rightarrow\infty} g_m(x)-g_n(x)=0$ holds almost everywhere, and so do $\mathop{lim}\limits_{m,n\rightarrow\infty} f_m(x)-f_n(x)=0$. Thus $\{f_n(x)\}$ forms a cauchy sequence almost everywhere $\Rightarrow$ $f_n(x)$ has finite limit almost everywhere, which is denoted as $f(x)$. Let $m\rightarrow\infty$,</p>
+<script type="math/tex; mode=display">
+|f(x)-f_n(x)|\leq g(x)-g_n(x)\leq g(x), a.e.</script><p>$|f(x)|\leq f_n(x)+g(x)\Rightarrow f(x)\in L^p(X)$. Also,</p>
+<script type="math/tex; mode=display">
+|f(x)-f_n(x)|^p\leq [g(x)]^p \Rightarrow |f(x)-f_n(x)|^p\in L(X)</script><p>According to Dominated convergence theorem, $||f(x)-f_n(x)||_p\rightarrow 0$.</p>
+<h2 id="2-Sobolev-Spaces"><a href="#2-Sobolev-Spaces" class="headerlink" title="2 Sobolev Spaces"></a>2 Sobolev Spaces</h2><h3 id="2-1-Weak-Derivative"><a href="#2-1-Weak-Derivative" class="headerlink" title="2.1 Weak Derivative"></a>2.1 Weak Derivative</h3><p><strong>Definition 2.1 (Distributional derivative)</strong> For $f ∈ L^1_{loc}(\Omega)$ and $\alpha \in \mathbb{N}^n$ , the α-distributional partial derivative $D^{\alpha}f \in \mathscr{D}’ (Ω)$ is defined as </p>
+<script type="math/tex; mode=display">
+\left <D^{\alpha} f, \varphi \right>:= (−1)^{|\alpha|} \int_{\Omega} fD^{\alpha}ϕ\varphi dx,  \forall \varphi \in \mathscr D(Ω).</script><p><strong>Definition 2.2 (Weak derivative)</strong> For $f ∈ L^1_{loc}(\Omega)$ and $\alpha \in \mathbb{N}^n$ , we say $f$ has α-weak derivative if its distributional derivative $D^{\alpha}f \in L_{loc}^1(\Omega), i.e. $ there exists $v\in L_{loc}^1(\Omega)$ s.t.</p>
+<script type="math/tex; mode=display">
+\int_{\Omega}v\varphi dx= (−1)^{|\alpha|} \int_ Ω fD^{\alpha}ϕ\varphi dx, , \forall \varphi \in \mathscr D(Ω).</script><p><strong>Definition 2.3 (Sobolev spaces)</strong>. For $1 \leq p  \leq\infty$, we define, </p>
+<script type="math/tex; mode=display">
+W^{k,p}(\Omega) = \{f \in L^p (\Omega) : D^{\alpha} f \in  (\Omega) ,\forall |\alpha| \leq k\}</script><p>with the norm </p>
+<script type="math/tex; mode=display">
+|| f||_{k,p}= \left(\sum\limits_{|\alpha|\leq k}\int_{\Omega}|D^{\alpha }f | ^ p \right )^{\frac{1}{p}}</script><h3 id="2-2-Density-Results-of-Different-Mollifications"><a href="#2-2-Density-Results-of-Different-Mollifications" class="headerlink" title="2.2 Density Results of Different Mollifications"></a>2.2 Density Results of Different Mollifications</h3><p><strong>Definition 2.4 (Standard mollification)</strong></p>
+<p><strong>Theorem 2.1</strong> Let $f \in W^{k,p}(\Omega), 1 \leq p &lt; \infty$ and $f_{\epsilon} = η ∗ f : \Omega \rightarrow \mathbb {R}$. Then</p>
+<script type="math/tex; mode=display">
+f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } L^p(\Omega)\\
+f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } W^{k,p}(K) ,\forall K\subset\Omega</script><p>The result is the same for mollification from inside. </p>
+<p><strong>Proposition 2.2</strong> $C_{0}^{\infty}(\Omega)$ is not dense in $W^{k,p}(\Omega)$. </p>
+<p><em>Proof</em>. Under some conditions like $C^1$ boundary, $\tau_0 u=\mathop{lim}\limits_{k\rightarrow\infty}u_k|_{\partial u}=0$. (Theorem 5.8)</p>
+<p><strong>Definition 2.5 </strong> Following Proposition 2.3, we denote by $W^{k,p}_0(\Omega)$ the closure of $C_{0}^{\infty}(\Omega)$ in  $W^{k,p}(\Omega)$.</p>
+<p><strong>Theorem 2.3 (Meyers-Serrin’s theorem)</strong> $C^{\infty}(\Omega)\cap W^{k,p}(\Omega)$ is dense in $W^{k,p}(\Omega)$. </p>
+<p><strong>Definition 2.6 (translated mollification)</strong></p>
+<p><strong>Theorem 2.4</strong> Let $\Omega = \mathbb R^n_ {+}$ and $1 \leq p &lt; \infty$. Let $\hat{f_{\epsilon}}$ be translated mollification. Then </p>
+<script type="math/tex; mode=display">
+\hat f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } L^p(\Omega)\\
+\hat f_{\epsilon} \mathop{\longrightarrow}\limits_{}^{\epsilon\rightarrow 0} f \text{ in } W^{k,p}(\Omega)</script><p>Also, $\hat f_{\epsilon}\in C_0^{\infty} (\overline\Omega)$.</p>
+<p><strong>Theorem 2.5 </strong> If $\Omega$ satisfies the segment condition, then $C^{\infty} (\overline\Omega)$ is dense in $W^{k,p}(\Omega)$, for $1 \leq p &lt; \infty$. [Theorem 3 in Section 5.3.3 in Evan’s book]</p>
+<h3 id="2-3-Traces"><a href="#2-3-Traces" class="headerlink" title="2.3 Traces"></a>2.3 Traces</h3><p>Deal with the boundary: Since $L^p$ space has no restrictions for boundary (null set), it is meaningless to discuss the solution in $L^p$ space. Thus, we turn to $W^{k,p}(\Omega)$. The way to proceed is the following: since $C^{\infty}(\overline\Omega)$ is dense in $W^{k,p}(\Omega)$ [Theorem 2.5], given $f \in W^{k,p}(\Omega)$ we can find a sequence $f_k \in C^{\infty}(Ω)$ s.t. </p>
+<script type="math/tex; mode=display">
+f_k\rightarrow f \text{ in }W^{k,p}(\Omega)</script><p>For each $f_k$, the trace $f_k|\partial\Omega$ is uniquely defined, so that we define the “trace of $f$ on ∂Ω” as $\mathop{lim}\limits_{k\rightarrow \infty} f_k|\partial\Omega$.  The crucial question is whether such limit exists and with respect to which topology.</p>
+<p><strong>Theorem 2.5 (Trace theorem in $\mathbb R^n_+$)</strong>. There exists a bounded linear operator $τ_0 : W^{1,p}(\mathbb R^n_+) \rightarrow L^p (\partial \mathbb R^n_+), 1 \leq p &lt; \infty$, s.t. $\tau_0u = u|\partial {\mathbb R_n^+}$  if $u \in W^{1,p}(\mathbb R^n_+) ∩ C_0 (\overline{\mathbb R^+_n})$.</p>
+<p><strong>Theorem 2.6 (Trace theorem in $\Omega$ )</strong>. Let $\Omega$ be a domain with bounded boundary $\partial\Omega$ of class $C^1$. There exists a bounded linear operator $τ_0 : W^{1,p}(\Omega) \rightarrow L^p (\partial\Omega), 1 \leq p &lt; \infty$, s.t. $\tau_0u = u|\partial {\Omega}$ if $u \in W^{1,p}(\Omega) ∩ C_0 (\overline{\Omega})$.</p>
+<p>There are several corollaries:</p>
+<ul>
+<li><p>Integration by part.</p>
+</li>
+<li><p>Poincare inequality: Let $\Omega \subset \mathbb R^n$  be a bounded domain. Then there exists a constant $C_P&gt;0$ such that</p>
+<script type="math/tex; mode=display">
+\Vert f\Vert_{L^p(\Omega)} \leq C_P \Vert Df\Vert_{L^p(\Omega)}, ∀f \in W^{1,p}_0(\Omega).</script></li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Functional-Analysis/" rel="tag">Functional Analysis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Measure-Theory/" rel="tag">Measure Theory</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PDE/" rel="tag">PDE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Real-Analysis/" rel="tag">Real Analysis</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-Basic-Number-Theory"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/09/28/Basic-Number-Theory/"
+    >Basic Number Theory</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/09/28/Basic-Number-Theory/" class="article-date">
+  <time datetime="2022-09-27T22:19:45.000Z" itemprop="datePublished">2022-09-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Algebra/">Algebra</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>A note following Math-310 Algebra, EPFL.</p>
+<h2 id="1-Well-ordering-and-factorization"><a href="#1-Well-ordering-and-factorization" class="headerlink" title="1 Well-ordering and factorization"></a>1 Well-ordering and factorization</h2><p><strong>Axioms 1.1</strong> Principles of integer number.</p>
+<p><a target="_blank" rel="noopener" href="https://proofwiki.org/wiki/Equivalence_of_Well-Ordering_Principle_and_Induction">https://proofwiki.org/wiki/Equivalence_of_Well-Ordering_Principle_and_Induction</a></p>
+<p>(1) Well-ordering principle: Every nonempty subset of natural numbers has a least element.</p>
+<p>(2) (Weak) Induction principle: Let $S\subset \mathbb{N}$ which satisfies two properties, (a) $0\in S$, (b) $n\in S\Rightarrow n+1\in S$, then $S=\mathbb{N}$.</p>
+<p>(3) Strong induction principle.</p>
+<p><strong>Proposition 1.2:</strong> Well-ordering principle and induction principle are equivalent.</p>
+<p>$\mathcal{Proof}.$ </p>
+<p>$(1)\Rightarrow(2)$: Assume $S\neq \mathbb{N}$ prove that $\mathbb{N} \backslash S=\varnothing$ using well-ordering principle.</p>
+<p>$(2)\Rightarrow (3)$ is easy.</p>
+<p>$(3)\Rightarrow (1)$ For this part of proof, maybe it is better to recognize the $\mathbb{N}$ and $\{P(i)\}$ holds for all $i\in \mathbb{N}$ as equivalent. Choose nonempty $Y$ not satisfying well-ordering property. Denote $S=\{i \notin Y\}$, then use (3) show that $S=\mathbb{N}$.</p>
+<p><strong>Theorem 1.3 </strong> Fundamental theorems of arithmetic.</p>
+<p>(1) Any integer greater than 1 is a product of primes.</p>
+<p>(2) The prime factorization is unique up to the order of factors.</p>
+<p>$Proof$.</p>
+<p>(1) Assume there exists a non-empty set $A$ of natural numbers greater than 1 that are not products of primes. Then there exists a least element $m\in A$. Since $m$ is not a prime, $m=p\cdot q =\prod p_i\prod q_j$, where $p_i$ and $q_j$ are primes. Contradiction.</p>
+<p>(2)</p>
+<p>…</p>
+<h2 id="2-Elementary-Number-Theory"><a href="#2-Elementary-Number-Theory" class="headerlink" title="2 Elementary Number Theory"></a>2 Elementary Number Theory</h2><h3 id="2-1-Euclidean-division"><a href="#2-1-Euclidean-division" class="headerlink" title="2.1 Euclidean division"></a>2.1 Euclidean division</h3><p><strong>Lemma 2.1</strong> (Euclid’s lemma) </p>
+<p>$Proof.$</p>
+<p>Assume $p\nmid a$ and $p\nmid b$, $a=p_1p_2…p_m$, $b=q_1…q_m$, where $p_i\neq p, q_i\neq p$. Thus we have </p>
+<script type="math/tex; mode=display">
+ab=p_1...p_nq_1...q_m</script><p>If $p|ab$, then there is another prime factorization for $ab$. Contradiction.</p>
+<p><strong>Theorem 2.2</strong> (Euclidean division)  Let $n \in \mathbb{Z} $ and $d \in \mathbb{Z}_+$. There exist two integers $q, r \in \mathbb{Z}$ such that $n = qd + r$, and $0 \leq r&lt;  d$. The integers $q, r$ are unique.</p>
+<p>$Proof.$</p>
+<p>(1) $\exists 0\leq r&lt; d$, such that $n=qd+r$.  Let $S=\{n-kd\}_{k\in \mathbb{Z}}\cap \mathbb{N}$. It is easy to see $S\neq \varnothing$. Thus, there exists a least element $r\in S$ such that $r=n-kd$. Assume $r\geq d$, then $r-1\in S$. Contradiction.</p>
+<p>(2) Uniqueness. Suppose exists $0 \leq r_1&lt; d$  and $0 \leq r_2 &lt; d$ and $r_1\neq r_2$, such that $r_1+q_1d=r_2+q_2d$. Assume $q_1&gt;q_2$ without loss of generality, $r_1=r_2+(q_2-q_1)d\geq  d$. Contradiction.</p>
+<h3 id="2-2-Euclidean-algorithm"><a href="#2-2-Euclidean-algorithm" class="headerlink" title="2.2 Euclidean algorithm"></a>2.2 Euclidean algorithm</h3><p><strong>Lemma 2.3</strong> (Euclidean Algorithm) Let $n,q \in \mathbb{Z} $ and $d \in \mathbb{Z}_+$ such that $n = qd + r$, then $gcd(n,d)=gcd(d,r)$.</p>
+<p>$Proof.$</p>
+<p>(1) If $a|n, a|d$, then $r=a(n/a-d/a)\Rightarrow a|r$.</p>
+<p>(2)If $a|d,a|r$, then $n=a(qd/a+r/a)\Rightarrow a|n$.</p>
+<p>Since the divisors of $a$ and $−a$ are the same, one can run the Euclidean algorithm for $|a|, |b|$ to find the $gcd(a, b)$.</p>
+<p><strong>Corollary 2.4</strong> For any $a,b \in \mathbb{Z_+}$  there exist $x, y \in \mathbb{Z}$ such that </p>
+<script type="math/tex; mode=display">
+gcd(a, b) = ax + by</script><p>$Proof.$ (The corollary can be extended to $a,b \in Z  (a,b\neq 0)$ )</p>
+<p>We only need to prove $a’=ax_1+by_1, b’=ax_2+by_2$ for $a’,b’$ in every step. (induction)</p>
+<p>Base step: It is easy to see that $a=a\cdot 1,b=b\cdot1$.</p>
+<p>Induction step: Assume $a’=ax_1+by_1, b’=ax_2+by_2$ and $a’&gt;b’$. Denoting $a’/b’=k$, and $a’\%b’=c’$,</p>
+<script type="math/tex; mode=display">
+c'=a'-kb'=a(x_1-kx_2)+b(y_1-ky_2)</script><p>Thus $b’=ax_2+by_2$ and $c’=ax_3+by_3$.</p>
+<p><strong>Corollary 2.5</strong> If $a, b ∈ \mathbb{Z} $ ($a,b \neq 0$) and $d = gcd(a, b)$, then the equation $ax + by = c$, $c \in Z$ has integer solutions for $x, y$ if and only if $c \in d\mathbb Z$.</p>
+<p>(1) If there is any integer solution, then it is easy to show $c\in d\mathbb{Z}$.</p>
+<p>(2) According to corollary 2.4, there exists $x,y$ such that $d=ax+by$. If $c=dk$, then $c=a(kx)+b(ky)$.</p>
+<p><strong>Corollary 2.6</strong> (Bezout’s Lemma) If $a, b \in \mathbb{Z}$  are coprime, then there exist $x, y \in \mathbb{Z}$ such that $ax + by = 1$.</p>
+<p><strong>Definition 2.6</strong> (Euler’s phi function) Euler’s totient function $\phi(n)$ is defined for any positive integer $n$ as the number of positive integers $a : 1 \leq a \leq n$ such that $gcd(a, n) = 1$.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algebra/" rel="tag">Algebra</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-Measure-Theory-Notes"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/08/06/Measure-Theory-Notes/"
+    >Measure Theory Notes</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/08/06/Measure-Theory-Notes/" class="article-date">
+  <time datetime="2022-08-06T15:17:55.000Z" itemprop="datePublished">2022-08-06</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Measure-Theory/">Measure Theory</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  
+
+	<div class="row">
+    <embed src="https://one-punch24.github.io/2022/08/06/Measure-Theory-Notes/Measure_Theory_Notes.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Measure-Theory/" rel="tag">Measure Theory</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Point-Set-Topology/" rel="tag">Point-Set Topology</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-Dual-Space-and-Adjoint-Operator"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/07/26/Dual-Space-and-Adjoint-Operator/"
+    >Dual Space and Adjoint Operator</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/07/26/Dual-Space-and-Adjoint-Operator/" class="article-date">
+  <time datetime="2022-07-26T03:50:18.000Z" itemprop="datePublished">2022-07-26</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Functional-Analysis/">Functional Analysis</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="1-Dual-Space"><a href="#1-Dual-Space" class="headerlink" title="1 Dual Space"></a>1 Dual Space</h2><h3 id="1-1-Dual-Space"><a href="#1-1-Dual-Space" class="headerlink" title="1.1  Dual Space"></a>1.1  Dual Space</h3><p><strong>Definition 1.1 (Dual space)</strong> Let $X$ be a normed space. $X^{\ast}=\mathcal{L}(X,K)$ is called the dual space of $X$. Since $K$ is complete, $X^{\ast}$ is also a Banach space.</p>
+<p><strong>Definition 1.2 (Bidual space)</strong> We can define another intermediate mapping $x^{\ast\ast}: X^{\ast}\rightarrow R$ by $x^{\ast\ast}(f)=f(x)$. The space $X^{\ast\ast}=\mathcal{L}(X^{\ast},K)$ is called Bidual space, which is also a Banach space.</p>
+<p><strong>Definition 1.3 (Canonical mapping/embedding)</strong> We can define a mapping $J:X\rightarrow X^{\ast\ast}$ where $Jx(f)=f(x)$. $J$ is a linear isometry.</p>
+<p><em>Proof.</em> Since $x^{\ast\ast}(f)=|f(x)|\leq||x||||f||$, $||x^{\ast\ast}||\leq ||x||$. Due to Hahn-Banach theorem, there exists $f_0\in E^{\ast}$ such that $\Vert f_0\Vert=1$ and $|f_0(x)|=||x||$, and thus $||x^{\ast\ast}||\geq||x||$. Therefore, $||x^{\ast\ast}||=||x||$.</p>
+<p><strong>Definition 1.4 (Reflexive)</strong> In the sense of isometry, $X$ is a subspace of $X^{\ast\ast}$. $X$ is said to be reflexive if the canonical embedding $J$ into its bidual $X^{\ast\ast}$ is surjective. </p>
+<h3 id="1-2-Dual-Space-of-Hilbert-Space"><a href="#1-2-Dual-Space-of-Hilbert-Space" class="headerlink" title="1.2 Dual Space of Hilbert Space"></a>1.2 Dual Space of Hilbert Space</h3><p><strong>Theorem 1.1 (Projection theorem)</strong> Let $H$ be a Hilbert space and $H_0 \subset H$ a closed subspace. Then for every $x \in H$ there exist uniquely $y \in H_0$ and $z \in H_0^{\perp}$ s.t. $x = y + z$.</p>
+<p><strong>Theorem 1.2 (Riesz’s representation theorem) </strong> Let $H$ be a Hilbert space $f$ be a bounded linear functional on $H$,  then there exists one and only one $h\in H$ such that</p>
+<script type="math/tex; mode=display">
+f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem suggests that the mapping $H\rightarrow H^{\ast}$ is surjective, and hence an isometric isomorphism. It is not hard to see that $H^{\ast}$ is also a Hilbert space. Repeat the argument for $H^*$ and mapping $H^{\ast}\rightarrow H^{\ast\ast}$. We can prove that a Hilbert space is reflexive.</p>
+<p><strong>Corollary 1.3 (Lax-Milgram)</strong> Let $V$ be a Hilbert space, $a : H \times H → \mathbb R$ a bilinear, bounded and coercive form on $H$ . Then, for any $f \in H’$  the abstract problem </p>
+<script type="math/tex; mode=display">
+\text{find } u \in H : a(u, v) = f(v), \forall v \in H</script><p>has a unique solution $u \in V$ such that $\Vert u\Vert_H ≤\Vert f\Vert_{H’}/\alpha$ where $\alpha$ is the coercivity constant of the bilinear form.</p>
+<h3 id="1-3-Examples-of-Dual-Spaces"><a href="#1-3-Examples-of-Dual-Spaces" class="headerlink" title="1.3 Examples of Dual Spaces"></a>1.3 Examples of Dual Spaces</h3><p>Distribution.</p>
+<h2 id="2-Adjoint-Operators"><a href="#2-Adjoint-Operators" class="headerlink" title="2 Adjoint Operators"></a>2 Adjoint Operators</h2><p><strong>Definition 2.1 (Adjoint Operator)</strong> Let $X$ and $Y$ be normed linear spaces and $T\in \mathcal{L}(X,Y)$. The adjoint operator of $T$, denoted by $T^{\ast}$ , is the operator $T^{\ast}:Y^{\ast}\rightarrow X^{\ast}$ defined by</p>
+<script type="math/tex; mode=display">
+(T^{\ast}y^{\ast})(x)=y^{\ast}(Tx) \text{ for all } y^{\ast}\in Y^{\ast}, x\in X^{\ast}</script><p><strong>Theorem 2.1</strong> Let $X$ and $Y$ be normed linear spaces and $T\in \mathcal{L}(X,Y)$.</p>
+<p>(a) $T^{\ast}$ is bounded linear operator on $Y^{\ast}$.</p>
+<p>(b) $||T||=||T^{\ast}||$.</p>
+<h2 id="3-Weak-Topology"><a href="#3-Weak-Topology" class="headerlink" title="3 Weak Topology"></a>3 Weak Topology</h2><h3 id="3-1-Type-of-Convergence"><a href="#3-1-Type-of-Convergence" class="headerlink" title="3.1 Type of Convergence"></a>3.1 Type of Convergence</h3><p><strong>Definition 3.1 (Types of convergence for sequence)</strong></p>
+<p>Let $X$  be normed linear space, $x,\{x_n\}\in X$.</p>
+<p>(1) Strong Convergence: <script type="math/tex">||x_n-x||\rightarrow 0</script>.</p>
+<p>(2) Weak convergence:  If $\forall$ $f\in X^{\ast}$,  $f(x_n)\rightarrow f(x)$, then we call $x_n\rightharpoonup x$ in weak topology. </p>
+<p><strong>Proposition 3.1</strong> $x_n\rightharpoonup x$ iff</p>
+<p>(1) $\{||x_n||\}$ is bounded.</p>
+<p>(2) $\exists$ a dense subset $M\subseteq X^{\ast}$ such that for any $f\in M$, $f(x_n)\rightarrow f(x)$</p>
+<p><strong>Proposition 3.2</strong></p>
+<p>If $X$ is finite dimensional, then $\text{strong convergence}\iff \text{weak convergence}$.</p>
+<p><strong>Definition 3.2 (Types of convergence for operators)</strong></p>
+<p>Let $X,Y$  be normed linear spaces, $T,\{T_n\}\in \mathcal L(X,Y)$. </p>
+<p>(1) Uniform Convergence.</p>
+<p>(2) Strong Convergence: If $\forall$ $x\in X$,  $T_nx$ convergences strongly to $Tx$, then we call $T_n\rightarrow T$.</p>
+<p>(3) Weak Convergence: If $\forall$ $x\in X$,  $T_nx$ convergences weakly to $Tx$ in $Y$, then we call $T_n\rightharpoonup T$.</p>
+<p>Let $X,Y$ be normed spaces and $T\in \mathcal L(X,Y)$. The mapping $GT=T^{\ast}$ is a distance-preseved mapping and $Im(G)$ is isometric isomorphism wrt $\mathcal L(X,Y)$.</p>
+<p><strong>Definition 3.3 (Types of convergence for functionals)</strong> </p>
+<p>(1) Strong convergence.</p>
+<p>(2) Weak convergence.</p>
+<p>(2) Weak-$\ast$ convergence. Let $X$ be a normed space and $X^{\ast}$ be its dual space. </p>
+<p><strong>Proposition 3.3</strong> Let $X$ be Banach space and $f,\{f_n\}\in X^{\ast}$. Then $f_n\mathop{\rightarrow}\limits_{}^{w^{\ast}} f$ iff</p>
+<p>(1) $\{||f_n||\}$ is bounded.</p>
+<p>(2) $\exists$ a dense subset $M\subseteq X$ such that for any $x\in M$, $f(x_n)\rightarrow f(x)$.</p>
+<p><strong>Proposition 3.4</strong> Let $X$ be normed spaces and $X^{\ast}$ be the dual space, then </p>
+<script type="math/tex; mode=display">
+\text{weak convergence} \Rightarrow \text{weak-}{\ast} \text{convergence}</script><p> in $X^{\ast}$. If $X$ is reflexive,</p>
+<script type="math/tex; mode=display">
+\text{weak convergence} \iff\text{weak-}{\ast} \text{convergence}</script><h3 id="3-2-Separability"><a href="#3-2-Separability" class="headerlink" title="3.2 Separability"></a>3.2 Separability</h3><p>Banach-Alaoglu Theorem (Theorem 5.5.7 in [1]). We can turn to [1] and <a target="_blank" rel="noopener" href="https://planetmath.org/proofofbanachalaoglutheorem">link</a> here.</p>
+<p><img src="https://One-punch24.github.io/2022/07/26/Dual-Space-and-Adjoint-Operator/image-20240224001801993.png" alt="image-20240224001801993"></p>
+<p>(1) If $X$ is a separable normed space, then any bounded sequence $\{f_n\}\in X^{\ast}$ admits a weakly-* convergent subsequence. (Weaker Version of Banach-Alaoglu Theorem in separable case.)</p>
+<p>(2) Let $X$ be a normed space, then $X^{\ast}$ is separable $\Rightarrow$ $X$ is separable. </p>
+<h2 id="4-Finite-Dimentional-Normed-Space"><a href="#4-Finite-Dimentional-Normed-Space" class="headerlink" title="4 Finite Dimentional Normed Space"></a>4 Finite Dimentional Normed Space</h2><p>A small supplement.</p>
+<p><strong>Definition 1 (Linear isometry and homeomorphism in normed spaces)</strong> In mathematics, an isometry is a distance-preserving transformation between metric spaces, usually assumed to be bijective. Linear isometry is often respect with <strong>normed vector spaces</strong>. Homeomorphism represents the <strong>topological</strong> isomorphism.</p>
+<p><strong>Proposition 1 (Several Properties)</strong>  I met them in my “Smooth Manifolds” course. </p>
+<ul>
+<li>All norms on finite dimensional normed space $X$ are equivalent. [1, Theorem 2.6.1]</li>
+<li>Every finite dimensional normed space is linear isomorphic (线性同构，一定意义的代数上) and homeomorphic (同胚，拓扑上) to $\mathbb{R}^n$. [2, Theorem 2.1]</li>
+</ul>
+<p><strong>Proposition 2 (More properties about the finite dim normed spaces)</strong></p>
+<ul>
+<li>Every finite dimensional normed space is complete. Heine-Borel Theorem could be generalized to finite dimensional normed space.</li>
+<li>A normed space $X$ is finite dimensional iff $X$ is locally compact, i.e. every point $x$ in $X$ has a compact neighborhood (through Riesz’s Lemma). [2, Theorem 2.2]</li>
+<li>A normed space $X$ is finite-dimensional iff its closed unit ball is compact. [1, Theorem 2.6.4]</li>
+</ul>
+<p><em>References</em></p>
+<p>[1] Functional Analysis Notes, by Mr. Andrew Pinchuck, <a target="_blank" rel="noopener" href="https://uomustansiriyah.edu.iq/media/lectures/9/9_2017_09_30!12_03_54_PM.pdf">https://uomustansiriyah.edu.iq/media/lectures/9/9_2017_09_30!12_03_54_PM.pdf</a></p>
+<p>[2] A Sketch of Real-Value Function and Functional Analysis, by Wang Shengwang, Zheng Weixing.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Functional-Analysis/" rel="tag">Functional Analysis</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-Bounded-Linear-Operator"
   class="article article-type-post"
   itemscope
@@ -175,9 +759,10 @@ mjx-container[display="true"] + br {
     
     <header class="article-header">
        
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Bounded Linear Operator
-</h1>
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/07/20/Bounded-Linear-Operator/"
+    >Bounded Linear Operator</a> 
+</h2>
  
 
       
@@ -190,34 +775,9 @@ mjx-container[display="true"] + br {
   <div class="article-category">
     <a class="article-category-link" href="/categories/Functional-Analysis/">Functional Analysis</a>
   </div>
-  
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">341</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">2 min</span>
-        </span>
-    </span>
-</div>
- 
+   
     </div>
       
-    <div class="tocbot"></div>
-
-
-
-
-  
     <div class="article-entry" itemprop="articleBody">
        
   <p>[Some Hexo Debug Experience: modify inline.js: <a target="_blank" rel="noopener" href="https://myblackboxrecorder.com/use-math-in-hexo/">https://myblackboxrecorder.com/use-math-in-hexo/</a>]</p>
@@ -279,40 +839,79 @@ d(x,x_0)=\mathop{inf}_{x_0\in X_0}||x-x_0||=d</script><p>then there exists <mjx-
   </div>
 
    
-  <nav class="article-nav">
-    
-      <a href="/2022/07/26/Dual-Space-and-Adjoint-Operator/" class="article-nav-link">
-        <strong class="article-nav-caption">Previous Post</strong>
-        <div class="article-nav-title">
-          
-            Dual Space and Adjoint Operator
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2021/12/22/QML-Notes/" class="article-nav-link">
-        <strong class="article-nav-caption">Next Post</strong>
-        <div class="article-nav-title">A Simple Survey of Quantum Machine Learning</div>
-      </a>
-    
-  </nav>
-
-  
    
   
-   
-    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
-    <div id="twikoo" class="twikoo"></div>
-    <script>
-        twikoo.init({
-            envId: ""
-        })
-    </script>
- 
 </article>
 
+    
+    <article
+  id="post-QML-Notes"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/12/22/QML-Notes/"
+    >A Simple Survey of Quantum Machine Learning</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/12/22/QML-Notes/" class="article-date">
+  <time datetime="2021-12-22T18:29:47.000Z" itemprop="datePublished">2021-12-22</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Quantum-Physics/">Quantum Physics</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  
+
+	<div class="row">
+    <embed src="https://one-punch24.github.io/2021/12/22/QML-Notes/QML.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Quantum-Computation/" rel="tag">Quantum Computation</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+  </article>
+  
+
+  
 </section>
+</div>
+
       <footer class="footer">
   <div class="outer">
     <ul>
@@ -444,22 +1043,6 @@ d(x,x_0)=\mathop{inf}_{x_0\in X_0}||x-x_0||=d</script><p>then there exists <mjx-
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
- 
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  tocbot.init({
-    tocSelector: ".tocbot",
-    contentSelector: ".article-entry",
-    headingSelector: "h1, h2, h3, h4, h5, h6",
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: "main",
-    positionFixedSelector: ".tocbot",
-    positionFixedClass: "is-position-fixed",
-    fixedSidebarOffset: "auto",
-  });
-</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
