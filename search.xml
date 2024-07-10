@@ -204,25 +204,6 @@ f_k\rightarrow f \text{ in }W^{k,p}(\Omega)</script><p>For each $f_k$, the trace
       </tags>
   </entry>
   <entry>
-    <title>A Simple Survey of Quantum Machine Learning</title>
-    <url>/2021/12/22/QML-Notes/</url>
-    <content><![CDATA[
-
-	<div class="row">
-    <embed src="https://one-punch24.github.io/2021/12/22/QML-Notes/QML.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-]]></content>
-      <categories>
-        <category>Quantum Machine Learning</category>
-      </categories>
-      <tags>
-        <tag>Quantum Computation</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Bounded Linear Operator</title>
     <url>/2022/07/20/Bounded-Linear-Operator/</url>
     <content><![CDATA[<p>[Some Hexo Debug Experience: modify inline.js: <a href="https://myblackboxrecorder.com/use-math-in-hexo/">https://myblackboxrecorder.com/use-math-in-hexo/</a>]</p>
