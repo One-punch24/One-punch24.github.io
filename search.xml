@@ -354,4 +354,23 @@ a(u, v) = F(v), \forall v \in V.</script><p>where $a(u, v) = \int_{\Omega}  \nab
         <tag>PDE</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Proximal Algorithm in Wasserstein Space</title>
+    <url>/2024/07/11/Proximal-Algorithm-in-Wasserstein-Space/</url>
+    <content><![CDATA[
+
+	<div class="row">
+    <embed src="https://one-punch24.github.io/2024/07/11/Proximal-Algorithm-in-Wasserstein-Space/Proximal_Algorithms_in_Wasserstein_Space.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+]]></content>
+      <categories>
+        <category>Projects of ML Theory</category>
+      </categories>
+      <tags>
+        <tag>Optimal Transport</tag>
+      </tags>
+  </entry>
 </search>
