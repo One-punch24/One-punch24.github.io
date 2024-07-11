@@ -373,4 +373,23 @@ a(u, v) = F(v), \forall v \in V.</script><p>where $a(u, v) = \int_{\Omega}  \nab
         <tag>Optimal Transport</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Implicit Bias of Scale Factor in Attention Layer</title>
+    <url>/2024/02/12/Implicit-Bias-of-Scale-Factor-in-Attention-Layer/</url>
+    <content><![CDATA[
+
+	<div class="row">
+    <embed src="https://one-punch24.github.io/2024/02/12/Implicit-Bias-of-Scale-Factor-in-Attention-Layer/SP_Report_ShuailongZhu.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+]]></content>
+      <categories>
+        <category>Projects of ML Theory</category>
+      </categories>
+      <tags>
+        <tag>Machine Learning Theory</tag>
+      </tags>
+  </entry>
 </search>
