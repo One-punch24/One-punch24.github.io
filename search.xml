@@ -185,7 +185,7 @@ f_k\rightarrow f \text{ in }W^{k,p}(\Omega)</script><p>For each $f_k$, the trace
   </entry>
   <entry>
     <title>Notes on Optimal Transport</title>
-    <url>/2023/09/18/Notes-on-Optimal-Transport/</url>
+    <url>/2023/09/19/Notes-on-Optimal-Transport/</url>
     <content><![CDATA[
 
 	<div class="row">
@@ -356,7 +356,7 @@ a(u, v) = F(v), \forall v \in V.</script><p>where $a(u, v) = \int_{\Omega}  \nab
   </entry>
   <entry>
     <title>Proximal Algorithm in Wasserstein Space</title>
-    <url>/2024/07/11/Proximal-Algorithm-in-Wasserstein-Space/</url>
+    <url>/2024/07/12/Proximal-Algorithm-in-Wasserstein-Space/</url>
     <content><![CDATA[
 
 	<div class="row">
