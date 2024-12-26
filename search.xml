@@ -55,30 +55,8 @@ d(x,x_0)=\mathop{inf}_{x_0\in X_0}||x-x_0||=d</script><p>then there exists <mjx-
       </tags>
   </entry>
   <entry>
-    <title>Benefits of Stochasticity in SGD</title>
-    <url>/2023/01/04/Benefits-of-Stochasticity-in-SGD/</url>
-    <content><![CDATA[<p>This is a project mainly based on the paper “Implicit Bias of SGD for Diagonal Linear Networks: a Provable Benefit of stochasticity”. We put our reimplementation and some further experiments in the following repo:</p>
-<p><a href="https://github.com/One-punch24/Bias-of-SGF">https://github.com/One-punch24/Bias-of-SGF</a>.</p>
-<p>The following is the report.</p>
-
-
-	<div class="row">
-    <embed src="https://one-punch24.github.io/2023/01/04/Benefits-of-Stochasticity-in-SGD/project_implicit_bias_sgd.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-]]></content>
-      <categories>
-        <category>Projects of ML Theory</category>
-      </categories>
-      <tags>
-        <tag>Machine Learning Theory</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>$L^p$ Space and Sobolev Spaces</title>
-    <url>/2023/07/25/Lp-Space/</url>
+    <url>/2023/07/24/Lp-Space/</url>
     <content><![CDATA[<h2 id="1-L-p-Space"><a href="#1-L-p-Space" class="headerlink" title="1 $L^p$ Space"></a>1 $L^p$ Space</h2><h3 id="1-1-Density"><a href="#1-1-Density" class="headerlink" title="1.1 Density"></a>1.1 Density</h3><p><strong>Theorem 1.1 (Density of simple functions)</strong> Let $(X,\mathscr{A},\mu)$ be a measure space, and let $p$ satisfy $1 \leq p \leq +\infty$. Then the simple functions in $L^p(X,\mathscr{A},\mu)$ form a dense subspace of $L^p(X,\mathscr{A},\mu)$.</p>
 <p><strong>Lemma 1.2 (Approximation of measurable function by simple function)</strong> If $f : X \rightarrow [0, \infty]$ is a positive measurable function, then there is a monotone increasing sequence of positive simple functions $\varphi_n : X → [0, \infty)$ with $\varphi_1 ≤ \varphi_2 ≤ · · · ≤ \varphi_n ≤ . . .$ such that $\varphi_n \rightarrow f$ pointwise. If $f$ is bounded, then $\varphi_n \rightarrow f$ uniformly.</p>
 <p><em>Proof of Lemma 1.2</em> For each $n \in \mathbb N$, we divide the interval $[0, n]$  into $n2^{n}$ subintervals of width $1/2^n$</p>
@@ -178,7 +156,7 @@ f_k\rightarrow f \text{ in }W^{k,p}(\Omega)</script><p>For each $f_k$, the trace
   </entry>
   <entry>
     <title>Dual Space and Adjoint Operator</title>
-    <url>/2022/07/26/Dual-Space-and-Adjoint-Operator/</url>
+    <url>/2022/07/25/Dual-Space-and-Adjoint-Operator/</url>
     <content><![CDATA[<h2 id="1-Dual-Space"><a href="#1-Dual-Space" class="headerlink" title="1 Dual Space"></a>1 Dual Space</h2><h3 id="1-1-Dual-Space"><a href="#1-1-Dual-Space" class="headerlink" title="1.1  Dual Space"></a>1.1  Dual Space</h3><p><strong>Definition 1.1 (Dual space)</strong> Let $X$ be a normed space. $X^{\ast}=\mathcal{L}(X,K)$ is called the dual space of $X$. Since $K$ is complete, $X^{\ast}$ is also a Banach space.</p>
 <p><strong>Definition 1.2 (Bidual space)</strong> We can define another intermediate mapping $x^{\ast\ast}: X^{\ast}\rightarrow R$ by $x^{\ast\ast}(f)=f(x)$. The space $X^{\ast\ast}=\mathcal{L}(X^{\ast},K)$ is called Bidual space, which is also a Banach space.</p>
 <p><strong>Definition 1.3 (Canonical mapping/embedding)</strong> We can define a mapping $J:X\rightarrow X^{\ast\ast}$ where $Jx(f)=f(x)$. $J$ is a linear isometry.</p>
@@ -273,25 +251,6 @@ f(x)=(x,h), ||f||_{H^\ast}=||h||_{H}</script><p>The Riesz representation theorem
       </categories>
       <tags>
         <tag>Measure Theory</tag>
-        <tag>Optimal Transport</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Proximal Algorithm in Wasserstein Space</title>
-    <url>/2024/07/11/Proximal-Algorithm-in-Wasserstein-Space/</url>
-    <content><![CDATA[
-
-	<div class="row">
-    <embed src="https://one-punch24.github.io/2024/07/11/Proximal-Algorithm-in-Wasserstein-Space/Proximal_Algorithms_in_Wasserstein_Space.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-]]></content>
-      <categories>
-        <category>Projects of ML Theory</category>
-      </categories>
-      <tags>
         <tag>Optimal Transport</tag>
       </tags>
   </entry>
